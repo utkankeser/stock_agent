@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block content %}
+
+<a href="/" class="back-link">← Dashboard'a Dön</a>
+
+{% if result.error %}
+<section class="glass-card error-card">
+    <h2>⚠️ Hata</h2>
+    <p>{{ result.error }}</p>
+</section>
+{% else %}
+
+<!-- Hisse Başlık -->
+<section class="stock-header glass-card">
+    <div class="stock-header-left">
+        <h1>{{ result.name }}</h1>
+        <span class="stock-code">{{ result.code }}</span>
+        {% if result.indicators and result.indicators.price_info %}
+        <div class="price-display">
+            <span class="current-price">₺{{ result.indicators.price_info.current }}</span>
+            {% set change = result.indicators.price_info.change_1d %}
+            <span class="price-change {% if change > 0 %}text-green{% elif change < 0 %}text-red{% endif %}">
+                {% if change > 0 %}+{% endif %}{{ change }}%
+            </span>
+        </div>
+        {% endif %}
+    </div>
+    <div class="stock-header-right">
+        <div class="signal-display signal-{{ result.signal_class }}">
+            <span class="signal-label">Öneri</span>
+            <span class="signal-value">{{ result.signal }}</span>
+        </div>
+        <div class="overall-score-display">
+            <span class="score-label">Genel Skor</span>
+            <span class="score-value">{{ result.overall_score }}/100</span>
+        </div>
+    </div>
+</section>
+
+<!-- Skor Kartları -->
+<section class="detail-scores">
+    <div class="detail-score-card glass-card">
+        <div class="detail-score-title">Teknik Skor</div>
+        <div class="detail-score-circle"
+            style="--score: {{ result.technical_score }}; --color: {% if result.technical_score >= 60 %}#00c853{% elif result.technical_score <= 40 %}#ff1744{% else %}#ffc107{% endif %}">
+            <span>{{ result.technical_score }}</span>
+        </div>
+    </div>
+    <div class="detail-score-card glass-card">
+        <div class="detail-score-title">Haber Skoru</div>
+        <div class="detail-score-circle"
+            style="--score: {{ result.news_score }}; --color: {% if result.news_score >= 60 %}#00c853{% elif result.news_score <= 40 %}#ff1744{% else %}#ffc107{% endif %}">
+            <span>{{ result.news_score }}</span>
+        </div>
+    </div>
+    <div class="detail-score-card glass-card">
+        <div class="detail-score-title">Genel Skor</div>
+        <div class="detail-score-circle"
+            style="--score: {{ result.overall_score }}; --color: {% if result.overall_score >= 60 %}#00c853{% elif result.overall_score <= 40 %}#ff1744{% else %}#ffc107{% endif %}">
+            <span>{{ result.overall_score }}</span>
+        </div>
+    </div>
+</section>
+
+<!-- Fiyat Bilgileri -->
+{% if result.indicators and result.indicators.price_info %}
+<section class="glass-card">
+    <h2>💰 Fiyat Bilgileri</h2>
+    <div class="price-grid">
+        <div class="price-item">
+            <span class="price-item-label">Günlük Değişim</span>
+            {% set ch1d = result.indicators.price_info.change_1d %}
+            <span class="price-item-value {% if ch1d > 0 %}text-green{% elif ch1d < 0 %}text-red{% endif %}">
+                {% if ch1d > 0 %}+{% endif %}{{ ch1d }}%
+            </span>
+        </div>
+        <div class="price-item">
+            <span class="price-item-label">Haftalık Değişim</span>
+            {% set ch1w = result.indicators.price_info.change_1w %}
+            <span class="price-item-value {% if ch1w > 0 %}text-green{% elif ch1w < 0 %}text-red{% endif %}">
+                {% if ch1w > 0 %}+{% endif %}{{ ch1w }}%
+            </span>
+        </div>
+        <div class="price-item">
+            <span class="price-item-label">Aylık Değişim</span>
+            {% set ch1m = result.indicators.price_info.change_1m %}
+            <span class="price-item-value {% if ch1m > 0 %}text-green{% elif ch1m < 0 %}text-red{% endif %}">
+                {% if ch1m > 0 %}+{% endif %}{{ ch1m }}%
+            </span>
+        </div>
+        <div class="price-item">
+            <span class="price-item-label">Dönem En Yüksek</span>
+            <span class="price-item-value">₺{{ result.indicators.price_info.high_period }}</span>
+        </div>
+        <div class="price-item">
+            <span class="price-item-label">Dönem En Düşük</span>
+            <span class="price-item-value">₺{{ result.indicators.price_info.low_period }}</span>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Teknik Göstergeler -->
+{% if result.details %}
+<section class="glass-card">
+    <h2>📉 Teknik Göstergeler</h2>
+    <div class="indicators-grid">
+        {% for detail in result.details %}
+        <div class="indicator-card">
+            <div class="indicator-header">
+                <span class="indicator-name">{{ detail.indicator }}</span>
+                <span
+                    class="signal-badge signal-{{ 'buy' if detail.signal == 'AL' else ('sell' if detail.signal == 'SAT' else 'hold') }}">
+                    {{ detail.signal }}
+                </span>
+            </div>
+            <div class="indicator-value">{{ detail.value }}</div>
+            <div class="indicator-desc">{{ detail.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Haberler -->
+{% if result.news %}
+<section class="glass-card">
+    <h2>📰 Son Haberler</h2>
+    <div class="news-list">
+        {% for news in result.news %}
+        <div class="news-item">
+            <div class="news-sentiment sentiment-{{ news.sentiment.label }}">
+                {% if news.sentiment.label == 'pozitif' %}🟢
+                {% elif news.sentiment.label == 'negatif' %}🔴
+                {% else %}⚪{% endif %}
+            </div>
+            <div class="news-content">
+                <h4>
+                    {% if news.url %}
+                    <a href="{{ news.url }}" target="_blank" rel="noopener">{{ news.title }}</a>
+                    {% else %}
+                    {{ news.title }}
+                    {% endif %}
+                </h4>
+                <div class="news-meta">
+                    <span class="news-source">{{ news.source }}</span>
+                    <span class="news-date">{{ news.date }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Özet -->
+<section class="glass-card summary-section">
+    <h2>📝 Özet</h2>
+    <p class="summary-text">{{ result.summary }}</p>
+</section>
+
+{% endif %}
+{% endblock %}

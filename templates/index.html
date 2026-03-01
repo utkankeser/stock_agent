@@ -1,0 +1,339 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>📈 BIST Borsa Analiz Paneli</h1>
+    <p class="hero-sub">Tüm BIST hisselerini teknik analiz ile tarayın, haberleri kontrol edin ve AL/SAT/TUT önerisi
+        alın.</p>
+    <p class="hero-count">📋 Sistemde <strong>{{ stock_count }}</strong> hisse bulunuyor</p>
+</section>
+
+{% if refreshed %}
+<div class="notification success-notification">
+    ✅ Hisse listesi güncellendi! Toplam {{ refresh_count }} hisse yüklendi.
+</div>
+{% endif %}
+
+<!-- Analiz Kontrol Paneli -->
+<section class="control-panel glass-card">
+    <form method="POST" action="/analyze" id="analysisForm">
+        <div class="controls-row">
+            <div class="control-group">
+                <label for="sector">Sektör</label>
+                <select name="sector" id="sector">
+                    <option value="all" {% if selected_sector=='all' %}selected{% endif %}>Tüm Sektörler</option>
+                    {% for s in sectors %}
+                    <option value="{{ s }}" {% if selected_sector==s %}selected{% endif %}>{{ s }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="period">Periyot</label>
+                <select name="period" id="period">
+                    <option value="1mo">1 Ay</option>
+                    <option value="3mo">3 Ay</option>
+                    <option value="6mo" selected>6 Ay</option>
+                    <option value="1y">1 Yıl</option>
+                    <option value="2y">2 Yıl</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="max_stocks">Hisse Limiti</label>
+                <select name="max_stocks" id="max_stocks">
+                    <option value="50">İlk 50</option>
+                    <option value="100" selected>İlk 100</option>
+                    <option value="200">İlk 200</option>
+                    <option value="all">Tümü ({{ stock_count }})</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="scan_mode">Tarama Modu</label>
+                <select name="scan_mode" id="scan_mode">
+                    <option value="quick" selected>⚡ Hızlı (habersiz)</option>
+                    <option value="detailed">📰 Detaylı (haberli)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <button type="submit" class="btn-analyze" id="analyzeBtn">
+                    🔍 Analiz Başlat
+                </button>
+            </div>
+        </div>
+    </form>
+    <form method="POST" action="/refresh" style="margin-top: 0.8rem;">
+        <button type="submit" class="btn-refresh">🔄 Hisse Listesini Güncelle</button>
+    </form>
+</section>
+
+<!-- Loading -->
+<div id="loading" class="loading-overlay" style="display:none;">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <p>Hisseler analiz ediliyor... Bu işlem birkaç dakika sürebilir.</p>
+    </div>
+</div>
+
+{% if analysis_done %}
+<!-- Özet Kartlar -->
+<section class="summary-cards">
+    {% set buy_count = [] %}
+    {% set sell_count = [] %}
+    {% set hold_count = [] %}
+    {% for ticker, r in results.items() %}
+    {% if r.signal == "AL" %}{% if buy_count.append(1) %}{% endif %}
+    {% elif r.signal == "SAT" %}{% if sell_count.append(1) %}{% endif %}
+    {% else %}{% if hold_count.append(1) %}{% endif %}
+    {% endif %}
+    {% endfor %}
+
+    <div class="stat-card buy-card">
+        <div class="stat-number">{{ buy_count|length }}</div>
+        <div class="stat-label">AL Sinyali</div>
+        <div class="stat-icon">🟢</div>
+    </div>
+    <div class="stat-card hold-card">
+        <div class="stat-number">{{ hold_count|length }}</div>
+        <div class="stat-label">TUT Sinyali</div>
+        <div class="stat-icon">🟡</div>
+    </div>
+    <div class="stat-card sell-card">
+        <div class="stat-number">{{ sell_count|length }}</div>
+        <div class="stat-label">SAT Sinyali</div>
+        <div class="stat-icon">🔴</div>
+    </div>
+    <div class="stat-card total-card">
+        <div class="stat-number">{{ total_analyzed }}</div>
+        <div class="stat-label">Toplam Analiz</div>
+        <div class="stat-icon">📊</div>
+    </div>
+</section>
+
+<!-- Sonuç Tablosu -->
+<section class="results-section glass-card">
+    <div class="results-header">
+        <h2>📋 Analiz Sonuçları</h2>
+        <div class="results-info">
+            <span id="showingCount"></span>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <table class="results-table" id="resultsTable">
+            <thead>
+                <tr>
+                    <th class="sortable" data-col="0" data-type="text">Hisse <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="1" data-type="text">Sektör <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="2" data-type="number">Fiyat <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="3" data-type="number">Günlük <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="4" data-type="number">Haftalık <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="5" data-type="number">Teknik <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="6" data-type="number">Haber <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="7" data-type="number">Genel <span class="sort-arrow"></span></th>
+                    <th>Öneri</th>
+                    <th>Detay</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ticker, r in sorted_results %}
+                <tr class="result-row {{ r.signal_class }}">
+                    <td>
+                        <div class="stock-name">
+                            <strong>{{ r.code }}</strong>
+                            <small>{{ r.name }}</small>
+                        </div>
+                    </td>
+                    <td>{{ stocks[ticker].sector if ticker in stocks else '-' }}</td>
+                    <td
+                        data-value="{{ r.indicators.price_info.current if r.indicators and r.indicators.price_info else 0 }}">
+                        {% if r.indicators and r.indicators.price_info %}
+                        ₺{{ r.indicators.price_info.current }}
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td
+                        data-value="{{ r.indicators.price_info.change_1d if r.indicators and r.indicators.price_info else 0 }}">
+                        {% if r.indicators and r.indicators.price_info %}
+                        {% set change = r.indicators.price_info.change_1d %}
+                        <span class="{% if change > 0 %}text-green{% elif change < 0 %}text-red{% endif %}">
+                            {% if change > 0 %}+{% endif %}{{ change }}%
+                        </span>
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td
+                        data-value="{{ r.indicators.price_info.change_1w if r.indicators and r.indicators.price_info else 0 }}">
+                        {% if r.indicators and r.indicators.price_info %}
+                        {% set change_w = r.indicators.price_info.change_1w %}
+                        <span class="{% if change_w > 0 %}text-green{% elif change_w < 0 %}text-red{% endif %}">
+                            {% if change_w > 0 %}+{% endif %}{{ change_w }}%
+                        </span>
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td data-value="{{ r.technical_score }}">
+                        <div class="score-bar">
+                            <div class="score-fill"
+                                style="width: {{ r.technical_score }}%; background: {{ _score_color(r.technical_score) }}">
+                            </div>
+                            <span class="score-text">{{ r.technical_score }}</span>
+                        </div>
+                    </td>
+                    <td data-value="{{ r.news_score }}">
+                        <div class="score-bar">
+                            <div class="score-fill"
+                                style="width: {{ r.news_score }}%; background: {{ _score_color(r.news_score) }}"></div>
+                            <span class="score-text">{{ r.news_score }}</span>
+                        </div>
+                    </td>
+                    <td data-value="{{ r.overall_score }}">
+                        <div class="score-bar">
+                            <div class="score-fill"
+                                style="width: {{ r.overall_score }}%; background: {{ _score_color(r.overall_score) }}">
+                            </div>
+                            <span class="score-text">{{ r.overall_score }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="signal-badge signal-{{ r.signal_class }}">{{ r.signal }}</span>
+                    </td>
+                    <td>
+                        <a href="/stock/{{ ticker }}" class="btn-detail">Detay →</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Daha Fazla Göster butonu -->
+    <div class="show-more-container" id="showMoreContainer" style="display:none;">
+        <button class="btn-show-more" id="showMoreBtn">📊 Daha Fazla Göster</button>
+    </div>
+</section>
+{% else %}
+<!-- Henüz analiz yapılmadı -->
+<section class="empty-state glass-card">
+    <div class="empty-icon">🔎</div>
+    <h2>Analiz Bekliyor</h2>
+    <p>Yukarıdaki panelden sektör ve periyot seçerek analizi başlatın.</p>
+    <p class="empty-hint">Tüm sektörler seçildiğinde {{ stock_count }} hisse analiz edilecektir. Hisse sayısına bağlı
+        olarak bu işlem birkaç dakika sürebilir.</p>
+</section>
+{% endif %}
+
+<script>
+    // Loading overlay
+    document.getElementById('analysisForm').addEventListener('submit', function () {
+        document.getElementById('loading').style.display = 'flex';
+        document.getElementById('analyzeBtn').disabled = true;
+        document.getElementById('analyzeBtn').textContent = '⏳ Analiz ediliyor...';
+    });
+
+    // ============================================================
+    // Sıralanabilir tablo + Sayfalama
+    // ============================================================
+    (function () {
+        const table = document.getElementById('resultsTable');
+        if (!table) return;
+
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const totalRows = rows.length;
+        const PAGE_SIZE = 100;
+        let visibleCount = Math.min(PAGE_SIZE, totalRows);
+        let currentSortCol = null;
+        let currentSortDir = 'desc'; // varsayılan: büyükten küçüğe
+
+        const showMoreContainer = document.getElementById('showMoreContainer');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        const showingCount = document.getElementById('showingCount');
+
+        // İlk yüklemede sayfalama uygula
+        function applyPagination() {
+            rows.forEach((row, i) => {
+                row.style.display = i < visibleCount ? '' : 'none';
+            });
+            if (showingCount) {
+                showingCount.textContent = `${visibleCount} / ${totalRows} hisse gösteriliyor`;
+            }
+            if (showMoreContainer) {
+                showMoreContainer.style.display = visibleCount < totalRows ? 'flex' : 'none';
+            }
+            if (showMoreBtn) {
+                const remaining = totalRows - visibleCount;
+                showMoreBtn.textContent = `📊 ${remaining} hisse daha göster`;
+            }
+        }
+
+        // Daha fazla göster
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', function () {
+                visibleCount = Math.min(visibleCount + PAGE_SIZE, totalRows);
+                applyPagination();
+            });
+        }
+
+        // Sıralama
+        const headers = table.querySelectorAll('th.sortable');
+        headers.forEach(th => {
+            th.style.cursor = 'pointer';
+            th.addEventListener('click', function () {
+                const col = parseInt(this.dataset.col);
+                const type = this.dataset.type;
+
+                // Aynı sütuna tıklandığında yönü değiştir
+                if (currentSortCol === col) {
+                    currentSortDir = currentSortDir === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSortCol = col;
+                    currentSortDir = 'desc'; // yeni sütunda her zaman büyükten küçüğe başla
+                }
+
+                // Ok göstergelerini güncelle
+                headers.forEach(h => {
+                    const arrow = h.querySelector('.sort-arrow');
+                    if (arrow) arrow.textContent = '';
+                });
+                const arrow = this.querySelector('.sort-arrow');
+                if (arrow) {
+                    arrow.textContent = currentSortDir === 'asc' ? ' ▲' : ' ▼';
+                }
+
+                // Active class
+                headers.forEach(h => h.classList.remove('sort-active'));
+                this.classList.add('sort-active');
+
+                // Satırları sırala
+                rows.sort((a, b) => {
+                    let aVal, bVal;
+
+                    if (type === 'number') {
+                        // data-value varsa onu kullan, yoksa text'i parse et
+                        const aCell = a.cells[col];
+                        const bCell = b.cells[col];
+                        aVal = parseFloat(aCell.dataset.value || aCell.textContent.replace(/[₺%+\s,]/g, '')) || 0;
+                        bVal = parseFloat(bCell.dataset.value || bCell.textContent.replace(/[₺%+\s,]/g, '')) || 0;
+                    } else {
+                        aVal = a.cells[col].textContent.trim().toLowerCase();
+                        bVal = b.cells[col].textContent.trim().toLowerCase();
+                    }
+
+                    if (aVal < bVal) return currentSortDir === 'asc' ? -1 : 1;
+                    if (aVal > bVal) return currentSortDir === 'asc' ? 1 : -1;
+                    return 0;
+                });
+
+                // DOM'u güncelle
+                rows.forEach(row => tbody.appendChild(row));
+                applyPagination();
+            });
+        });
+
+        // İlk yükleme
+        applyPagination();
+    })();
+</script>
+
+{% endblock %}
