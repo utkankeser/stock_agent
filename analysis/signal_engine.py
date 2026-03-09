@@ -230,102 +230,106 @@ def _generate_summary(result):
 
 
 def _generate_details(result):
-    """Detaylı analiz maddeleri oluşturur (9 indikatör + haber)."""
+    """Detaylı analiz maddeleri oluşturur (15 indikatör + haber)."""
     details = []
     indicators = result.get("indicators", {})
     
     if not indicators:
         return details
     
-    # RSI
+    # 1. RSI
     if "rsi" in indicators:
-        rsi = indicators["rsi"]
-        details.append({
-            "indicator": "RSI",
-            "value": str(rsi["value"]),
-            "signal": rsi["signal"],
-            "description": rsi["description"]
-        })
+        r = indicators["rsi"]
+        details.append({"indicator": "RSI", "value": str(r["value"]),
+                        "signal": r["signal"], "description": r["description"]})
     
-    # MACD
+    # 2. MACD
     if "macd" in indicators:
-        macd = indicators["macd"]
-        details.append({
-            "indicator": "MACD",
-            "value": f"{macd['macd_line']}",
-            "signal": macd["signal"],
-            "description": macd["description"]
-        })
+        m = indicators["macd"]
+        details.append({"indicator": "MACD", "value": f"{m['macd_line']}",
+                        "signal": m["signal"], "description": m["description"]})
     
-    # SMA
+    # 3. SMA
     if "sma" in indicators:
-        sma = indicators["sma"]
-        details.append({
-            "indicator": f"SMA ({config.SMA_SHORT}/{config.SMA_LONG})",
-            "value": f"{sma['sma_short']} / {sma['sma_long']}",
-            "signal": sma["signal"],
-            "description": sma["description"]
-        })
+        s = indicators["sma"]
+        details.append({"indicator": f"SMA ({config.SMA_SHORT}/{config.SMA_LONG})",
+                        "value": f"{s['sma_short']} / {s['sma_long']}",
+                        "signal": s["signal"], "description": s["description"]})
     
-    # EMA
+    # 4. EMA
     if "ema" in indicators:
-        ema = indicators["ema"]
-        details.append({
-            "indicator": f"EMA ({config.EMA_SHORT}/{config.EMA_LONG})",
-            "value": f"{ema['ema_short']} / {ema['ema_long']}",
-            "signal": ema["signal"],
-            "description": ema["description"]
-        })
+        e = indicators["ema"]
+        details.append({"indicator": f"EMA ({config.EMA_SHORT}/{config.EMA_LONG})",
+                        "value": f"{e['ema_short']} / {e['ema_long']}",
+                        "signal": e["signal"], "description": e["description"]})
     
-    # Bollinger
+    # 5. Bollinger
     if "bollinger" in indicators:
-        bb = indicators["bollinger"]
-        details.append({
-            "indicator": "Bollinger",
-            "value": f"{bb['lower']} - {bb['upper']}",
-            "signal": bb["signal"],
-            "description": bb["description"]
-        })
+        b = indicators["bollinger"]
+        details.append({"indicator": "Bollinger", "value": f"{b['lower']} - {b['upper']}",
+                        "signal": b["signal"], "description": b["description"]})
     
-    # Stokastik
+    # 6. Stokastik
     if "stochastic" in indicators:
-        stoch = indicators["stochastic"]
-        details.append({
-            "indicator": "Stokastik",
-            "value": f"%K:{stoch['k']} %D:{stoch['d']}",
-            "signal": stoch["signal"],
-            "description": stoch["description"]
-        })
+        st = indicators["stochastic"]
+        details.append({"indicator": "Stokastik", "value": f"%K:{st['k']} %D:{st['d']}",
+                        "signal": st["signal"], "description": st["description"]})
     
-    # ADX
+    # 7. ADX
     if "adx" in indicators:
-        adx = indicators["adx"]
-        details.append({
-            "indicator": "ADX",
-            "value": f"{adx['value']} (+DI:{adx['plus_di']} -DI:{adx['minus_di']})",
-            "signal": adx["signal"],
-            "description": adx["description"]
-        })
+        a = indicators["adx"]
+        details.append({"indicator": "ADX",
+                        "value": f"{a['value']} (+DI:{a['plus_di']} -DI:{a['minus_di']})",
+                        "signal": a["signal"], "description": a["description"]})
     
-    # CCI
+    # 8. CCI
     if "cci" in indicators:
-        cci = indicators["cci"]
-        details.append({
-            "indicator": "CCI",
-            "value": str(cci["value"]),
-            "signal": cci["signal"],
-            "description": cci["description"]
-        })
+        c = indicators["cci"]
+        details.append({"indicator": "CCI", "value": str(c["value"]),
+                        "signal": c["signal"], "description": c["description"]})
     
-    # Williams %R
+    # 9. Williams %R
     if "williams" in indicators:
-        williams = indicators["williams"]
-        details.append({
-            "indicator": "Williams %R",
-            "value": str(williams["value"]),
-            "signal": williams["signal"],
-            "description": williams["description"]
-        })
+        w = indicators["williams"]
+        details.append({"indicator": "Williams %R", "value": str(w["value"]),
+                        "signal": w["signal"], "description": w["description"]})
+    
+    # 10. OBV
+    if "obv" in indicators:
+        o = indicators["obv"]
+        details.append({"indicator": "OBV", "value": f"{o['value']:,}",
+                        "signal": o["signal"], "description": o["description"]})
+    
+    # 11. MFI
+    if "mfi" in indicators:
+        mf = indicators["mfi"]
+        details.append({"indicator": "MFI", "value": str(mf["value"]),
+                        "signal": mf["signal"], "description": mf["description"]})
+    
+    # 12. Parabolic SAR
+    if "psar" in indicators:
+        ps = indicators["psar"]
+        details.append({"indicator": "Parabolic SAR", "value": str(ps["value"]),
+                        "signal": ps["signal"], "description": ps["description"]})
+    
+    # 13. Ichimoku
+    if "ichimoku" in indicators:
+        ic = indicators["ichimoku"]
+        details.append({"indicator": "Ichimoku",
+                        "value": f"T:{ic['tenkan']} K:{ic['kijun']}",
+                        "signal": ic["signal"], "description": ic["description"]})
+    
+    # 14. ROC
+    if "roc" in indicators:
+        rc = indicators["roc"]
+        details.append({"indicator": "ROC", "value": f"%{rc['value']}",
+                        "signal": rc["signal"], "description": rc["description"]})
+    
+    # 15. CMF
+    if "cmf" in indicators:
+        cm = indicators["cmf"]
+        details.append({"indicator": "CMF", "value": f"{cm['value']:.4f}",
+                        "signal": cm["signal"], "description": cm["description"]})
     
     # Haber
     news_score = result.get("news_score", 50)
@@ -341,9 +345,10 @@ def _generate_details(result):
         details.append({
             "indicator": "Haber Analizi",
             "value": f"{news_count} haber",
-            "signal": "AL" if news_score > 60 else ("SAT" if news_score < 40 else "TUT"),
+            "signal": "AL" if news_score > 60 else ("SAT" if news_score < 40 else "NÖTR"),
             "description": label
         })
     
     return details
+
 

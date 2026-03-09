@@ -1,0 +1,2426 @@
+{
+  "timestamp": "2026-03-01T16:55:37.591677",
+  "count": 605,
+  "stocks": {
+    "ACSEL.IS": {
+      "name": "ACSEL",
+      "sector": "Bilinmiyor"
+    },
+    "ADEL.IS": {
+      "name": "ADEL",
+      "sector": "Bilinmiyor"
+    },
+    "ADESE.IS": {
+      "name": "ADESE",
+      "sector": "Bilinmiyor"
+    },
+    "ADGYO.IS": {
+      "name": "ADGYO",
+      "sector": "Bilinmiyor"
+    },
+    "AEFES.IS": {
+      "name": "AEFES",
+      "sector": "Bilinmiyor"
+    },
+    "AFYON.IS": {
+      "name": "AFYON",
+      "sector": "Bilinmiyor"
+    },
+    "AGESA.IS": {
+      "name": "AGESA",
+      "sector": "Bilinmiyor"
+    },
+    "AGHOL.IS": {
+      "name": "AGHOL",
+      "sector": "Bilinmiyor"
+    },
+    "AGROT.IS": {
+      "name": "AGROT",
+      "sector": "Bilinmiyor"
+    },
+    "AGYO.IS": {
+      "name": "AGYO",
+      "sector": "Bilinmiyor"
+    },
+    "AHGAZ.IS": {
+      "name": "AHGAZ",
+      "sector": "Bilinmiyor"
+    },
+    "AHSGY.IS": {
+      "name": "AHSGY",
+      "sector": "Bilinmiyor"
+    },
+    "AKBNK.IS": {
+      "name": "AKBNK",
+      "sector": "Bilinmiyor"
+    },
+    "AKCNS.IS": {
+      "name": "AKCNS",
+      "sector": "Bilinmiyor"
+    },
+    "AKENR.IS": {
+      "name": "AKENR",
+      "sector": "Bilinmiyor"
+    },
+    "AKFGY.IS": {
+      "name": "AKFGY",
+      "sector": "Bilinmiyor"
+    },
+    "AKFIS.IS": {
+      "name": "AKFIS",
+      "sector": "Bilinmiyor"
+    },
+    "AKFYE.IS": {
+      "name": "AKFYE",
+      "sector": "Bilinmiyor"
+    },
+    "AKGRT.IS": {
+      "name": "AKGRT",
+      "sector": "Bilinmiyor"
+    },
+    "AKHAN.IS": {
+      "name": "AKHAN",
+      "sector": "Bilinmiyor"
+    },
+    "AKMGY.IS": {
+      "name": "AKMGY",
+      "sector": "Bilinmiyor"
+    },
+    "AKSA.IS": {
+      "name": "AKSA",
+      "sector": "Bilinmiyor"
+    },
+    "AKSEN.IS": {
+      "name": "AKSEN",
+      "sector": "Bilinmiyor"
+    },
+    "AKSGY.IS": {
+      "name": "AKSGY",
+      "sector": "Bilinmiyor"
+    },
+    "AKSUE.IS": {
+      "name": "AKSUE",
+      "sector": "Bilinmiyor"
+    },
+    "AKYHO.IS": {
+      "name": "AKYHO",
+      "sector": "Bilinmiyor"
+    },
+    "ALARK.IS": {
+      "name": "ALARK",
+      "sector": "Bilinmiyor"
+    },
+    "ALBRK.IS": {
+      "name": "ALBRK",
+      "sector": "Bilinmiyor"
+    },
+    "ALCAR.IS": {
+      "name": "ALCAR",
+      "sector": "Bilinmiyor"
+    },
+    "ALCTL.IS": {
+      "name": "ALCTL",
+      "sector": "Bilinmiyor"
+    },
+    "ALFAS.IS": {
+      "name": "ALFAS",
+      "sector": "Bilinmiyor"
+    },
+    "ALGYO.IS": {
+      "name": "ALGYO",
+      "sector": "Bilinmiyor"
+    },
+    "ALKA.IS": {
+      "name": "ALKA",
+      "sector": "Bilinmiyor"
+    },
+    "ALKIM.IS": {
+      "name": "ALKIM",
+      "sector": "Bilinmiyor"
+    },
+    "ALKLC.IS": {
+      "name": "ALKLC",
+      "sector": "Bilinmiyor"
+    },
+    "ALTNY.IS": {
+      "name": "ALTNY",
+      "sector": "Bilinmiyor"
+    },
+    "ALVES.IS": {
+      "name": "ALVES",
+      "sector": "Bilinmiyor"
+    },
+    "ANELE.IS": {
+      "name": "ANELE",
+      "sector": "Bilinmiyor"
+    },
+    "ANGEN.IS": {
+      "name": "ANGEN",
+      "sector": "Bilinmiyor"
+    },
+    "ANHYT.IS": {
+      "name": "ANHYT",
+      "sector": "Bilinmiyor"
+    },
+    "ANSGR.IS": {
+      "name": "ANSGR",
+      "sector": "Bilinmiyor"
+    },
+    "ARASE.IS": {
+      "name": "ARASE",
+      "sector": "Bilinmiyor"
+    },
+    "ARCLK.IS": {
+      "name": "ARCLK",
+      "sector": "Bilinmiyor"
+    },
+    "ARDYZ.IS": {
+      "name": "ARDYZ",
+      "sector": "Bilinmiyor"
+    },
+    "ARENA.IS": {
+      "name": "ARENA",
+      "sector": "Bilinmiyor"
+    },
+    "ARFYE.IS": {
+      "name": "ARFYE",
+      "sector": "Bilinmiyor"
+    },
+    "ARMGD.IS": {
+      "name": "ARMGD",
+      "sector": "Bilinmiyor"
+    },
+    "ARSAN.IS": {
+      "name": "ARSAN",
+      "sector": "Bilinmiyor"
+    },
+    "ARTMS.IS": {
+      "name": "ARTMS",
+      "sector": "Bilinmiyor"
+    },
+    "ARZUM.IS": {
+      "name": "ARZUM",
+      "sector": "Bilinmiyor"
+    },
+    "ASELS.IS": {
+      "name": "ASELS",
+      "sector": "Bilinmiyor"
+    },
+    "ASGYO.IS": {
+      "name": "ASGYO",
+      "sector": "Bilinmiyor"
+    },
+    "ASTOR.IS": {
+      "name": "ASTOR",
+      "sector": "Bilinmiyor"
+    },
+    "ASUZU.IS": {
+      "name": "ASUZU",
+      "sector": "Bilinmiyor"
+    },
+    "ATAGY.IS": {
+      "name": "ATAGY",
+      "sector": "Bilinmiyor"
+    },
+    "ATAKP.IS": {
+      "name": "ATAKP",
+      "sector": "Bilinmiyor"
+    },
+    "ATATP.IS": {
+      "name": "ATATP",
+      "sector": "Bilinmiyor"
+    },
+    "ATATR.IS": {
+      "name": "ATATR",
+      "sector": "Bilinmiyor"
+    },
+    "ATEKS.IS": {
+      "name": "ATEKS",
+      "sector": "Bilinmiyor"
+    },
+    "ATLAS.IS": {
+      "name": "ATLAS",
+      "sector": "Bilinmiyor"
+    },
+    "ATSYH.IS": {
+      "name": "ATSYH",
+      "sector": "Bilinmiyor"
+    },
+    "AVGYO.IS": {
+      "name": "AVGYO",
+      "sector": "Bilinmiyor"
+    },
+    "AVHOL.IS": {
+      "name": "AVHOL",
+      "sector": "Bilinmiyor"
+    },
+    "AVOD.IS": {
+      "name": "AVOD",
+      "sector": "Bilinmiyor"
+    },
+    "AVPGY.IS": {
+      "name": "AVPGY",
+      "sector": "Bilinmiyor"
+    },
+    "AVTUR.IS": {
+      "name": "AVTUR",
+      "sector": "Bilinmiyor"
+    },
+    "AYCES.IS": {
+      "name": "AYCES",
+      "sector": "Bilinmiyor"
+    },
+    "AYDEM.IS": {
+      "name": "AYDEM",
+      "sector": "Bilinmiyor"
+    },
+    "AYEN.IS": {
+      "name": "AYEN",
+      "sector": "Bilinmiyor"
+    },
+    "AYES.IS": {
+      "name": "AYES",
+      "sector": "Bilinmiyor"
+    },
+    "AYGAZ.IS": {
+      "name": "AYGAZ",
+      "sector": "Bilinmiyor"
+    },
+    "AZTEK.IS": {
+      "name": "AZTEK",
+      "sector": "Bilinmiyor"
+    },
+    "BAGFS.IS": {
+      "name": "BAGFS",
+      "sector": "Bilinmiyor"
+    },
+    "BAHKM.IS": {
+      "name": "BAHKM",
+      "sector": "Bilinmiyor"
+    },
+    "BAKAB.IS": {
+      "name": "BAKAB",
+      "sector": "Bilinmiyor"
+    },
+    "BALAT.IS": {
+      "name": "BALAT",
+      "sector": "Bilinmiyor"
+    },
+    "BALSU.IS": {
+      "name": "BALSU",
+      "sector": "Bilinmiyor"
+    },
+    "BANVT.IS": {
+      "name": "BANVT",
+      "sector": "Bilinmiyor"
+    },
+    "BARMA.IS": {
+      "name": "BARMA",
+      "sector": "Bilinmiyor"
+    },
+    "BASCM.IS": {
+      "name": "BASCM",
+      "sector": "Bilinmiyor"
+    },
+    "BASGZ.IS": {
+      "name": "BASGZ",
+      "sector": "Bilinmiyor"
+    },
+    "BAYRK.IS": {
+      "name": "BAYRK",
+      "sector": "Bilinmiyor"
+    },
+    "BEGYO.IS": {
+      "name": "BEGYO",
+      "sector": "Bilinmiyor"
+    },
+    "BERA.IS": {
+      "name": "BERA",
+      "sector": "Bilinmiyor"
+    },
+    "BESLR.IS": {
+      "name": "BESLR",
+      "sector": "Bilinmiyor"
+    },
+    "BESTE.IS": {
+      "name": "BESTE",
+      "sector": "Bilinmiyor"
+    },
+    "BEYAZ.IS": {
+      "name": "BEYAZ",
+      "sector": "Bilinmiyor"
+    },
+    "BFREN.IS": {
+      "name": "BFREN",
+      "sector": "Bilinmiyor"
+    },
+    "BIENY.IS": {
+      "name": "BIENY",
+      "sector": "Bilinmiyor"
+    },
+    "BIGCH.IS": {
+      "name": "BIGCH",
+      "sector": "Bilinmiyor"
+    },
+    "BIGEN.IS": {
+      "name": "BIGEN",
+      "sector": "Bilinmiyor"
+    },
+    "BIGTK.IS": {
+      "name": "BIGTK",
+      "sector": "Bilinmiyor"
+    },
+    "BIMAS.IS": {
+      "name": "BIMAS",
+      "sector": "Bilinmiyor"
+    },
+    "BINBN.IS": {
+      "name": "BINBN",
+      "sector": "Bilinmiyor"
+    },
+    "BINHO.IS": {
+      "name": "BINHO",
+      "sector": "Bilinmiyor"
+    },
+    "BIOEN.IS": {
+      "name": "BIOEN",
+      "sector": "Bilinmiyor"
+    },
+    "BIZIM.IS": {
+      "name": "BIZIM",
+      "sector": "Bilinmiyor"
+    },
+    "BJKAS.IS": {
+      "name": "BJKAS",
+      "sector": "Bilinmiyor"
+    },
+    "BLCYT.IS": {
+      "name": "BLCYT",
+      "sector": "Bilinmiyor"
+    },
+    "BLUME.IS": {
+      "name": "BLUME",
+      "sector": "Bilinmiyor"
+    },
+    "BMSCH.IS": {
+      "name": "BMSCH",
+      "sector": "Bilinmiyor"
+    },
+    "BMSTL.IS": {
+      "name": "BMSTL",
+      "sector": "Bilinmiyor"
+    },
+    "BNTAS.IS": {
+      "name": "BNTAS",
+      "sector": "Bilinmiyor"
+    },
+    "BOBET.IS": {
+      "name": "BOBET",
+      "sector": "Bilinmiyor"
+    },
+    "BORLS.IS": {
+      "name": "BORLS",
+      "sector": "Bilinmiyor"
+    },
+    "BORSK.IS": {
+      "name": "BORSK",
+      "sector": "Bilinmiyor"
+    },
+    "BOSSA.IS": {
+      "name": "BOSSA",
+      "sector": "Bilinmiyor"
+    },
+    "BRISA.IS": {
+      "name": "BRISA",
+      "sector": "Bilinmiyor"
+    },
+    "BRKO.IS": {
+      "name": "BRKO",
+      "sector": "Bilinmiyor"
+    },
+    "BRKSN.IS": {
+      "name": "BRKSN",
+      "sector": "Bilinmiyor"
+    },
+    "BRKVY.IS": {
+      "name": "BRKVY",
+      "sector": "Bilinmiyor"
+    },
+    "BRLSM.IS": {
+      "name": "BRLSM",
+      "sector": "Bilinmiyor"
+    },
+    "BRMEN.IS": {
+      "name": "BRMEN",
+      "sector": "Bilinmiyor"
+    },
+    "BRSAN.IS": {
+      "name": "BRSAN",
+      "sector": "Bilinmiyor"
+    },
+    "BRYAT.IS": {
+      "name": "BRYAT",
+      "sector": "Bilinmiyor"
+    },
+    "BSOKE.IS": {
+      "name": "BSOKE",
+      "sector": "Bilinmiyor"
+    },
+    "BTCIM.IS": {
+      "name": "BTCIM",
+      "sector": "Bilinmiyor"
+    },
+    "BUCIM.IS": {
+      "name": "BUCIM",
+      "sector": "Bilinmiyor"
+    },
+    "BULGS.IS": {
+      "name": "BULGS",
+      "sector": "Bilinmiyor"
+    },
+    "BURCE.IS": {
+      "name": "BURCE",
+      "sector": "Bilinmiyor"
+    },
+    "BURVA.IS": {
+      "name": "BURVA",
+      "sector": "Bilinmiyor"
+    },
+    "BVSAN.IS": {
+      "name": "BVSAN",
+      "sector": "Bilinmiyor"
+    },
+    "BYDNR.IS": {
+      "name": "BYDNR",
+      "sector": "Bilinmiyor"
+    },
+    "CANTE.IS": {
+      "name": "CANTE",
+      "sector": "Bilinmiyor"
+    },
+    "CASA.IS": {
+      "name": "CASA",
+      "sector": "Bilinmiyor"
+    },
+    "CATES.IS": {
+      "name": "CATES",
+      "sector": "Bilinmiyor"
+    },
+    "CCOLA.IS": {
+      "name": "CCOLA",
+      "sector": "Bilinmiyor"
+    },
+    "CELHA.IS": {
+      "name": "CELHA",
+      "sector": "Bilinmiyor"
+    },
+    "CEMAS.IS": {
+      "name": "CEMAS",
+      "sector": "Bilinmiyor"
+    },
+    "CEMTS.IS": {
+      "name": "CEMTS",
+      "sector": "Bilinmiyor"
+    },
+    "CEMZY.IS": {
+      "name": "CEMZY",
+      "sector": "Bilinmiyor"
+    },
+    "CEOEM.IS": {
+      "name": "CEOEM",
+      "sector": "Bilinmiyor"
+    },
+    "CGCAM.IS": {
+      "name": "CGCAM",
+      "sector": "Bilinmiyor"
+    },
+    "CIMSA.IS": {
+      "name": "CIMSA",
+      "sector": "Bilinmiyor"
+    },
+    "CLEBI.IS": {
+      "name": "CLEBI",
+      "sector": "Bilinmiyor"
+    },
+    "CMBTN.IS": {
+      "name": "CMBTN",
+      "sector": "Bilinmiyor"
+    },
+    "CMENT.IS": {
+      "name": "CMENT",
+      "sector": "Bilinmiyor"
+    },
+    "CONSE.IS": {
+      "name": "CONSE",
+      "sector": "Bilinmiyor"
+    },
+    "COSMO.IS": {
+      "name": "COSMO",
+      "sector": "Bilinmiyor"
+    },
+    "CRDFA.IS": {
+      "name": "CRDFA",
+      "sector": "Bilinmiyor"
+    },
+    "CRFSA.IS": {
+      "name": "CRFSA",
+      "sector": "Bilinmiyor"
+    },
+    "CUSAN.IS": {
+      "name": "CUSAN",
+      "sector": "Bilinmiyor"
+    },
+    "CVKMD.IS": {
+      "name": "CVKMD",
+      "sector": "Bilinmiyor"
+    },
+    "CWENE.IS": {
+      "name": "CWENE",
+      "sector": "Bilinmiyor"
+    },
+    "DAGI.IS": {
+      "name": "DAGI",
+      "sector": "Bilinmiyor"
+    },
+    "DAPGM.IS": {
+      "name": "DAPGM",
+      "sector": "Bilinmiyor"
+    },
+    "DARDL.IS": {
+      "name": "DARDL",
+      "sector": "Bilinmiyor"
+    },
+    "DCTTR.IS": {
+      "name": "DCTTR",
+      "sector": "Bilinmiyor"
+    },
+    "DENGE.IS": {
+      "name": "DENGE",
+      "sector": "Bilinmiyor"
+    },
+    "DERHL.IS": {
+      "name": "DERHL",
+      "sector": "Bilinmiyor"
+    },
+    "DERIM.IS": {
+      "name": "DERIM",
+      "sector": "Bilinmiyor"
+    },
+    "DESA.IS": {
+      "name": "DESA",
+      "sector": "Bilinmiyor"
+    },
+    "DESPC.IS": {
+      "name": "DESPC",
+      "sector": "Bilinmiyor"
+    },
+    "DEVA.IS": {
+      "name": "DEVA",
+      "sector": "Bilinmiyor"
+    },
+    "DGATE.IS": {
+      "name": "DGATE",
+      "sector": "Bilinmiyor"
+    },
+    "DGGYO.IS": {
+      "name": "DGGYO",
+      "sector": "Bilinmiyor"
+    },
+    "DGNMO.IS": {
+      "name": "DGNMO",
+      "sector": "Bilinmiyor"
+    },
+    "DIRIT.IS": {
+      "name": "DIRIT",
+      "sector": "Bilinmiyor"
+    },
+    "DITAS.IS": {
+      "name": "DITAS",
+      "sector": "Bilinmiyor"
+    },
+    "DMLKTG.IS": {
+      "name": "DMLKTG",
+      "sector": "Bilinmiyor"
+    },
+    "DMRGD.IS": {
+      "name": "DMRGD",
+      "sector": "Bilinmiyor"
+    },
+    "DMSAS.IS": {
+      "name": "DMSAS",
+      "sector": "Bilinmiyor"
+    },
+    "DNISI.IS": {
+      "name": "DNISI",
+      "sector": "Bilinmiyor"
+    },
+    "DOAS.IS": {
+      "name": "DOAS",
+      "sector": "Bilinmiyor"
+    },
+    "DOCO.IS": {
+      "name": "DOCO",
+      "sector": "Bilinmiyor"
+    },
+    "DOFER.IS": {
+      "name": "DOFER",
+      "sector": "Bilinmiyor"
+    },
+    "DOFRB.IS": {
+      "name": "DOFRB",
+      "sector": "Bilinmiyor"
+    },
+    "DOGUB.IS": {
+      "name": "DOGUB",
+      "sector": "Bilinmiyor"
+    },
+    "DOHOL.IS": {
+      "name": "DOHOL",
+      "sector": "Bilinmiyor"
+    },
+    "DOKTA.IS": {
+      "name": "DOKTA",
+      "sector": "Bilinmiyor"
+    },
+    "DSTKF.IS": {
+      "name": "DSTKF",
+      "sector": "Bilinmiyor"
+    },
+    "DUNYH.IS": {
+      "name": "DUNYH",
+      "sector": "Bilinmiyor"
+    },
+    "DURDO.IS": {
+      "name": "DURDO",
+      "sector": "Bilinmiyor"
+    },
+    "DURKN.IS": {
+      "name": "DURKN",
+      "sector": "Bilinmiyor"
+    },
+    "DYOBY.IS": {
+      "name": "DYOBY",
+      "sector": "Bilinmiyor"
+    },
+    "DZGYO.IS": {
+      "name": "DZGYO",
+      "sector": "Bilinmiyor"
+    },
+    "EBEBK.IS": {
+      "name": "EBEBK",
+      "sector": "Bilinmiyor"
+    },
+    "ECILC.IS": {
+      "name": "ECILC",
+      "sector": "Bilinmiyor"
+    },
+    "ECOGR.IS": {
+      "name": "ECOGR",
+      "sector": "Bilinmiyor"
+    },
+    "ECZYT.IS": {
+      "name": "ECZYT",
+      "sector": "Bilinmiyor"
+    },
+    "EDATA.IS": {
+      "name": "EDATA",
+      "sector": "Bilinmiyor"
+    },
+    "EDIP.IS": {
+      "name": "EDIP",
+      "sector": "Bilinmiyor"
+    },
+    "EFOR.IS": {
+      "name": "EFOR",
+      "sector": "Bilinmiyor"
+    },
+    "EGEEN.IS": {
+      "name": "EGEEN",
+      "sector": "Bilinmiyor"
+    },
+    "EGEGY.IS": {
+      "name": "EGEGY",
+      "sector": "Bilinmiyor"
+    },
+    "EGEPO.IS": {
+      "name": "EGEPO",
+      "sector": "Bilinmiyor"
+    },
+    "EGGUB.IS": {
+      "name": "EGGUB",
+      "sector": "Bilinmiyor"
+    },
+    "EGPRO.IS": {
+      "name": "EGPRO",
+      "sector": "Bilinmiyor"
+    },
+    "EGSER.IS": {
+      "name": "EGSER",
+      "sector": "Bilinmiyor"
+    },
+    "EKGYO.IS": {
+      "name": "EKGYO",
+      "sector": "Bilinmiyor"
+    },
+    "EKIZ.IS": {
+      "name": "EKIZ",
+      "sector": "Bilinmiyor"
+    },
+    "EKOS.IS": {
+      "name": "EKOS",
+      "sector": "Bilinmiyor"
+    },
+    "EKSUN.IS": {
+      "name": "EKSUN",
+      "sector": "Bilinmiyor"
+    },
+    "ELITE.IS": {
+      "name": "ELITE",
+      "sector": "Bilinmiyor"
+    },
+    "EMKEL.IS": {
+      "name": "EMKEL",
+      "sector": "Bilinmiyor"
+    },
+    "EMNIS.IS": {
+      "name": "EMNIS",
+      "sector": "Bilinmiyor"
+    },
+    "EMPAE.IS": {
+      "name": "EMPAE",
+      "sector": "Bilinmiyor"
+    },
+    "ENDAE.IS": {
+      "name": "ENDAE",
+      "sector": "Bilinmiyor"
+    },
+    "ENERY.IS": {
+      "name": "ENERY",
+      "sector": "Bilinmiyor"
+    },
+    "ENJSA.IS": {
+      "name": "ENJSA",
+      "sector": "Bilinmiyor"
+    },
+    "ENKAI.IS": {
+      "name": "ENKAI",
+      "sector": "Bilinmiyor"
+    },
+    "ENSRI.IS": {
+      "name": "ENSRI",
+      "sector": "Bilinmiyor"
+    },
+    "ENTRA.IS": {
+      "name": "ENTRA",
+      "sector": "Bilinmiyor"
+    },
+    "EPLAS.IS": {
+      "name": "EPLAS",
+      "sector": "Bilinmiyor"
+    },
+    "ERBOS.IS": {
+      "name": "ERBOS",
+      "sector": "Bilinmiyor"
+    },
+    "ERCB.IS": {
+      "name": "ERCB",
+      "sector": "Bilinmiyor"
+    },
+    "EREGL.IS": {
+      "name": "EREGL",
+      "sector": "Bilinmiyor"
+    },
+    "ERSU.IS": {
+      "name": "ERSU",
+      "sector": "Bilinmiyor"
+    },
+    "ESCAR.IS": {
+      "name": "ESCAR",
+      "sector": "Bilinmiyor"
+    },
+    "ESCOM.IS": {
+      "name": "ESCOM",
+      "sector": "Bilinmiyor"
+    },
+    "ESEN.IS": {
+      "name": "ESEN",
+      "sector": "Bilinmiyor"
+    },
+    "ETILR.IS": {
+      "name": "ETILR",
+      "sector": "Bilinmiyor"
+    },
+    "ETYAT.IS": {
+      "name": "ETYAT",
+      "sector": "Bilinmiyor"
+    },
+    "EUHOL.IS": {
+      "name": "EUHOL",
+      "sector": "Bilinmiyor"
+    },
+    "EUKYO.IS": {
+      "name": "EUKYO",
+      "sector": "Bilinmiyor"
+    },
+    "EUPWR.IS": {
+      "name": "EUPWR",
+      "sector": "Bilinmiyor"
+    },
+    "EUREN.IS": {
+      "name": "EUREN",
+      "sector": "Bilinmiyor"
+    },
+    "EUYO.IS": {
+      "name": "EUYO",
+      "sector": "Bilinmiyor"
+    },
+    "EYGYO.IS": {
+      "name": "EYGYO",
+      "sector": "Bilinmiyor"
+    },
+    "FADE.IS": {
+      "name": "FADE",
+      "sector": "Bilinmiyor"
+    },
+    "FENER.IS": {
+      "name": "FENER",
+      "sector": "Bilinmiyor"
+    },
+    "FLAP.IS": {
+      "name": "FLAP",
+      "sector": "Bilinmiyor"
+    },
+    "FMIZP.IS": {
+      "name": "FMIZP",
+      "sector": "Bilinmiyor"
+    },
+    "FONET.IS": {
+      "name": "FONET",
+      "sector": "Bilinmiyor"
+    },
+    "FORMT.IS": {
+      "name": "FORMT",
+      "sector": "Bilinmiyor"
+    },
+    "FORTE.IS": {
+      "name": "FORTE",
+      "sector": "Bilinmiyor"
+    },
+    "FRIGO.IS": {
+      "name": "FRIGO",
+      "sector": "Bilinmiyor"
+    },
+    "FRMPL.IS": {
+      "name": "FRMPL",
+      "sector": "Bilinmiyor"
+    },
+    "FROTO.IS": {
+      "name": "FROTO",
+      "sector": "Bilinmiyor"
+    },
+    "FZLGY.IS": {
+      "name": "FZLGY",
+      "sector": "Bilinmiyor"
+    },
+    "GARAN.IS": {
+      "name": "GARAN",
+      "sector": "Bilinmiyor"
+    },
+    "GARFA.IS": {
+      "name": "GARFA",
+      "sector": "Bilinmiyor"
+    },
+    "GATEG.IS": {
+      "name": "GATEG",
+      "sector": "Bilinmiyor"
+    },
+    "GEDIK.IS": {
+      "name": "GEDIK",
+      "sector": "Bilinmiyor"
+    },
+    "GEDZA.IS": {
+      "name": "GEDZA",
+      "sector": "Bilinmiyor"
+    },
+    "GENIL.IS": {
+      "name": "GENIL",
+      "sector": "Bilinmiyor"
+    },
+    "GENTS.IS": {
+      "name": "GENTS",
+      "sector": "Bilinmiyor"
+    },
+    "GEREL.IS": {
+      "name": "GEREL",
+      "sector": "Bilinmiyor"
+    },
+    "GESAN.IS": {
+      "name": "GESAN",
+      "sector": "Bilinmiyor"
+    },
+    "GIPTA.IS": {
+      "name": "GIPTA",
+      "sector": "Bilinmiyor"
+    },
+    "GLBMD.IS": {
+      "name": "GLBMD",
+      "sector": "Bilinmiyor"
+    },
+    "GLCVY.IS": {
+      "name": "GLCVY",
+      "sector": "Bilinmiyor"
+    },
+    "GLRMK.IS": {
+      "name": "GLRMK",
+      "sector": "Bilinmiyor"
+    },
+    "GLRYH.IS": {
+      "name": "GLRYH",
+      "sector": "Bilinmiyor"
+    },
+    "GLYHO.IS": {
+      "name": "GLYHO",
+      "sector": "Bilinmiyor"
+    },
+    "GMTAS.IS": {
+      "name": "GMTAS",
+      "sector": "Bilinmiyor"
+    },
+    "GOKNR.IS": {
+      "name": "GOKNR",
+      "sector": "Bilinmiyor"
+    },
+    "GOLTS.IS": {
+      "name": "GOLTS",
+      "sector": "Bilinmiyor"
+    },
+    "GOODY.IS": {
+      "name": "GOODY",
+      "sector": "Bilinmiyor"
+    },
+    "GOZDE.IS": {
+      "name": "GOZDE",
+      "sector": "Bilinmiyor"
+    },
+    "GRNYO.IS": {
+      "name": "GRNYO",
+      "sector": "Bilinmiyor"
+    },
+    "GRSEL.IS": {
+      "name": "GRSEL",
+      "sector": "Bilinmiyor"
+    },
+    "GRTHO.IS": {
+      "name": "GRTHO",
+      "sector": "Bilinmiyor"
+    },
+    "GSDDE.IS": {
+      "name": "GSDDE",
+      "sector": "Bilinmiyor"
+    },
+    "GSDHO.IS": {
+      "name": "GSDHO",
+      "sector": "Bilinmiyor"
+    },
+    "GSRAY.IS": {
+      "name": "GSRAY",
+      "sector": "Bilinmiyor"
+    },
+    "GUBRF.IS": {
+      "name": "GUBRF",
+      "sector": "Bilinmiyor"
+    },
+    "GUNDG.IS": {
+      "name": "GUNDG",
+      "sector": "Bilinmiyor"
+    },
+    "GWIND.IS": {
+      "name": "GWIND",
+      "sector": "Bilinmiyor"
+    },
+    "GZNMI.IS": {
+      "name": "GZNMI",
+      "sector": "Bilinmiyor"
+    },
+    "HALKB.IS": {
+      "name": "HALKB",
+      "sector": "Bilinmiyor"
+    },
+    "HATEK.IS": {
+      "name": "HATEK",
+      "sector": "Bilinmiyor"
+    },
+    "HATSN.IS": {
+      "name": "HATSN",
+      "sector": "Bilinmiyor"
+    },
+    "HDFGS.IS": {
+      "name": "HDFGS",
+      "sector": "Bilinmiyor"
+    },
+    "HEDEF.IS": {
+      "name": "HEDEF",
+      "sector": "Bilinmiyor"
+    },
+    "HEKTS.IS": {
+      "name": "HEKTS",
+      "sector": "Bilinmiyor"
+    },
+    "HKTM.IS": {
+      "name": "HKTM",
+      "sector": "Bilinmiyor"
+    },
+    "HLGYO.IS": {
+      "name": "HLGYO",
+      "sector": "Bilinmiyor"
+    },
+    "HOROZ.IS": {
+      "name": "HOROZ",
+      "sector": "Bilinmiyor"
+    },
+    "HRKET.IS": {
+      "name": "HRKET",
+      "sector": "Bilinmiyor"
+    },
+    "HTTBT.IS": {
+      "name": "HTTBT",
+      "sector": "Bilinmiyor"
+    },
+    "HUBVC.IS": {
+      "name": "HUBVC",
+      "sector": "Bilinmiyor"
+    },
+    "HUNER.IS": {
+      "name": "HUNER",
+      "sector": "Bilinmiyor"
+    },
+    "HURGZ.IS": {
+      "name": "HURGZ",
+      "sector": "Bilinmiyor"
+    },
+    "ICBCT.IS": {
+      "name": "ICBCT",
+      "sector": "Bilinmiyor"
+    },
+    "ICUGS.IS": {
+      "name": "ICUGS",
+      "sector": "Bilinmiyor"
+    },
+    "IDGYO.IS": {
+      "name": "IDGYO",
+      "sector": "Bilinmiyor"
+    },
+    "IEYHO.IS": {
+      "name": "IEYHO",
+      "sector": "Bilinmiyor"
+    },
+    "IHAAS.IS": {
+      "name": "IHAAS",
+      "sector": "Bilinmiyor"
+    },
+    "IHEVA.IS": {
+      "name": "IHEVA",
+      "sector": "Bilinmiyor"
+    },
+    "IHGZT.IS": {
+      "name": "IHGZT",
+      "sector": "Bilinmiyor"
+    },
+    "IHLAS.IS": {
+      "name": "IHLAS",
+      "sector": "Bilinmiyor"
+    },
+    "IHLGM.IS": {
+      "name": "IHLGM",
+      "sector": "Bilinmiyor"
+    },
+    "IHYAY.IS": {
+      "name": "IHYAY",
+      "sector": "Bilinmiyor"
+    },
+    "IMASM.IS": {
+      "name": "IMASM",
+      "sector": "Bilinmiyor"
+    },
+    "INDES.IS": {
+      "name": "INDES",
+      "sector": "Bilinmiyor"
+    },
+    "INFO.IS": {
+      "name": "INFO",
+      "sector": "Bilinmiyor"
+    },
+    "INGRM.IS": {
+      "name": "INGRM",
+      "sector": "Bilinmiyor"
+    },
+    "INTEK.IS": {
+      "name": "INTEK",
+      "sector": "Bilinmiyor"
+    },
+    "INTEM.IS": {
+      "name": "INTEM",
+      "sector": "Bilinmiyor"
+    },
+    "INVEO.IS": {
+      "name": "INVEO",
+      "sector": "Bilinmiyor"
+    },
+    "INVES.IS": {
+      "name": "INVES",
+      "sector": "Bilinmiyor"
+    },
+    "ISATR.IS": {
+      "name": "ISATR",
+      "sector": "Bilinmiyor"
+    },
+    "ISBIR.IS": {
+      "name": "ISBIR",
+      "sector": "Bilinmiyor"
+    },
+    "ISBTR.IS": {
+      "name": "ISBTR",
+      "sector": "Bilinmiyor"
+    },
+    "ISCTR.IS": {
+      "name": "ISCTR",
+      "sector": "Bilinmiyor"
+    },
+    "ISDMR.IS": {
+      "name": "ISDMR",
+      "sector": "Bilinmiyor"
+    },
+    "ISFIN.IS": {
+      "name": "ISFIN",
+      "sector": "Bilinmiyor"
+    },
+    "ISGSY.IS": {
+      "name": "ISGSY",
+      "sector": "Bilinmiyor"
+    },
+    "ISGYO.IS": {
+      "name": "ISGYO",
+      "sector": "Bilinmiyor"
+    },
+    "ISKPL.IS": {
+      "name": "ISKPL",
+      "sector": "Bilinmiyor"
+    },
+    "ISKUR.IS": {
+      "name": "ISKUR",
+      "sector": "Bilinmiyor"
+    },
+    "ISMEN.IS": {
+      "name": "ISMEN",
+      "sector": "Bilinmiyor"
+    },
+    "ISSEN.IS": {
+      "name": "ISSEN",
+      "sector": "Bilinmiyor"
+    },
+    "ISYAT.IS": {
+      "name": "ISYAT",
+      "sector": "Bilinmiyor"
+    },
+    "IZENR.IS": {
+      "name": "IZENR",
+      "sector": "Bilinmiyor"
+    },
+    "IZFAS.IS": {
+      "name": "IZFAS",
+      "sector": "Bilinmiyor"
+    },
+    "IZINV.IS": {
+      "name": "IZINV",
+      "sector": "Bilinmiyor"
+    },
+    "IZMDC.IS": {
+      "name": "IZMDC",
+      "sector": "Bilinmiyor"
+    },
+    "JANTS.IS": {
+      "name": "JANTS",
+      "sector": "Bilinmiyor"
+    },
+    "KAPLM.IS": {
+      "name": "KAPLM",
+      "sector": "Bilinmiyor"
+    },
+    "KAREL.IS": {
+      "name": "KAREL",
+      "sector": "Bilinmiyor"
+    },
+    "KARSN.IS": {
+      "name": "KARSN",
+      "sector": "Bilinmiyor"
+    },
+    "KARTN.IS": {
+      "name": "KARTN",
+      "sector": "Bilinmiyor"
+    },
+    "KATMR.IS": {
+      "name": "KATMR",
+      "sector": "Bilinmiyor"
+    },
+    "KAYSE.IS": {
+      "name": "KAYSE",
+      "sector": "Bilinmiyor"
+    },
+    "KBORU.IS": {
+      "name": "KBORU",
+      "sector": "Bilinmiyor"
+    },
+    "KCAER.IS": {
+      "name": "KCAER",
+      "sector": "Bilinmiyor"
+    },
+    "KCHOL.IS": {
+      "name": "KCHOL",
+      "sector": "Bilinmiyor"
+    },
+    "KENT.IS": {
+      "name": "KENT",
+      "sector": "Bilinmiyor"
+    },
+    "KERVN.IS": {
+      "name": "KERVN",
+      "sector": "Bilinmiyor"
+    },
+    "KFEIN.IS": {
+      "name": "KFEIN",
+      "sector": "Bilinmiyor"
+    },
+    "KGYO.IS": {
+      "name": "KGYO",
+      "sector": "Bilinmiyor"
+    },
+    "KIMMR.IS": {
+      "name": "KIMMR",
+      "sector": "Bilinmiyor"
+    },
+    "KLGYO.IS": {
+      "name": "KLGYO",
+      "sector": "Bilinmiyor"
+    },
+    "KLKIM.IS": {
+      "name": "KLKIM",
+      "sector": "Bilinmiyor"
+    },
+    "KLMSN.IS": {
+      "name": "KLMSN",
+      "sector": "Bilinmiyor"
+    },
+    "KLNMA.IS": {
+      "name": "KLNMA",
+      "sector": "Bilinmiyor"
+    },
+    "KLRHO.IS": {
+      "name": "KLRHO",
+      "sector": "Bilinmiyor"
+    },
+    "KLSER.IS": {
+      "name": "KLSER",
+      "sector": "Bilinmiyor"
+    },
+    "KLSYN.IS": {
+      "name": "KLSYN",
+      "sector": "Bilinmiyor"
+    },
+    "KLYPV.IS": {
+      "name": "KLYPV",
+      "sector": "Bilinmiyor"
+    },
+    "KMPUR.IS": {
+      "name": "KMPUR",
+      "sector": "Bilinmiyor"
+    },
+    "KNFRT.IS": {
+      "name": "KNFRT",
+      "sector": "Bilinmiyor"
+    },
+    "KOCMT.IS": {
+      "name": "KOCMT",
+      "sector": "Bilinmiyor"
+    },
+    "KONKA.IS": {
+      "name": "KONKA",
+      "sector": "Bilinmiyor"
+    },
+    "KONTR.IS": {
+      "name": "KONTR",
+      "sector": "Bilinmiyor"
+    },
+    "KONYA.IS": {
+      "name": "KONYA",
+      "sector": "Bilinmiyor"
+    },
+    "KOPOL.IS": {
+      "name": "KOPOL",
+      "sector": "Bilinmiyor"
+    },
+    "KORDS.IS": {
+      "name": "KORDS",
+      "sector": "Bilinmiyor"
+    },
+    "KOTON.IS": {
+      "name": "KOTON",
+      "sector": "Bilinmiyor"
+    },
+    "KRDMA.IS": {
+      "name": "KRDMA",
+      "sector": "Bilinmiyor"
+    },
+    "KRDMB.IS": {
+      "name": "KRDMB",
+      "sector": "Bilinmiyor"
+    },
+    "KRDMD.IS": {
+      "name": "KRDMD",
+      "sector": "Bilinmiyor"
+    },
+    "KRGYO.IS": {
+      "name": "KRGYO",
+      "sector": "Bilinmiyor"
+    },
+    "KRONT.IS": {
+      "name": "KRONT",
+      "sector": "Bilinmiyor"
+    },
+    "KRPLS.IS": {
+      "name": "KRPLS",
+      "sector": "Bilinmiyor"
+    },
+    "KRSTL.IS": {
+      "name": "KRSTL",
+      "sector": "Bilinmiyor"
+    },
+    "KRTEK.IS": {
+      "name": "KRTEK",
+      "sector": "Bilinmiyor"
+    },
+    "KRVGD.IS": {
+      "name": "KRVGD",
+      "sector": "Bilinmiyor"
+    },
+    "KSTUR.IS": {
+      "name": "KSTUR",
+      "sector": "Bilinmiyor"
+    },
+    "KTLEV.IS": {
+      "name": "KTLEV",
+      "sector": "Bilinmiyor"
+    },
+    "KTSKR.IS": {
+      "name": "KTSKR",
+      "sector": "Bilinmiyor"
+    },
+    "KUTPO.IS": {
+      "name": "KUTPO",
+      "sector": "Bilinmiyor"
+    },
+    "KUVVA.IS": {
+      "name": "KUVVA",
+      "sector": "Bilinmiyor"
+    },
+    "KUYAS.IS": {
+      "name": "KUYAS",
+      "sector": "Bilinmiyor"
+    },
+    "KZBGY.IS": {
+      "name": "KZBGY",
+      "sector": "Bilinmiyor"
+    },
+    "KZGYO.IS": {
+      "name": "KZGYO",
+      "sector": "Bilinmiyor"
+    },
+    "LIDER.IS": {
+      "name": "LIDER",
+      "sector": "Bilinmiyor"
+    },
+    "LIDFA.IS": {
+      "name": "LIDFA",
+      "sector": "Bilinmiyor"
+    },
+    "LILAK.IS": {
+      "name": "LILAK",
+      "sector": "Bilinmiyor"
+    },
+    "LINK.IS": {
+      "name": "LINK",
+      "sector": "Bilinmiyor"
+    },
+    "LKMNH.IS": {
+      "name": "LKMNH",
+      "sector": "Bilinmiyor"
+    },
+    "LMKDC.IS": {
+      "name": "LMKDC",
+      "sector": "Bilinmiyor"
+    },
+    "LOGO.IS": {
+      "name": "LOGO",
+      "sector": "Bilinmiyor"
+    },
+    "LRSHO.IS": {
+      "name": "LRSHO",
+      "sector": "Bilinmiyor"
+    },
+    "LUKSK.IS": {
+      "name": "LUKSK",
+      "sector": "Bilinmiyor"
+    },
+    "LYDHO.IS": {
+      "name": "LYDHO",
+      "sector": "Bilinmiyor"
+    },
+    "LYDYE.IS": {
+      "name": "LYDYE",
+      "sector": "Bilinmiyor"
+    },
+    "MAALT.IS": {
+      "name": "MAALT",
+      "sector": "Bilinmiyor"
+    },
+    "MACKO.IS": {
+      "name": "MACKO",
+      "sector": "Bilinmiyor"
+    },
+    "MAGEN.IS": {
+      "name": "MAGEN",
+      "sector": "Bilinmiyor"
+    },
+    "MAKIM.IS": {
+      "name": "MAKIM",
+      "sector": "Bilinmiyor"
+    },
+    "MAKTK.IS": {
+      "name": "MAKTK",
+      "sector": "Bilinmiyor"
+    },
+    "MANAS.IS": {
+      "name": "MANAS",
+      "sector": "Bilinmiyor"
+    },
+    "MARBL.IS": {
+      "name": "MARBL",
+      "sector": "Bilinmiyor"
+    },
+    "MARKA.IS": {
+      "name": "MARKA",
+      "sector": "Bilinmiyor"
+    },
+    "MARMR.IS": {
+      "name": "MARMR",
+      "sector": "Bilinmiyor"
+    },
+    "MARTI.IS": {
+      "name": "MARTI",
+      "sector": "Bilinmiyor"
+    },
+    "MAVI.IS": {
+      "name": "MAVI",
+      "sector": "Bilinmiyor"
+    },
+    "MEDTR.IS": {
+      "name": "MEDTR",
+      "sector": "Bilinmiyor"
+    },
+    "MEGAP.IS": {
+      "name": "MEGAP",
+      "sector": "Bilinmiyor"
+    },
+    "MEGMT.IS": {
+      "name": "MEGMT",
+      "sector": "Bilinmiyor"
+    },
+    "MEKAG.IS": {
+      "name": "MEKAG",
+      "sector": "Bilinmiyor"
+    },
+    "MEPET.IS": {
+      "name": "MEPET",
+      "sector": "Bilinmiyor"
+    },
+    "MERCN.IS": {
+      "name": "MERCN",
+      "sector": "Bilinmiyor"
+    },
+    "MERIT.IS": {
+      "name": "MERIT",
+      "sector": "Bilinmiyor"
+    },
+    "MERKO.IS": {
+      "name": "MERKO",
+      "sector": "Bilinmiyor"
+    },
+    "METRO.IS": {
+      "name": "METRO",
+      "sector": "Bilinmiyor"
+    },
+    "MEYSU.IS": {
+      "name": "MEYSU",
+      "sector": "Bilinmiyor"
+    },
+    "MGROS.IS": {
+      "name": "MGROS",
+      "sector": "Bilinmiyor"
+    },
+    "MHRGY.IS": {
+      "name": "MHRGY",
+      "sector": "Bilinmiyor"
+    },
+    "MIATK.IS": {
+      "name": "MIATK",
+      "sector": "Bilinmiyor"
+    },
+    "MMCAS.IS": {
+      "name": "MMCAS",
+      "sector": "Bilinmiyor"
+    },
+    "MNDRS.IS": {
+      "name": "MNDRS",
+      "sector": "Bilinmiyor"
+    },
+    "MNDTR.IS": {
+      "name": "MNDTR",
+      "sector": "Bilinmiyor"
+    },
+    "MOBTL.IS": {
+      "name": "MOBTL",
+      "sector": "Bilinmiyor"
+    },
+    "MOGAN.IS": {
+      "name": "MOGAN",
+      "sector": "Bilinmiyor"
+    },
+    "MOPAS.IS": {
+      "name": "MOPAS",
+      "sector": "Bilinmiyor"
+    },
+    "MPARK.IS": {
+      "name": "MPARK",
+      "sector": "Bilinmiyor"
+    },
+    "MRGYO.IS": {
+      "name": "MRGYO",
+      "sector": "Bilinmiyor"
+    },
+    "MRSHL.IS": {
+      "name": "MRSHL",
+      "sector": "Bilinmiyor"
+    },
+    "MSGYO.IS": {
+      "name": "MSGYO",
+      "sector": "Bilinmiyor"
+    },
+    "MTRKS.IS": {
+      "name": "MTRKS",
+      "sector": "Bilinmiyor"
+    },
+    "MTRYO.IS": {
+      "name": "MTRYO",
+      "sector": "Bilinmiyor"
+    },
+    "MZHLD.IS": {
+      "name": "MZHLD",
+      "sector": "Bilinmiyor"
+    },
+    "NATEN.IS": {
+      "name": "NATEN",
+      "sector": "Bilinmiyor"
+    },
+    "NETAS.IS": {
+      "name": "NETAS",
+      "sector": "Bilinmiyor"
+    },
+    "NETCD.IS": {
+      "name": "NETCD",
+      "sector": "Bilinmiyor"
+    },
+    "NIBAS.IS": {
+      "name": "NIBAS",
+      "sector": "Bilinmiyor"
+    },
+    "NTGAZ.IS": {
+      "name": "NTGAZ",
+      "sector": "Bilinmiyor"
+    },
+    "NTHOL.IS": {
+      "name": "NTHOL",
+      "sector": "Bilinmiyor"
+    },
+    "NUGYO.IS": {
+      "name": "NUGYO",
+      "sector": "Bilinmiyor"
+    },
+    "NUHCM.IS": {
+      "name": "NUHCM",
+      "sector": "Bilinmiyor"
+    },
+    "OBAMS.IS": {
+      "name": "OBAMS",
+      "sector": "Bilinmiyor"
+    },
+    "OBASE.IS": {
+      "name": "OBASE",
+      "sector": "Bilinmiyor"
+    },
+    "ODAS.IS": {
+      "name": "ODAS",
+      "sector": "Bilinmiyor"
+    },
+    "ODINE.IS": {
+      "name": "ODINE",
+      "sector": "Bilinmiyor"
+    },
+    "OFSYM.IS": {
+      "name": "OFSYM",
+      "sector": "Bilinmiyor"
+    },
+    "ONCSM.IS": {
+      "name": "ONCSM",
+      "sector": "Bilinmiyor"
+    },
+    "ONRYT.IS": {
+      "name": "ONRYT",
+      "sector": "Bilinmiyor"
+    },
+    "ORCAY.IS": {
+      "name": "ORCAY",
+      "sector": "Bilinmiyor"
+    },
+    "ORGE.IS": {
+      "name": "ORGE",
+      "sector": "Bilinmiyor"
+    },
+    "ORMA.IS": {
+      "name": "ORMA",
+      "sector": "Bilinmiyor"
+    },
+    "OSMEN.IS": {
+      "name": "OSMEN",
+      "sector": "Bilinmiyor"
+    },
+    "OSTIM.IS": {
+      "name": "OSTIM",
+      "sector": "Bilinmiyor"
+    },
+    "OTKAR.IS": {
+      "name": "OTKAR",
+      "sector": "Bilinmiyor"
+    },
+    "OTTO.IS": {
+      "name": "OTTO",
+      "sector": "Bilinmiyor"
+    },
+    "OYAKC.IS": {
+      "name": "OYAKC",
+      "sector": "Bilinmiyor"
+    },
+    "OYAYO.IS": {
+      "name": "OYAYO",
+      "sector": "Bilinmiyor"
+    },
+    "OYLUM.IS": {
+      "name": "OYLUM",
+      "sector": "Bilinmiyor"
+    },
+    "OYYAT.IS": {
+      "name": "OYYAT",
+      "sector": "Bilinmiyor"
+    },
+    "OZATD.IS": {
+      "name": "OZATD",
+      "sector": "Bilinmiyor"
+    },
+    "OZGYO.IS": {
+      "name": "OZGYO",
+      "sector": "Bilinmiyor"
+    },
+    "OZKGY.IS": {
+      "name": "OZKGY",
+      "sector": "Bilinmiyor"
+    },
+    "OZRDN.IS": {
+      "name": "OZRDN",
+      "sector": "Bilinmiyor"
+    },
+    "OZSUB.IS": {
+      "name": "OZSUB",
+      "sector": "Bilinmiyor"
+    },
+    "OZYSR.IS": {
+      "name": "OZYSR",
+      "sector": "Bilinmiyor"
+    },
+    "PAGYO.IS": {
+      "name": "PAGYO",
+      "sector": "Bilinmiyor"
+    },
+    "PAHOL.IS": {
+      "name": "PAHOL",
+      "sector": "Bilinmiyor"
+    },
+    "PAMEL.IS": {
+      "name": "PAMEL",
+      "sector": "Bilinmiyor"
+    },
+    "PAPIL.IS": {
+      "name": "PAPIL",
+      "sector": "Bilinmiyor"
+    },
+    "PARSN.IS": {
+      "name": "PARSN",
+      "sector": "Bilinmiyor"
+    },
+    "PASEU.IS": {
+      "name": "PASEU",
+      "sector": "Bilinmiyor"
+    },
+    "PATEK.IS": {
+      "name": "PATEK",
+      "sector": "Bilinmiyor"
+    },
+    "PCILT.IS": {
+      "name": "PCILT",
+      "sector": "Bilinmiyor"
+    },
+    "PEKGY.IS": {
+      "name": "PEKGY",
+      "sector": "Bilinmiyor"
+    },
+    "PENGD.IS": {
+      "name": "PENGD",
+      "sector": "Bilinmiyor"
+    },
+    "PENTA.IS": {
+      "name": "PENTA",
+      "sector": "Bilinmiyor"
+    },
+    "PETKM.IS": {
+      "name": "PETKM",
+      "sector": "Bilinmiyor"
+    },
+    "PETUN.IS": {
+      "name": "PETUN",
+      "sector": "Bilinmiyor"
+    },
+    "PGSUS.IS": {
+      "name": "PGSUS",
+      "sector": "Bilinmiyor"
+    },
+    "PINSU.IS": {
+      "name": "PINSU",
+      "sector": "Bilinmiyor"
+    },
+    "PKART.IS": {
+      "name": "PKART",
+      "sector": "Bilinmiyor"
+    },
+    "PKENT.IS": {
+      "name": "PKENT",
+      "sector": "Bilinmiyor"
+    },
+    "PLTUR.IS": {
+      "name": "PLTUR",
+      "sector": "Bilinmiyor"
+    },
+    "PNLSN.IS": {
+      "name": "PNLSN",
+      "sector": "Bilinmiyor"
+    },
+    "PNSUT.IS": {
+      "name": "PNSUT",
+      "sector": "Bilinmiyor"
+    },
+    "POLHO.IS": {
+      "name": "POLHO",
+      "sector": "Bilinmiyor"
+    },
+    "POLTK.IS": {
+      "name": "POLTK",
+      "sector": "Bilinmiyor"
+    },
+    "PRDGS.IS": {
+      "name": "PRDGS",
+      "sector": "Bilinmiyor"
+    },
+    "PRKAB.IS": {
+      "name": "PRKAB",
+      "sector": "Bilinmiyor"
+    },
+    "PRKME.IS": {
+      "name": "PRKME",
+      "sector": "Bilinmiyor"
+    },
+    "PRZMA.IS": {
+      "name": "PRZMA",
+      "sector": "Bilinmiyor"
+    },
+    "PSDTC.IS": {
+      "name": "PSDTC",
+      "sector": "Bilinmiyor"
+    },
+    "PSGYO.IS": {
+      "name": "PSGYO",
+      "sector": "Bilinmiyor"
+    },
+    "QNBFK.IS": {
+      "name": "QNBFK",
+      "sector": "Bilinmiyor"
+    },
+    "QNBTR.IS": {
+      "name": "QNBTR",
+      "sector": "Bilinmiyor"
+    },
+    "QUAGR.IS": {
+      "name": "QUAGR",
+      "sector": "Bilinmiyor"
+    },
+    "RALYH.IS": {
+      "name": "RALYH",
+      "sector": "Bilinmiyor"
+    },
+    "RAYSG.IS": {
+      "name": "RAYSG",
+      "sector": "Bilinmiyor"
+    },
+    "REEDR.IS": {
+      "name": "REEDR",
+      "sector": "Bilinmiyor"
+    },
+    "RGYAS.IS": {
+      "name": "RGYAS",
+      "sector": "Bilinmiyor"
+    },
+    "RNPOL.IS": {
+      "name": "RNPOL",
+      "sector": "Bilinmiyor"
+    },
+    "RODRG.IS": {
+      "name": "RODRG",
+      "sector": "Bilinmiyor"
+    },
+    "ROYAL.IS": {
+      "name": "ROYAL",
+      "sector": "Bilinmiyor"
+    },
+    "RTALB.IS": {
+      "name": "RTALB",
+      "sector": "Bilinmiyor"
+    },
+    "RUBNS.IS": {
+      "name": "RUBNS",
+      "sector": "Bilinmiyor"
+    },
+    "RUZYE.IS": {
+      "name": "RUZYE",
+      "sector": "Bilinmiyor"
+    },
+    "RYGYO.IS": {
+      "name": "RYGYO",
+      "sector": "Bilinmiyor"
+    },
+    "RYSAS.IS": {
+      "name": "RYSAS",
+      "sector": "Bilinmiyor"
+    },
+    "SAFKR.IS": {
+      "name": "SAFKR",
+      "sector": "Bilinmiyor"
+    },
+    "SAHOL.IS": {
+      "name": "SAHOL",
+      "sector": "Bilinmiyor"
+    },
+    "SAMAT.IS": {
+      "name": "SAMAT",
+      "sector": "Bilinmiyor"
+    },
+    "SANEL.IS": {
+      "name": "SANEL",
+      "sector": "Bilinmiyor"
+    },
+    "SANFM.IS": {
+      "name": "SANFM",
+      "sector": "Bilinmiyor"
+    },
+    "SANKO.IS": {
+      "name": "SANKO",
+      "sector": "Bilinmiyor"
+    },
+    "SARKY.IS": {
+      "name": "SARKY",
+      "sector": "Bilinmiyor"
+    },
+    "SASA.IS": {
+      "name": "SASA",
+      "sector": "Bilinmiyor"
+    },
+    "SAYAS.IS": {
+      "name": "SAYAS",
+      "sector": "Bilinmiyor"
+    },
+    "SDTTR.IS": {
+      "name": "SDTTR",
+      "sector": "Bilinmiyor"
+    },
+    "SEGMN.IS": {
+      "name": "SEGMN",
+      "sector": "Bilinmiyor"
+    },
+    "SEGYO.IS": {
+      "name": "SEGYO",
+      "sector": "Bilinmiyor"
+    },
+    "SEKFK.IS": {
+      "name": "SEKFK",
+      "sector": "Bilinmiyor"
+    },
+    "SEKUR.IS": {
+      "name": "SEKUR",
+      "sector": "Bilinmiyor"
+    },
+    "SELEC.IS": {
+      "name": "SELEC",
+      "sector": "Bilinmiyor"
+    },
+    "SELVA.IS": {
+      "name": "SELVA",
+      "sector": "Bilinmiyor"
+    },
+    "SERNT.IS": {
+      "name": "SERNT",
+      "sector": "Bilinmiyor"
+    },
+    "SEYKM.IS": {
+      "name": "SEYKM",
+      "sector": "Bilinmiyor"
+    },
+    "SILVR.IS": {
+      "name": "SILVR",
+      "sector": "Bilinmiyor"
+    },
+    "SISE.IS": {
+      "name": "SISE",
+      "sector": "Bilinmiyor"
+    },
+    "SKBNK.IS": {
+      "name": "SKBNK",
+      "sector": "Bilinmiyor"
+    },
+    "SKTAS.IS": {
+      "name": "SKTAS",
+      "sector": "Bilinmiyor"
+    },
+    "SKYLP.IS": {
+      "name": "SKYLP",
+      "sector": "Bilinmiyor"
+    },
+    "SKYMD.IS": {
+      "name": "SKYMD",
+      "sector": "Bilinmiyor"
+    },
+    "SMART.IS": {
+      "name": "SMART",
+      "sector": "Bilinmiyor"
+    },
+    "SMRTG.IS": {
+      "name": "SMRTG",
+      "sector": "Bilinmiyor"
+    },
+    "SMRVA.IS": {
+      "name": "SMRVA",
+      "sector": "Bilinmiyor"
+    },
+    "SNGYO.IS": {
+      "name": "SNGYO",
+      "sector": "Bilinmiyor"
+    },
+    "SNICA.IS": {
+      "name": "SNICA",
+      "sector": "Bilinmiyor"
+    },
+    "SNPAM.IS": {
+      "name": "SNPAM",
+      "sector": "Bilinmiyor"
+    },
+    "SODSN.IS": {
+      "name": "SODSN",
+      "sector": "Bilinmiyor"
+    },
+    "SOKE.IS": {
+      "name": "SOKE",
+      "sector": "Bilinmiyor"
+    },
+    "SOKM.IS": {
+      "name": "SOKM",
+      "sector": "Bilinmiyor"
+    },
+    "SONME.IS": {
+      "name": "SONME",
+      "sector": "Bilinmiyor"
+    },
+    "SRVGY.IS": {
+      "name": "SRVGY",
+      "sector": "Bilinmiyor"
+    },
+    "SUMAS.IS": {
+      "name": "SUMAS",
+      "sector": "Bilinmiyor"
+    },
+    "SUNTK.IS": {
+      "name": "SUNTK",
+      "sector": "Bilinmiyor"
+    },
+    "SURGY.IS": {
+      "name": "SURGY",
+      "sector": "Bilinmiyor"
+    },
+    "SUWEN.IS": {
+      "name": "SUWEN",
+      "sector": "Bilinmiyor"
+    },
+    "TABGD.IS": {
+      "name": "TABGD",
+      "sector": "Bilinmiyor"
+    },
+    "TARKM.IS": {
+      "name": "TARKM",
+      "sector": "Bilinmiyor"
+    },
+    "TATEN.IS": {
+      "name": "TATEN",
+      "sector": "Bilinmiyor"
+    },
+    "TATGD.IS": {
+      "name": "TATGD",
+      "sector": "Bilinmiyor"
+    },
+    "TAVHL.IS": {
+      "name": "TAVHL",
+      "sector": "Bilinmiyor"
+    },
+    "TBORG.IS": {
+      "name": "TBORG",
+      "sector": "Bilinmiyor"
+    },
+    "TCELL.IS": {
+      "name": "TCELL",
+      "sector": "Bilinmiyor"
+    },
+    "TCKRC.IS": {
+      "name": "TCKRC",
+      "sector": "Bilinmiyor"
+    },
+    "TDGYO.IS": {
+      "name": "TDGYO",
+      "sector": "Bilinmiyor"
+    },
+    "TEHOL.IS": {
+      "name": "TEHOL",
+      "sector": "Bilinmiyor"
+    },
+    "TEKTU.IS": {
+      "name": "TEKTU",
+      "sector": "Bilinmiyor"
+    },
+    "TERA.IS": {
+      "name": "TERA",
+      "sector": "Bilinmiyor"
+    },
+    "TEZOL.IS": {
+      "name": "TEZOL",
+      "sector": "Bilinmiyor"
+    },
+    "TGSAS.IS": {
+      "name": "TGSAS",
+      "sector": "Bilinmiyor"
+    },
+    "THYAO.IS": {
+      "name": "THYAO",
+      "sector": "Bilinmiyor"
+    },
+    "TKFEN.IS": {
+      "name": "TKFEN",
+      "sector": "Bilinmiyor"
+    },
+    "TKNSA.IS": {
+      "name": "TKNSA",
+      "sector": "Bilinmiyor"
+    },
+    "TLMAN.IS": {
+      "name": "TLMAN",
+      "sector": "Bilinmiyor"
+    },
+    "TMPOL.IS": {
+      "name": "TMPOL",
+      "sector": "Bilinmiyor"
+    },
+    "TMSN.IS": {
+      "name": "TMSN",
+      "sector": "Bilinmiyor"
+    },
+    "TNZTP.IS": {
+      "name": "TNZTP",
+      "sector": "Bilinmiyor"
+    },
+    "TOASO.IS": {
+      "name": "TOASO",
+      "sector": "Bilinmiyor"
+    },
+    "TRALT.IS": {
+      "name": "TRALT",
+      "sector": "Bilinmiyor"
+    },
+    "TRCAS.IS": {
+      "name": "TRCAS",
+      "sector": "Bilinmiyor"
+    },
+    "TRENJ.IS": {
+      "name": "TRENJ",
+      "sector": "Bilinmiyor"
+    },
+    "TRGYO.IS": {
+      "name": "TRGYO",
+      "sector": "Bilinmiyor"
+    },
+    "TRHOL.IS": {
+      "name": "TRHOL",
+      "sector": "Bilinmiyor"
+    },
+    "TRILC.IS": {
+      "name": "TRILC",
+      "sector": "Bilinmiyor"
+    },
+    "TRMET.IS": {
+      "name": "TRMET",
+      "sector": "Bilinmiyor"
+    },
+    "TSGYO.IS": {
+      "name": "TSGYO",
+      "sector": "Bilinmiyor"
+    },
+    "TSKB.IS": {
+      "name": "TSKB",
+      "sector": "Bilinmiyor"
+    },
+    "TSPOR.IS": {
+      "name": "TSPOR",
+      "sector": "Bilinmiyor"
+    },
+    "TTKOM.IS": {
+      "name": "TTKOM",
+      "sector": "Bilinmiyor"
+    },
+    "TTRAK.IS": {
+      "name": "TTRAK",
+      "sector": "Bilinmiyor"
+    },
+    "TUCLK.IS": {
+      "name": "TUCLK",
+      "sector": "Bilinmiyor"
+    },
+    "TUKAS.IS": {
+      "name": "TUKAS",
+      "sector": "Bilinmiyor"
+    },
+    "TUPRS.IS": {
+      "name": "TUPRS",
+      "sector": "Bilinmiyor"
+    },
+    "TUREX.IS": {
+      "name": "TUREX",
+      "sector": "Bilinmiyor"
+    },
+    "TURGG.IS": {
+      "name": "TURGG",
+      "sector": "Bilinmiyor"
+    },
+    "TURSG.IS": {
+      "name": "TURSG",
+      "sector": "Bilinmiyor"
+    },
+    "UCAYM.IS": {
+      "name": "UCAYM",
+      "sector": "Bilinmiyor"
+    },
+    "UFUK.IS": {
+      "name": "UFUK",
+      "sector": "Bilinmiyor"
+    },
+    "ULAS.IS": {
+      "name": "ULAS",
+      "sector": "Bilinmiyor"
+    },
+    "ULKER.IS": {
+      "name": "ULKER",
+      "sector": "Bilinmiyor"
+    },
+    "ULUFA.IS": {
+      "name": "ULUFA",
+      "sector": "Bilinmiyor"
+    },
+    "ULUSE.IS": {
+      "name": "ULUSE",
+      "sector": "Bilinmiyor"
+    },
+    "ULUUN.IS": {
+      "name": "ULUUN",
+      "sector": "Bilinmiyor"
+    },
+    "UMPAS.IS": {
+      "name": "UMPAS",
+      "sector": "Bilinmiyor"
+    },
+    "UNLU.IS": {
+      "name": "UNLU",
+      "sector": "Bilinmiyor"
+    },
+    "USAK.IS": {
+      "name": "USAK",
+      "sector": "Bilinmiyor"
+    },
+    "VAKBN.IS": {
+      "name": "VAKBN",
+      "sector": "Bilinmiyor"
+    },
+    "VAKFA.IS": {
+      "name": "VAKFA",
+      "sector": "Bilinmiyor"
+    },
+    "VAKFN.IS": {
+      "name": "VAKFN",
+      "sector": "Bilinmiyor"
+    },
+    "VAKKO.IS": {
+      "name": "VAKKO",
+      "sector": "Bilinmiyor"
+    },
+    "VANGD.IS": {
+      "name": "VANGD",
+      "sector": "Bilinmiyor"
+    },
+    "VBTYZ.IS": {
+      "name": "VBTYZ",
+      "sector": "Bilinmiyor"
+    },
+    "VERTU.IS": {
+      "name": "VERTU",
+      "sector": "Bilinmiyor"
+    },
+    "VERUS.IS": {
+      "name": "VERUS",
+      "sector": "Bilinmiyor"
+    },
+    "VESBE.IS": {
+      "name": "VESBE",
+      "sector": "Bilinmiyor"
+    },
+    "VESTL.IS": {
+      "name": "VESTL",
+      "sector": "Bilinmiyor"
+    },
+    "VKFYO.IS": {
+      "name": "VKFYO",
+      "sector": "Bilinmiyor"
+    },
+    "VKGYO.IS": {
+      "name": "VKGYO",
+      "sector": "Bilinmiyor"
+    },
+    "VKING.IS": {
+      "name": "VKING",
+      "sector": "Bilinmiyor"
+    },
+    "VRGYO.IS": {
+      "name": "VRGYO",
+      "sector": "Bilinmiyor"
+    },
+    "VSNMD.IS": {
+      "name": "VSNMD",
+      "sector": "Bilinmiyor"
+    },
+    "YAPRK.IS": {
+      "name": "YAPRK",
+      "sector": "Bilinmiyor"
+    },
+    "YATAS.IS": {
+      "name": "YATAS",
+      "sector": "Bilinmiyor"
+    },
+    "YAYLA.IS": {
+      "name": "YAYLA",
+      "sector": "Bilinmiyor"
+    },
+    "YBTAS.IS": {
+      "name": "YBTAS",
+      "sector": "Bilinmiyor"
+    },
+    "YEOTK.IS": {
+      "name": "YEOTK",
+      "sector": "Bilinmiyor"
+    },
+    "YESIL.IS": {
+      "name": "YESIL",
+      "sector": "Bilinmiyor"
+    },
+    "YGGYO.IS": {
+      "name": "YGGYO",
+      "sector": "Bilinmiyor"
+    },
+    "YGYO.IS": {
+      "name": "YGYO",
+      "sector": "Bilinmiyor"
+    },
+    "YIGIT.IS": {
+      "name": "YIGIT",
+      "sector": "Bilinmiyor"
+    },
+    "YKBNK.IS": {
+      "name": "YKBNK",
+      "sector": "Bilinmiyor"
+    },
+    "YKSLN.IS": {
+      "name": "YKSLN",
+      "sector": "Bilinmiyor"
+    },
+    "YONGA.IS": {
+      "name": "YONGA",
+      "sector": "Bilinmiyor"
+    },
+    "YUNSA.IS": {
+      "name": "YUNSA",
+      "sector": "Bilinmiyor"
+    },
+    "YYAPI.IS": {
+      "name": "YYAPI",
+      "sector": "Bilinmiyor"
+    },
+    "YYLGD.IS": {
+      "name": "YYLGD",
+      "sector": "Bilinmiyor"
+    },
+    "ZEDUR.IS": {
+      "name": "ZEDUR",
+      "sector": "Bilinmiyor"
+    },
+    "ZERGY.IS": {
+      "name": "ZERGY",
+      "sector": "Bilinmiyor"
+    },
+    "ZGYO.IS": {
+      "name": "ZGYO",
+      "sector": "Bilinmiyor"
+    },
+    "ZOREN.IS": {
+      "name": "ZOREN",
+      "sector": "Bilinmiyor"
+    },
+    "ZRGYO.IS": {
+      "name": "ZRGYO",
+      "sector": "Bilinmiyor"
+    }
+  }
+}

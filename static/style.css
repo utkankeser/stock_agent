@@ -192,6 +192,127 @@ body {
     background: rgba(59, 130, 246, 0.08);
 }
 
+/* ---- Search Form ---- */
+.search-form {
+    margin-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1rem;
+}
+
+.search-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.btn-search {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn-search:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35);
+}
+
+/* ---- Search Results ---- */
+.search-results {
+    margin-top: 1.2rem;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1rem;
+}
+
+.search-results h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.suggestion-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.8rem;
+}
+
+.suggestion-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 12px 16px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.suggestion-card:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+    transform: translateX(4px);
+}
+
+.suggestion-card strong {
+    color: var(--accent-blue);
+    font-size: 1rem;
+    min-width: 60px;
+}
+
+.suggestion-name {
+    flex: 1;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.suggestion-sector {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.suggestion-arrow {
+    color: var(--accent-blue);
+    font-weight: 700;
+}
+
 /* ---- Control Panel ---- */
 .control-panel {
     margin-bottom: 2rem;
@@ -910,6 +1031,83 @@ body {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-secondary);
+}
+
+/* ---- AI Commentary ---- */
+.ai-section h2 {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn-ai {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-ai:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.btn-ai-refresh {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+}
+
+.btn-ai-refresh:hover {
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+    background: rgba(139, 92, 246, 0.08);
+    box-shadow: none;
+}
+
+.ai-hint {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.ai-loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+.ai-result {
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-left: 3px solid #8b5cf6;
+    padding-left: 1.2rem;
+}
+
+.ai-result p {
+    margin-bottom: 0.8rem;
+}
+
+.ai-result strong {
+    color: var(--text-primary);
+}
+
+.ai-error {
+    padding: 1rem;
+    background: var(--red-bg);
+    color: var(--red);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 23, 68, 0.3);
 }
 
 /* ---- Error Card ---- */

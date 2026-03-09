@@ -16,11 +16,16 @@ from data.bist_stocks import (
     get_sectors, get_stock_count, refresh_stock_list
 )
 from analysis.signal_engine import analyze_stock, analyze_multiple
+from analysis.ai_commentary import get_ai_commentary, set_api_key
 
 app = Flask(__name__)
 
 # Analiz sonuçları cache'i
 _analysis_cache = {}
+
+# Gemini API key'i ayarla
+if config.GEMINI_API_KEY:
+    set_api_key(config.GEMINI_API_KEY)
 
 
 def _score_color(score):
@@ -114,6 +119,70 @@ def refresh_stocks():
         refresh_count=count,
     )
 
+@app.route("/search", methods=["POST"])
+def search_stock():
+    """Hisse arama — kod veya isim ile, benzer sonuçlar gösterir"""
+    query = request.form.get("query", "").strip()
+    if not query:
+        return render_template(
+            "index.html",
+            stocks=get_all_stocks(),
+            sectors=get_sectors(),
+            stock_count=get_stock_count(),
+            selected_sector="all",
+            results=_analysis_cache,
+            search_error="Lütfen bir hisse kodu veya adı girin.",
+        )
+    
+    query_upper = query.upper()
+    all_stocks = get_all_stocks()
+    exact_match = None
+    suggestions = []
+    
+    for ticker, info in all_stocks.items():
+        code = ticker.replace(".IS", "")
+        name = info.get("name", "").upper()
+        
+        # 1. Tam kod eşleşmesi
+        if code == query_upper:
+            exact_match = ticker
+            break
+        
+        # 2. Kod query ile başlıyor (ör: "THY" → THYAO)
+        if code.startswith(query_upper):
+            suggestions.append((ticker, info, "kod"))
+        
+        # 3. İsimde içeriyor (ör: "garanti" → GARANTİ BANKASI)
+        elif query_upper in name:
+            suggestions.append((ticker, info, "isim"))
+    
+    # Tam eşleşme varsa → doğrudan detay sayfasına
+    if exact_match:
+        result = analyze_stock(exact_match)
+        _analysis_cache[exact_match] = result
+        return render_template("stock_detail.html", result=result)
+    
+    # Tek sonuç varsa → doğrudan detay sayfasına
+    if len(suggestions) == 1:
+        ticker = suggestions[0][0]
+        result = analyze_stock(ticker)
+        _analysis_cache[ticker] = result
+        return render_template("stock_detail.html", result=result)
+    
+    # Birden fazla veya sıfır sonuç → öneri listesi göster
+    return render_template(
+        "index.html",
+        stocks=get_all_stocks(),
+        sectors=get_sectors(),
+        stock_count=get_stock_count(),
+        selected_sector="all",
+        results=_analysis_cache,
+        search_query=query,
+        search_suggestions=suggestions[:20],  # Maks 20 öneri
+        search_error=f'"{query}" için sonuç bulunamadı.' if not suggestions else None,
+    )
+
+
 @app.route("/stock/<ticker>")
 def stock_detail(ticker):
     """Hisse detay sayfası"""
@@ -125,6 +194,19 @@ def stock_detail(ticker):
         result = _analysis_cache[ticker]
     
     return render_template("stock_detail.html", result=result)
+
+
+@app.route("/ai-comment/<ticker>")
+def ai_comment(ticker):
+    """Claude AI yorum endpoint — AJAX ile çağrılır"""
+    if ticker in _analysis_cache:
+        result = _analysis_cache[ticker]
+    else:
+        result = analyze_stock(ticker)
+        _analysis_cache[ticker] = result
+    
+    commentary = get_ai_commentary(result)
+    return jsonify({"commentary": commentary})
 
 
 @app.route("/api/analyze/<ticker>")
@@ -140,8 +222,12 @@ def api_analyze(ticker):
 
 
 if __name__ == "__main__":
+    host = config.FLASK_HOST
+    display_host = "127.0.0.1" if host == "0.0.0.0" else host
     print("=" * 60)
     print("  📊 BIST Teknik Analiz Ajanı")
-    print("  🌐 http://127.0.0.1:5000")
+    print(f"  🌐 http://{display_host}:{config.FLASK_PORT}")
+    if host == "0.0.0.0":
+        print("  📱 Aynı WiFi'daki cihazlardan erişilebilir")
     print("=" * 60)
     app.run(host=config.FLASK_HOST, port=config.FLASK_PORT, debug=config.FLASK_DEBUG)

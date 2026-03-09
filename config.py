@@ -1,11 +1,22 @@
 """
 BIST Teknik Analiz Ajanı - Konfigürasyon
+15 Teknik İndikatör ile Kapsamlı Analiz
 """
 
+import os
+from dotenv import load_dotenv
+
+# .env dosyasından gizli anahtarları yükle
+load_dotenv()
+
 # Flask Ayarları
-FLASK_HOST = "127.0.0.1"
+FLASK_HOST = "0.0.0.0"
 FLASK_PORT = 5000
 FLASK_DEBUG = True
+
+# Gemini AI API Anahtarı (.env dosyasından okunur — BURAYA YAZMAYIN!)
+# Ücretsiz key: https://aistudio.google.com/apikey
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 # Veri Çekme Ayarları
 DEFAULT_PERIOD = "6mo"  # Varsayılan veri periyodu (1mo, 3mo, 6mo, 1y, 2y)
@@ -15,21 +26,21 @@ DATA_INTERVAL = "1d"     # Veri aralığı (1d, 1wk, 1mo)
 # Teknik Analiz Parametreleri
 # =============================================
 
-# RSI
+# RSI (Relative Strength Index)
 RSI_PERIOD = 14
 RSI_OVERBOUGHT = 70
 RSI_OVERSOLD = 30
 
-# MACD
+# MACD (Moving Average Convergence Divergence)
 MACD_FAST = 12
 MACD_SLOW = 26
 MACD_SIGNAL = 9
 
-# SMA (Basit Hareketli Ortalama)
+# SMA (Simple Moving Average)
 SMA_SHORT = 20
 SMA_LONG = 50
 
-# EMA (Üssel Hareketli Ortalama)
+# EMA (Exponential Moving Average)
 EMA_SHORT = 12
 EMA_LONG = 26
 
@@ -46,7 +57,7 @@ STOCH_OVERSOLD = 20
 
 # ADX (Average Directional Index)
 ADX_PERIOD = 14
-ADX_STRONG_TREND = 25  # Bu değerin üstü güçlü trend
+ADX_STRONG_TREND = 25
 
 # CCI (Commodity Channel Index)
 CCI_PERIOD = 20
@@ -58,26 +69,57 @@ WILLIAMS_PERIOD = 14
 WILLIAMS_OVERBOUGHT = -20
 WILLIAMS_OVERSOLD = -80
 
+# OBV (On Balance Volume)
+OBV_SMA_PERIOD = 20  # OBV eğilimini ölçmek için SMA periyodu
+
+# MFI (Money Flow Index)
+MFI_PERIOD = 14
+MFI_OVERBOUGHT = 80
+MFI_OVERSOLD = 20
+
+# Parabolic SAR
+PSAR_AF = 0.02    # Acceleration Factor
+PSAR_MAX_AF = 0.2
+
+# Ichimoku Cloud
+ICHIMOKU_TENKAN = 9
+ICHIMOKU_KIJUN = 26
+ICHIMOKU_SENKOU = 52
+
+# ROC (Rate of Change)
+ROC_PERIOD = 12
+
+# CMF (Chaikin Money Flow)
+CMF_PERIOD = 20
+CMF_BULLISH = 0.05
+CMF_BEARISH = -0.05
+
 # =============================================
 # Sinyal Motoru Ağırlıkları (toplam teknik = 1.0)
+# 15 indikatör, eşit dağıtılmış ağırlıklar
 # =============================================
-WEIGHT_RSI = 0.15
-WEIGHT_MACD = 0.15
-WEIGHT_SMA = 0.10
-WEIGHT_EMA = 0.10
-WEIGHT_BOLLINGER = 0.10
-WEIGHT_STOCHASTIC = 0.10
-WEIGHT_ADX = 0.10
-WEIGHT_CCI = 0.10
-WEIGHT_WILLIAMS = 0.10
+WEIGHT_RSI = 0.08
+WEIGHT_MACD = 0.08
+WEIGHT_SMA = 0.07
+WEIGHT_EMA = 0.07
+WEIGHT_BOLLINGER = 0.07
+WEIGHT_STOCHASTIC = 0.07
+WEIGHT_ADX = 0.07
+WEIGHT_CCI = 0.06
+WEIGHT_WILLIAMS = 0.06
+WEIGHT_OBV = 0.06
+WEIGHT_MFI = 0.07
+WEIGHT_PSAR = 0.07
+WEIGHT_ICHIMOKU = 0.07
+WEIGHT_ROC = 0.05
+WEIGHT_CMF = 0.05
 
 # Haber ağırlığı (genel skordaki)
 WEIGHT_NEWS = 0.15
 
 # Sinyal Eşik Değerleri
-SIGNAL_BUY_THRESHOLD = 60     # Bu skorun üstü = AL
-SIGNAL_SELL_THRESHOLD = 40    # Bu skorun altı = SAT
-# Arada kalan = TUT
+SIGNAL_BUY_THRESHOLD = 60
+SIGNAL_SELL_THRESHOLD = 40
 
 # Haber Ayarları
 NEWS_MAX_ARTICLES = 10

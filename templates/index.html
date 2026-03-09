@@ -64,6 +64,35 @@
     <form method="POST" action="/refresh" style="margin-top: 0.8rem;">
         <button type="submit" class="btn-refresh">🔄 Hisse Listesini Güncelle</button>
     </form>
+    <!-- Hisse Arama -->
+    <form method="POST" action="/search" class="search-form">
+        <div class="search-row">
+            <input type="text" name="query" placeholder="Hisse kodu veya adı (ör: THYAO, Garanti)" class="search-input"
+                id="searchInput" autocomplete="off">
+            <button type="submit" class="btn-search">🔍 Ara ve Analiz Et</button>
+        </div>
+    </form>
+    {% if search_error %}
+    <div class="notification"
+        style="background: var(--red-bg); color: var(--red); border: 1px solid rgba(255,23,68,0.3); margin-top: 0.8rem;">
+        ⚠️ {{ search_error }}
+    </div>
+    {% endif %}
+    {% if search_suggestions %}
+    <div class="search-results">
+        <h3>🔎 "{{ search_query }}" için {{ search_suggestions|length }} sonuç bulundu:</h3>
+        <div class="suggestion-list">
+            {% for ticker, info, match_type in search_suggestions %}
+            <a href="/stock/{{ ticker }}" class="suggestion-card">
+                <strong>{{ ticker.replace('.IS', '') }}</strong>
+                <span class="suggestion-name">{{ info.name }}</span>
+                <span class="suggestion-sector">{{ info.sector }}</span>
+                <span class="suggestion-arrow">→</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </section>
 
 <!-- Loading -->

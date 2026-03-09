@@ -153,6 +153,17 @@
 </section>
 {% endif %}
 
+<!-- Gemini AI Yorum -->
+<section class="glass-card ai-section">
+    <h2>🤖 Gemini AI Yorumu</h2>
+    <div id="aiCommentary">
+        <button class="btn-ai" id="getAiComment" onclick="loadAiComment('{{ result.ticker }}')">
+            ✨ AI Yorumu Al
+        </button>
+        <p class="ai-hint">Google Gemini, teknik analiz sonuçlarını inceleyip profesyonel bir yorum hazırlar.</p>
+    </div>
+</section>
+
 <!-- Özet -->
 <section class="glass-card summary-section">
     <h2>📝 Özet</h2>
@@ -160,4 +171,42 @@
 </section>
 
 {% endif %}
+
+<script>
+    function loadAiComment(ticker) {
+        const container = document.getElementById('aiCommentary');
+        container.innerHTML = `
+        <div class="ai-loading">
+            <div class="spinner" style="width:30px;height:30px;border-width:3px;margin:0 auto 1rem;"></div>
+            <p>Gemini analiz ediyor...</p>
+        </div>
+    `;
+
+        fetch('/ai-comment/' + ticker)
+            .then(res => res.json())
+            .then(data => {
+                const text = data.commentary
+                    .replace(/\n\n/g, '</p><p>')
+                    .replace(/\n/g, '<br>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                container.innerHTML = `
+                <div class="ai-result">
+                    <p>${text}</p>
+                </div>
+                <button class="btn-ai btn-ai-refresh" onclick="loadAiComment('${ticker}')" style="margin-top:1rem;">
+                    🔄 Yeniden Yorumla
+                </button>
+            `;
+            })
+            .catch(err => {
+                container.innerHTML = `
+                <div class="ai-error">⚠️ Yorum alınamadı: ${err.message}</div>
+                <button class="btn-ai" onclick="loadAiComment('${ticker}')" style="margin-top:1rem;">
+                    🔄 Tekrar Dene
+                </button>
+            `;
+            });
+    }
+</script>
+
 {% endblock %}
