@@ -1,2426 +1,3073 @@
 {
-  "timestamp": "2026-03-01T16:55:37.591677",
-  "count": 605,
+  "timestamp": "2026-05-26T01:19:24.248403",
+  "count": 613,
   "stocks": {
+    "A1CAP.IS": {
+      "name": "A1 Capital",
+      "sector": "Aracı Kurumlar"
+    },
+    "A1YEN.IS": {
+      "name": "Kartal Yenilenebili Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "AAGYO.IS": {
+      "name": "Ağaoğlu GYO",
+      "sector": "GYO"
+    },
     "ACSEL.IS": {
-      "name": "ACSEL",
-      "sector": "Bilinmiyor"
+      "name": "Acıselsan Acıpayam Selüloz",
+      "sector": "Kimyasal Ürün"
     },
     "ADEL.IS": {
-      "name": "ADEL",
-      "sector": "Bilinmiyor"
+      "name": "Adel Kalemcilik",
+      "sector": "Kırtasiye"
     },
     "ADESE.IS": {
-      "name": "ADESE",
-      "sector": "Bilinmiyor"
+      "name": "Adese AVM",
+      "sector": "GYO"
     },
     "ADGYO.IS": {
-      "name": "ADGYO",
-      "sector": "Bilinmiyor"
+      "name": "Adra GYO",
+      "sector": "GYO"
     },
     "AEFES.IS": {
-      "name": "AEFES",
-      "sector": "Bilinmiyor"
+      "name": "Anadolu Efes",
+      "sector": "Meşrubat / İçecek"
     },
     "AFYON.IS": {
-      "name": "AFYON",
-      "sector": "Bilinmiyor"
+      "name": "Afyon Çimento",
+      "sector": "Çimento"
     },
     "AGESA.IS": {
-      "name": "AGESA",
-      "sector": "Bilinmiyor"
+      "name": "Agesa Hayat ve Emeklilik",
+      "sector": "Sigorta"
     },
     "AGHOL.IS": {
-      "name": "AGHOL",
-      "sector": "Bilinmiyor"
+      "name": "Anadolu Grubu Holding",
+      "sector": "Holdingler"
     },
     "AGROT.IS": {
-      "name": "AGROT",
-      "sector": "Bilinmiyor"
+      "name": "Agrotech Yüksek Teknoloji",
+      "sector": "Diğer"
     },
     "AGYO.IS": {
-      "name": "AGYO",
-      "sector": "Bilinmiyor"
+      "name": "Atakule GYO",
+      "sector": "GYO"
     },
     "AHGAZ.IS": {
-      "name": "AHGAZ",
-      "sector": "Bilinmiyor"
+      "name": "Ahlatçı Doğalgaz",
+      "sector": "Elektrik - Doğalgaz Dağıtım"
     },
     "AHSGY.IS": {
-      "name": "AHSGY",
-      "sector": "Bilinmiyor"
+      "name": "Ahes GYO",
+      "sector": "GYO"
     },
     "AKBNK.IS": {
-      "name": "AKBNK",
-      "sector": "Bilinmiyor"
+      "name": "Akbank",
+      "sector": "Bankacılık"
     },
     "AKCNS.IS": {
-      "name": "AKCNS",
-      "sector": "Bilinmiyor"
+      "name": "Akçansa",
+      "sector": "Çimento"
     },
     "AKENR.IS": {
-      "name": "AKENR",
-      "sector": "Bilinmiyor"
+      "name": "Akenerji",
+      "sector": "Elektrik Üretim"
     },
     "AKFGY.IS": {
-      "name": "AKFGY",
-      "sector": "Bilinmiyor"
+      "name": "Akfen GYO",
+      "sector": "GYO"
     },
     "AKFIS.IS": {
-      "name": "AKFIS",
-      "sector": "Bilinmiyor"
+      "name": "Akfen İnşaat",
+      "sector": "İnşaat- Taahhüt"
     },
     "AKFYE.IS": {
-      "name": "AKFYE",
-      "sector": "Bilinmiyor"
+      "name": "Akfen Yenilenebilir Enerji",
+      "sector": "Elektrik Üretim"
     },
     "AKGRT.IS": {
-      "name": "AKGRT",
-      "sector": "Bilinmiyor"
+      "name": "Aksigorta",
+      "sector": "Sigorta"
     },
     "AKHAN.IS": {
-      "name": "AKHAN",
-      "sector": "Bilinmiyor"
+      "name": "Akhan Un",
+      "sector": "Gıda"
     },
     "AKMGY.IS": {
-      "name": "AKMGY",
-      "sector": "Bilinmiyor"
+      "name": "Akmerkez GYO",
+      "sector": "GYO"
     },
     "AKSA.IS": {
-      "name": "AKSA",
-      "sector": "Bilinmiyor"
+      "name": "Aksa",
+      "sector": "Endüstriyel Tekstil"
     },
     "AKSEN.IS": {
-      "name": "AKSEN",
-      "sector": "Bilinmiyor"
+      "name": "Aksa Enerji",
+      "sector": "Elektrik Üretim"
     },
     "AKSGY.IS": {
-      "name": "AKSGY",
-      "sector": "Bilinmiyor"
+      "name": "Akis GYO",
+      "sector": "GYO"
     },
     "AKSUE.IS": {
-      "name": "AKSUE",
-      "sector": "Bilinmiyor"
+      "name": "Aksu Enerji",
+      "sector": "Elektrik Üretim"
     },
     "AKYHO.IS": {
-      "name": "AKYHO",
-      "sector": "Bilinmiyor"
+      "name": "Akdeniz Yatırım Holding",
+      "sector": "Holdingler"
     },
     "ALARK.IS": {
-      "name": "ALARK",
-      "sector": "Bilinmiyor"
+      "name": "Alarko Holding",
+      "sector": "Holdingler"
     },
     "ALBRK.IS": {
-      "name": "ALBRK",
-      "sector": "Bilinmiyor"
+      "name": "Albaraka Türk",
+      "sector": "Bankacılık"
     },
     "ALCAR.IS": {
-      "name": "ALCAR",
-      "sector": "Bilinmiyor"
+      "name": "Alarko Carrier",
+      "sector": "Dayanıklı Tüketim"
     },
     "ALCTL.IS": {
-      "name": "ALCTL",
-      "sector": "Bilinmiyor"
+      "name": "Alcatel Teletaş",
+      "sector": "İletişim Cihazları"
     },
     "ALFAS.IS": {
-      "name": "ALFAS",
-      "sector": "Bilinmiyor"
+      "name": "Alfa Solar",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
     },
     "ALGYO.IS": {
-      "name": "ALGYO",
-      "sector": "Bilinmiyor"
+      "name": "Alarko GYO",
+      "sector": "GYO"
     },
     "ALKA.IS": {
-      "name": "ALKA",
-      "sector": "Bilinmiyor"
+      "name": "Alkim Kağıt",
+      "sector": "Kağıt Ürünleri"
     },
     "ALKIM.IS": {
-      "name": "ALKIM",
-      "sector": "Bilinmiyor"
+      "name": "Alkim",
+      "sector": "Kimyasal Ürün"
     },
     "ALKLC.IS": {
-      "name": "ALKLC",
-      "sector": "Bilinmiyor"
+      "name": "Altınkılıç Gıda",
+      "sector": "Gıda"
     },
     "ALTNY.IS": {
-      "name": "ALTNY",
-      "sector": "Bilinmiyor"
+      "name": "Altınay Savunma",
+      "sector": "Savunma"
     },
     "ALVES.IS": {
-      "name": "ALVES",
-      "sector": "Bilinmiyor"
+      "name": "Alves Kablo",
+      "sector": "Kablo"
     },
     "ANELE.IS": {
-      "name": "ANELE",
-      "sector": "Bilinmiyor"
+      "name": "Anel Elektrik",
+      "sector": "İnşaat Malzemeleri"
     },
     "ANGEN.IS": {
-      "name": "ANGEN",
-      "sector": "Bilinmiyor"
+      "name": "Anatolia Biyoteknoloji",
+      "sector": "Sağlık ve İlaç"
     },
     "ANHYT.IS": {
-      "name": "ANHYT",
-      "sector": "Bilinmiyor"
+      "name": "Anadolu Hayat Emeklilik A.Ş.",
+      "sector": "Sigorta"
     },
     "ANSGR.IS": {
-      "name": "ANSGR",
-      "sector": "Bilinmiyor"
+      "name": "Anadolu Sigorta",
+      "sector": "Sigorta"
     },
     "ARASE.IS": {
-      "name": "ARASE",
-      "sector": "Bilinmiyor"
+      "name": "Doğu Aras Enerji",
+      "sector": "Elektrik - Doğalgaz Dağıtım"
     },
     "ARCLK.IS": {
-      "name": "ARCLK",
-      "sector": "Bilinmiyor"
+      "name": "Arçelik",
+      "sector": "Dayanıklı Tüketim"
     },
     "ARDYZ.IS": {
-      "name": "ARDYZ",
-      "sector": "Bilinmiyor"
+      "name": "ARD Grup Bilişim",
+      "sector": "Teknoloji"
     },
     "ARENA.IS": {
-      "name": "ARENA",
-      "sector": "Bilinmiyor"
+      "name": "Arena Bilgisayar",
+      "sector": "Bilgisayar Toptancılığı"
     },
     "ARFYE.IS": {
-      "name": "ARFYE",
-      "sector": "Bilinmiyor"
+      "name": "Arf Bio Enerji",
+      "sector": "Elektrik Üretim"
     },
     "ARMGD.IS": {
-      "name": "ARMGD",
-      "sector": "Bilinmiyor"
+      "name": "Armada Gıda",
+      "sector": "Gıda"
     },
     "ARSAN.IS": {
-      "name": "ARSAN",
-      "sector": "Bilinmiyor"
+      "name": "Arsan Holding",
+      "sector": "Tekstil Entegre"
     },
     "ARTMS.IS": {
-      "name": "ARTMS",
-      "sector": "Bilinmiyor"
+      "name": "Artemis Halı",
+      "sector": "Tekstil Entegre"
     },
     "ARZUM.IS": {
-      "name": "ARZUM",
-      "sector": "Bilinmiyor"
+      "name": "Arzum Ev Aletleri",
+      "sector": "Dayanıklı Tüketim"
     },
     "ASELS.IS": {
-      "name": "ASELS",
-      "sector": "Bilinmiyor"
+      "name": "Aselsan",
+      "sector": "Savunma"
     },
     "ASGYO.IS": {
-      "name": "ASGYO",
-      "sector": "Bilinmiyor"
+      "name": "Asce GYO",
+      "sector": "GYO"
     },
     "ASTOR.IS": {
-      "name": "ASTOR",
-      "sector": "Bilinmiyor"
+      "name": "Astor Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
     },
     "ASUZU.IS": {
-      "name": "ASUZU",
-      "sector": "Bilinmiyor"
+      "name": "Anadolu Isuzu",
+      "sector": "Otomotiv"
     },
     "ATAGY.IS": {
-      "name": "ATAGY",
-      "sector": "Bilinmiyor"
+      "name": "Ata GYO",
+      "sector": "GYO"
     },
     "ATAKP.IS": {
-      "name": "ATAKP",
-      "sector": "Bilinmiyor"
+      "name": "Atakey Patates",
+      "sector": "Gıda"
     },
     "ATATP.IS": {
-      "name": "ATATP",
-      "sector": "Bilinmiyor"
+      "name": "ATP Bilgisayar",
+      "sector": "Teknoloji"
     },
     "ATATR.IS": {
-      "name": "ATATR",
-      "sector": "Bilinmiyor"
+      "name": "Ata Turizm",
+      "sector": "Turizm"
     },
     "ATEKS.IS": {
-      "name": "ATEKS",
-      "sector": "Bilinmiyor"
+      "name": "Akın Tekstil",
+      "sector": "Tekstil Entegre"
     },
     "ATLAS.IS": {
-      "name": "ATLAS",
-      "sector": "Bilinmiyor"
+      "name": "Atlas YO",
+      "sector": "Yatırım Ortaklıkları"
     },
     "ATSYH.IS": {
-      "name": "ATSYH",
-      "sector": "Bilinmiyor"
+      "name": "Atlantis YO",
+      "sector": "Holdingler"
     },
     "AVGYO.IS": {
-      "name": "AVGYO",
-      "sector": "Bilinmiyor"
+      "name": "Avrasya YO",
+      "sector": "GYO"
     },
     "AVHOL.IS": {
-      "name": "AVHOL",
-      "sector": "Bilinmiyor"
+      "name": "Avrupa Yatırım Holding",
+      "sector": "Holdingler"
     },
     "AVOD.IS": {
-      "name": "AVOD",
-      "sector": "Bilinmiyor"
+      "name": "Avod Kurutulmuş Gıda",
+      "sector": "Gıda"
     },
     "AVPGY.IS": {
-      "name": "AVPGY",
-      "sector": "Bilinmiyor"
+      "name": "Avrupakent GYO",
+      "sector": "GYO"
     },
     "AVTUR.IS": {
-      "name": "AVTUR",
-      "sector": "Bilinmiyor"
+      "name": "Avrasya Petrol&Turistik Tesis",
+      "sector": "Turizm"
     },
     "AYCES.IS": {
-      "name": "AYCES",
-      "sector": "Bilinmiyor"
+      "name": "Altınyunus Çesme",
+      "sector": "Turizm"
     },
     "AYDEM.IS": {
-      "name": "AYDEM",
-      "sector": "Bilinmiyor"
+      "name": "Aydem Enerji",
+      "sector": "Elektrik Üretim"
     },
     "AYEN.IS": {
-      "name": "AYEN",
-      "sector": "Bilinmiyor"
+      "name": "Ayen Enerji",
+      "sector": "Elektrik Üretim"
     },
     "AYES.IS": {
-      "name": "AYES",
-      "sector": "Bilinmiyor"
+      "name": "Ayes Çelik Hasır & Çit",
+      "sector": "İnşaat Malzemeleri"
     },
     "AYGAZ.IS": {
-      "name": "AYGAZ",
-      "sector": "Bilinmiyor"
+      "name": "Aygaz",
+      "sector": "Petrol"
     },
     "AZTEK.IS": {
-      "name": "AZTEK",
-      "sector": "Bilinmiyor"
+      "name": "Aztek Teknoloji",
+      "sector": "Teknoloji"
     },
     "BAGFS.IS": {
-      "name": "BAGFS",
-      "sector": "Bilinmiyor"
+      "name": "Bandırma Gübre Fabrikaları A.Ş",
+      "sector": "Tarım Kimyasalları"
     },
     "BAHKM.IS": {
-      "name": "BAHKM",
-      "sector": "Bilinmiyor"
+      "name": "Bahadır Kimya",
+      "sector": "Kimyasal Ürün"
     },
     "BAKAB.IS": {
-      "name": "BAKAB",
-      "sector": "Bilinmiyor"
+      "name": "Bak Ambalaj",
+      "sector": "Kağıt Ürünleri"
     },
     "BALAT.IS": {
-      "name": "BALAT",
-      "sector": "Bilinmiyor"
+      "name": "Balatacılar Balatacılık",
+      "sector": "Otomotiv Parçası"
     },
     "BALSU.IS": {
-      "name": "BALSU",
-      "sector": "Bilinmiyor"
+      "name": "Balsu Gıda",
+      "sector": "Gıda"
     },
     "BANVT.IS": {
-      "name": "BANVT",
-      "sector": "Bilinmiyor"
+      "name": "Banvit",
+      "sector": "Hayvancılık"
     },
     "BARMA.IS": {
-      "name": "BARMA",
-      "sector": "Bilinmiyor"
+      "name": "Barem Ambalaj",
+      "sector": "Kağıt Ürünleri"
     },
     "BASCM.IS": {
-      "name": "BASCM",
-      "sector": "Bilinmiyor"
+      "name": "Baştaş Başkent Çimento Sanayi",
+      "sector": "Çimento"
     },
     "BASGZ.IS": {
-      "name": "BASGZ",
-      "sector": "Bilinmiyor"
+      "name": "Başkent Doğalgaz",
+      "sector": "Elektrik - Doğalgaz Dağıtım"
     },
     "BAYRK.IS": {
-      "name": "BAYRK",
-      "sector": "Bilinmiyor"
+      "name": "Bayrak EBT Taban",
+      "sector": "Tekstil Entegre"
     },
     "BEGYO.IS": {
-      "name": "BEGYO",
-      "sector": "Bilinmiyor"
+      "name": "Batı Ege GYO",
+      "sector": "GYO"
     },
     "BERA.IS": {
-      "name": "BERA",
-      "sector": "Bilinmiyor"
+      "name": "Bera Holding",
+      "sector": "Holdingler"
     },
     "BESLR.IS": {
-      "name": "BESLR",
-      "sector": "Bilinmiyor"
+      "name": "Besler Gıda",
+      "sector": "Gıda"
     },
     "BESTE.IS": {
-      "name": "BESTE",
-      "sector": "Bilinmiyor"
+      "name": "Best Brands Grup",
+      "sector": "Elektrik Üretim"
     },
     "BEYAZ.IS": {
-      "name": "BEYAZ",
-      "sector": "Bilinmiyor"
+      "name": "Beyaz Filo",
+      "sector": "Ulaştırma-Lojistik"
     },
     "BFREN.IS": {
-      "name": "BFREN",
-      "sector": "Bilinmiyor"
+      "name": "Bosch Fren",
+      "sector": "Otomotiv Parçası"
     },
     "BIENY.IS": {
-      "name": "BIENY",
-      "sector": "Bilinmiyor"
+      "name": "Bien Yapı",
+      "sector": "Seramik"
     },
     "BIGCH.IS": {
-      "name": "BIGCH",
-      "sector": "Bilinmiyor"
+      "name": "BigChefs",
+      "sector": "Gıda"
     },
     "BIGEN.IS": {
-      "name": "BIGEN",
-      "sector": "Bilinmiyor"
+      "name": "Birleşim Grup Enerji",
+      "sector": "Elektrik Üretim"
     },
     "BIGTK.IS": {
-      "name": "BIGTK",
-      "sector": "Bilinmiyor"
+      "name": "Big Medya",
+      "sector": "Medya"
     },
     "BIMAS.IS": {
-      "name": "BIMAS",
-      "sector": "Bilinmiyor"
+      "name": "Bim Birleşik Mağazalar A.Ş",
+      "sector": "Perakande - Ticaret"
     },
     "BINBN.IS": {
-      "name": "BINBN",
-      "sector": "Bilinmiyor"
+      "name": "BinBin",
+      "sector": "Ulaştırma-Lojistik"
     },
     "BINHO.IS": {
-      "name": "BINHO",
-      "sector": "Bilinmiyor"
+      "name": "1000 Yatırımlar",
+      "sector": "Holdingler"
     },
     "BIOEN.IS": {
-      "name": "BIOEN",
-      "sector": "Bilinmiyor"
+      "name": "Biotrend Enerji",
+      "sector": "Elektrik Üretim"
     },
     "BIZIM.IS": {
-      "name": "BIZIM",
-      "sector": "Bilinmiyor"
+      "name": "Bizim Toptan",
+      "sector": "Perakande - Ticaret"
     },
     "BJKAS.IS": {
-      "name": "BJKAS",
-      "sector": "Bilinmiyor"
+      "name": "Beşiktaş",
+      "sector": "Spor"
     },
     "BLCYT.IS": {
-      "name": "BLCYT",
-      "sector": "Bilinmiyor"
+      "name": "Bilici Yatırım",
+      "sector": "Tekstil Entegre"
     },
     "BLUME.IS": {
-      "name": "BLUME",
-      "sector": "Bilinmiyor"
+      "name": "Blume Metal Kimya",
+      "sector": "Turizm"
     },
     "BMSCH.IS": {
-      "name": "BMSCH",
-      "sector": "Bilinmiyor"
+      "name": "BMS Çelik Hasır",
+      "sector": "Demir-Çelik Döküm"
     },
     "BMSTL.IS": {
-      "name": "BMSTL",
-      "sector": "Bilinmiyor"
+      "name": "BMS Birleşik Metal",
+      "sector": "Demir-Çelik Döküm"
     },
     "BNTAS.IS": {
-      "name": "BNTAS",
-      "sector": "Bilinmiyor"
+      "name": "Bantaş Bandırma Ambalaj",
+      "sector": "Kimyasal Ürün"
     },
     "BOBET.IS": {
-      "name": "BOBET",
-      "sector": "Bilinmiyor"
+      "name": "Boğaziçi Beton",
+      "sector": "Çimento"
     },
     "BORLS.IS": {
-      "name": "BORLS",
-      "sector": "Bilinmiyor"
+      "name": "Borlease Otomotiv",
+      "sector": "Ulaştırma-Lojistik"
     },
     "BORSK.IS": {
-      "name": "BORSK",
-      "sector": "Bilinmiyor"
+      "name": "Bor Şeker",
+      "sector": "Gıda"
     },
     "BOSSA.IS": {
-      "name": "BOSSA",
-      "sector": "Bilinmiyor"
+      "name": "Bossa",
+      "sector": "Tekstil Entegre"
     },
     "BRISA.IS": {
-      "name": "BRISA",
-      "sector": "Bilinmiyor"
+      "name": "Brisa",
+      "sector": "Otomotiv Lastiği"
     },
     "BRKO.IS": {
-      "name": "BRKO",
-      "sector": "Bilinmiyor"
+      "name": "Birko Mensucat",
+      "sector": "Tekstil Entegre"
     },
     "BRKSN.IS": {
-      "name": "BRKSN",
-      "sector": "Bilinmiyor"
+      "name": "Berkosan Yalıtım",
+      "sector": "İnşaat Malzemeleri"
     },
     "BRKVY.IS": {
-      "name": "BRKVY",
-      "sector": "Bilinmiyor"
+      "name": "Birikim Varlık",
+      "sector": "Varlık Yönetim"
     },
     "BRLSM.IS": {
-      "name": "BRLSM",
-      "sector": "Bilinmiyor"
+      "name": "Birlesim Mühendislik",
+      "sector": "İnşaat Malzemeleri"
     },
     "BRMEN.IS": {
-      "name": "BRMEN",
-      "sector": "Bilinmiyor"
+      "name": "Birlik Mensucat",
+      "sector": "Tekstil Entegre"
     },
     "BRSAN.IS": {
-      "name": "BRSAN",
-      "sector": "Bilinmiyor"
+      "name": "Borusan Birleşik Boru Fab.",
+      "sector": "Demir-Çelik Temel"
     },
     "BRYAT.IS": {
-      "name": "BRYAT",
-      "sector": "Bilinmiyor"
+      "name": "Borusan Yatırım",
+      "sector": "Holdingler"
     },
     "BSOKE.IS": {
-      "name": "BSOKE",
-      "sector": "Bilinmiyor"
+      "name": "Batı Söke Çimento",
+      "sector": "Çimento"
     },
     "BTCIM.IS": {
-      "name": "BTCIM",
-      "sector": "Bilinmiyor"
+      "name": "Batıçim",
+      "sector": "Çimento"
     },
     "BUCIM.IS": {
-      "name": "BUCIM",
-      "sector": "Bilinmiyor"
+      "name": "Bursa Çimento",
+      "sector": "Çimento"
     },
     "BULGS.IS": {
-      "name": "BULGS",
-      "sector": "Bilinmiyor"
+      "name": "Bulls GSYO",
+      "sector": "Yatırım Ortaklıkları"
     },
     "BURCE.IS": {
-      "name": "BURCE",
-      "sector": "Bilinmiyor"
+      "name": "Burçelik",
+      "sector": "Demir-Çelik Döküm"
     },
     "BURVA.IS": {
-      "name": "BURVA",
-      "sector": "Bilinmiyor"
+      "name": "Burçelik Vana Sanayii",
+      "sector": "İnşaat Malzemeleri"
     },
     "BVSAN.IS": {
-      "name": "BVSAN",
-      "sector": "Bilinmiyor"
+      "name": "Bülbüloğlu Vinç",
+      "sector": "İnşaat Malzemeleri"
     },
     "BYDNR.IS": {
-      "name": "BYDNR",
-      "sector": "Bilinmiyor"
+      "name": "Baydöner",
+      "sector": "Gıda"
     },
     "CANTE.IS": {
-      "name": "CANTE",
-      "sector": "Bilinmiyor"
+      "name": "Çan2 Termik A.S",
+      "sector": "Elektrik Üretim"
     },
     "CASA.IS": {
-      "name": "CASA",
-      "sector": "Bilinmiyor"
+      "name": "Casa Emtia Petrol Kim.Tür.AŞ",
+      "sector": "Perakande - Ticaret"
     },
     "CATES.IS": {
-      "name": "CATES",
-      "sector": "Bilinmiyor"
+      "name": "Çates Elektrik",
+      "sector": "Elektrik Üretim"
     },
     "CCOLA.IS": {
-      "name": "CCOLA",
-      "sector": "Bilinmiyor"
+      "name": "Coca-Cola İçecek A.Ş",
+      "sector": "Meşrubat / İçecek"
     },
     "CELHA.IS": {
-      "name": "CELHA",
-      "sector": "Bilinmiyor"
+      "name": "Çelik Halat",
+      "sector": "Demir-Çelik Temel"
     },
     "CEMAS.IS": {
-      "name": "CEMAS",
-      "sector": "Bilinmiyor"
+      "name": "Çemaş Döküm",
+      "sector": "Demir-Çelik Döküm"
     },
     "CEMTS.IS": {
-      "name": "CEMTS",
-      "sector": "Bilinmiyor"
+      "name": "Çemtas",
+      "sector": "Demir-Çelik Temel"
     },
     "CEMZY.IS": {
-      "name": "CEMZY",
-      "sector": "Bilinmiyor"
+      "name": "Cem Zeytin",
+      "sector": "Gıda"
     },
     "CEOEM.IS": {
-      "name": "CEOEM",
-      "sector": "Bilinmiyor"
+      "name": "CEO Event Medya",
+      "sector": "Medya"
     },
     "CGCAM.IS": {
-      "name": "CGCAM",
-      "sector": "Bilinmiyor"
+      "name": "Çağdaş Cam",
+      "sector": "Cam"
     },
     "CIMSA.IS": {
-      "name": "CIMSA",
-      "sector": "Bilinmiyor"
+      "name": "Çimsa",
+      "sector": "Çimento"
     },
     "CLEBI.IS": {
-      "name": "CLEBI",
-      "sector": "Bilinmiyor"
+      "name": "Çelebi",
+      "sector": "Havayolları ve Hizm."
     },
     "CMBTN.IS": {
-      "name": "CMBTN",
-      "sector": "Bilinmiyor"
+      "name": "Çimbeton",
+      "sector": "Çimento"
     },
     "CMENT.IS": {
-      "name": "CMENT",
-      "sector": "Bilinmiyor"
+      "name": "Çimentaş",
+      "sector": "Çimento"
     },
     "CONSE.IS": {
-      "name": "CONSE",
-      "sector": "Bilinmiyor"
+      "name": "Consus Enerji",
+      "sector": "Elektrik Üretim"
     },
     "COSMO.IS": {
-      "name": "COSMO",
-      "sector": "Bilinmiyor"
+      "name": "Cosmos Yatırım Holding",
+      "sector": "Holdingler"
     },
     "CRDFA.IS": {
-      "name": "CRDFA",
-      "sector": "Bilinmiyor"
+      "name": "Creditwest Faktoring",
+      "sector": "Fin.Kiralama ve Faktoring"
     },
     "CRFSA.IS": {
-      "name": "CRFSA",
-      "sector": "Bilinmiyor"
+      "name": "Carrefoursa",
+      "sector": "Perakande - Ticaret"
     },
     "CUSAN.IS": {
-      "name": "CUSAN",
-      "sector": "Bilinmiyor"
+      "name": "Çuhadaroğlu Metal",
+      "sector": "Demir-Çelik Döküm"
     },
     "CVKMD.IS": {
-      "name": "CVKMD",
-      "sector": "Bilinmiyor"
+      "name": "Cvk Maden",
+      "sector": "Madencilik"
     },
     "CWENE.IS": {
-      "name": "CWENE",
-      "sector": "Bilinmiyor"
+      "name": "Cw Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
     },
     "DAGI.IS": {
-      "name": "DAGI",
-      "sector": "Bilinmiyor"
+      "name": "Dagi Giyim",
+      "sector": "Tekstil Entegre"
     },
     "DAPGM.IS": {
-      "name": "DAPGM",
-      "sector": "Bilinmiyor"
+      "name": "Dap Gayrimenkul",
+      "sector": "GYO"
     },
     "DARDL.IS": {
-      "name": "DARDL",
-      "sector": "Bilinmiyor"
+      "name": "Dardanel",
+      "sector": "Gıda"
     },
     "DCTTR.IS": {
-      "name": "DCTTR",
-      "sector": "Bilinmiyor"
+      "name": "Dct Trading",
+      "sector": "Diğer"
     },
     "DENGE.IS": {
-      "name": "DENGE",
-      "sector": "Bilinmiyor"
+      "name": "Denge Holding",
+      "sector": "Holdingler"
     },
     "DERHL.IS": {
-      "name": "DERHL",
-      "sector": "Bilinmiyor"
+      "name": "Derlüks Yatırım Holding",
+      "sector": "Deri Giyim"
     },
     "DERIM.IS": {
-      "name": "DERIM",
-      "sector": "Bilinmiyor"
+      "name": "Derimod",
+      "sector": "Deri Giyim"
     },
     "DESA.IS": {
-      "name": "DESA",
-      "sector": "Bilinmiyor"
+      "name": "Desa Deri Sanayii",
+      "sector": "Deri Giyim"
     },
     "DESPC.IS": {
-      "name": "DESPC",
-      "sector": "Bilinmiyor"
+      "name": "Despec Bilgisayar",
+      "sector": "Bilgisayar Toptancılığı"
     },
     "DEVA.IS": {
-      "name": "DEVA",
-      "sector": "Bilinmiyor"
+      "name": "Deva Holding",
+      "sector": "Sağlık ve İlaç"
     },
     "DGATE.IS": {
-      "name": "DGATE",
-      "sector": "Bilinmiyor"
+      "name": "Datagate",
+      "sector": "Bilgisayar Toptancılığı"
     },
     "DGGYO.IS": {
-      "name": "DGGYO",
-      "sector": "Bilinmiyor"
+      "name": "Doğuş GYO",
+      "sector": "GYO"
     },
     "DGNMO.IS": {
-      "name": "DGNMO",
-      "sector": "Bilinmiyor"
+      "name": "Doğanlar Mobilya",
+      "sector": "Mobilya"
     },
     "DIRIT.IS": {
-      "name": "DIRIT",
-      "sector": "Bilinmiyor"
+      "name": "Diriteks Diriliş Tekstil",
+      "sector": "Tekstil Entegre"
     },
     "DITAS.IS": {
-      "name": "DITAS",
-      "sector": "Bilinmiyor"
+      "name": "Ditaş BDY",
+      "sector": "Otomotiv Parçası"
+    },
+    "DMRGD.IS": {
+      "name": "DMR Unlu Mamüller",
+      "sector": "Gıda"
+    },
+    "DMSAS.IS": {
+      "name": "Demisaş",
+      "sector": "Demir-Çelik Döküm"
+    },
+    "DNISI.IS": {
+      "name": "Dinamik Isı Yalıtım",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "DOAS.IS": {
+      "name": "Doğuş Otomotiv",
+      "sector": "Otomotiv"
+    },
+    "DOCO.IS": {
+      "name": "DO & CO Aktiengesellschaft",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "DOFER.IS": {
+      "name": "Dofer Yapı",
+      "sector": "Demir-Çelik Temel"
+    },
+    "DOFRB.IS": {
+      "name": "Dof Robotik",
+      "sector": "Teknoloji"
+    },
+    "DOGUB.IS": {
+      "name": "Doğusan",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "DOHOL.IS": {
+      "name": "Doğan Holding",
+      "sector": "Holdingler"
+    },
+    "DOKTA.IS": {
+      "name": "Döktaş Dökümcülük",
+      "sector": "Otomotiv Parçası"
+    },
+    "DSTKF.IS": {
+      "name": "Destek Finans Faktoring",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "DUNYH.IS": {
+      "name": "Dünya Holding",
+      "sector": "Gıda"
+    },
+    "DURDO.IS": {
+      "name": "Duran Doğan Basım",
+      "sector": "Kağıt Ürünleri"
+    },
+    "DURKN.IS": {
+      "name": "Durukan Şekerleme",
+      "sector": "Gıda"
+    },
+    "DYOBY.IS": {
+      "name": "DYO Boya",
+      "sector": "Boya"
+    },
+    "DZGYO.IS": {
+      "name": "Deniz GYO",
+      "sector": "GYO"
+    },
+    "EBEBK.IS": {
+      "name": "Ebebek",
+      "sector": "Perakande - Ticaret"
+    },
+    "ECILC.IS": {
+      "name": "Eczacıbaşı İlaç",
+      "sector": "Sağlık ve İlaç"
+    },
+    "ECOGR.IS": {
+      "name": "Ecogreen",
+      "sector": "Elektrik Üretim"
+    },
+    "ECZYT.IS": {
+      "name": "Eczacıbaşı Yatırım",
+      "sector": "Holdingler"
+    },
+    "EDATA.IS": {
+      "name": "E-Data Teknoloji",
+      "sector": "Teknoloji"
+    },
+    "EDIP.IS": {
+      "name": "Edip Gayrimenkul Yat. San.",
+      "sector": "GYO"
+    },
+    "EFOR.IS": {
+      "name": "Efor Yat. San.",
+      "sector": "Gıda"
+    },
+    "EGEEN.IS": {
+      "name": "Ege Endüstri",
+      "sector": "Otomotiv Parçası"
+    },
+    "EGEGY.IS": {
+      "name": "Egeyapı GYO",
+      "sector": "GYO"
+    },
+    "EGEPO.IS": {
+      "name": "Egepol Hastanesi",
+      "sector": "Sağlık ve İlaç"
+    },
+    "EGGUB.IS": {
+      "name": "Ege Gübre",
+      "sector": "Tarım Kimyasalları"
+    },
+    "EGPRO.IS": {
+      "name": "Ege Profil",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "EGSER.IS": {
+      "name": "Ege Seramik",
+      "sector": "Seramik"
+    },
+    "EKDMR.IS": {
+      "name": "Ekinciler",
+      "sector": "Demir-Çelik Temel"
+    },
+    "EKGYO.IS": {
+      "name": "Emlak Konut GYO",
+      "sector": "GYO"
+    },
+    "EKIZ.IS": {
+      "name": "Ekiz Yağ ve Sabun",
+      "sector": "Gıda"
+    },
+    "EKOS.IS": {
+      "name": "Ekos Teknoloji",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "EKSUN.IS": {
+      "name": "Eksun Gıda",
+      "sector": "Gıda"
+    },
+    "ELITE.IS": {
+      "name": "Elite Organik Gıda",
+      "sector": "Gıda"
+    },
+    "EMKEL.IS": {
+      "name": "Emek Elektrik",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "EMNIS.IS": {
+      "name": "Eminiş Ambalaj",
+      "sector": "Boya"
+    },
+    "EMPAE.IS": {
+      "name": "Empa Elektronik",
+      "sector": "Teknoloji"
+    },
+    "ENDAE.IS": {
+      "name": "Enda Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "ENERY.IS": {
+      "name": "Enerya Enerji",
+      "sector": "Elektrik - Doğalgaz Dağıtım"
+    },
+    "ENJSA.IS": {
+      "name": "Enerjisa Enerji",
+      "sector": "Elektrik - Doğalgaz Dağıtım"
+    },
+    "ENKAI.IS": {
+      "name": "Enka İnşaat",
+      "sector": "İnşaat- Taahhüt"
+    },
+    "ENPRA.IS": {
+      "name": "Enpara",
+      "sector": "Bankacılık"
+    },
+    "ENSRI.IS": {
+      "name": "Ensari Deri",
+      "sector": "Deri Giyim"
+    },
+    "ENTRA.IS": {
+      "name": "Ic Enterra Yenilenebilir",
+      "sector": "Elektrik Üretim"
+    },
+    "EPLAS.IS": {
+      "name": "Egeplast",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "ERBOS.IS": {
+      "name": "Erbosan",
+      "sector": "Demir-Çelik Döküm"
+    },
+    "ERCB.IS": {
+      "name": "Erciyas Çelik Boru",
+      "sector": "Demir-Çelik Temel"
+    },
+    "EREGL.IS": {
+      "name": "Ereğli Demir Çelik",
+      "sector": "Demir-Çelik Temel"
+    },
+    "ERSU.IS": {
+      "name": "Ersu Gıda",
+      "sector": "Meşrubat / İçecek"
+    },
+    "ESCAR.IS": {
+      "name": "Escar Filo",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "ESCOM.IS": {
+      "name": "Escort Teknoloji",
+      "sector": "Teknoloji"
+    },
+    "ESEN.IS": {
+      "name": "Esenboğa Elektrik",
+      "sector": "Elektrik Üretim"
+    },
+    "ETILR.IS": {
+      "name": "Etiler Gıda",
+      "sector": "Gıda"
+    },
+    "ETYAT.IS": {
+      "name": "Euro Trend Yatırım",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "EUHOL.IS": {
+      "name": "Euro Yatırım",
+      "sector": "Holdingler"
+    },
+    "EUKYO.IS": {
+      "name": "Euro Kapital Yatırım Ortaklığı",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "EUPWR.IS": {
+      "name": "Europower Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "EUREN.IS": {
+      "name": "Europen Endüstri",
+      "sector": "Demir-Çelik Döküm"
+    },
+    "EUYO.IS": {
+      "name": "Euro Menkul",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "EYGYO.IS": {
+      "name": "EYG Gayrimenkul",
+      "sector": "GYO"
+    },
+    "FADE.IS": {
+      "name": "Fade Gıda Yatırım",
+      "sector": "Gıda"
+    },
+    "FENER.IS": {
+      "name": "Fenerbahce Futbol A.Ş.",
+      "sector": "Spor"
+    },
+    "FLAP.IS": {
+      "name": "Flap Kongre Hiz.Oto.Tur.A.Ş",
+      "sector": "Diğer"
+    },
+    "FMIZP.IS": {
+      "name": "F-M İzmit Piston",
+      "sector": "Otomotiv Parçası"
+    },
+    "FONET.IS": {
+      "name": "Fonet Bilgi Teknolojileri",
+      "sector": "Teknoloji"
+    },
+    "FORMT.IS": {
+      "name": "Formet Metal ve Cam Sanayii",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "FORTE.IS": {
+      "name": "Forte Bilgi İletişim",
+      "sector": "Teknoloji"
+    },
+    "FRIGO.IS": {
+      "name": "Frigo Pak Gıda",
+      "sector": "Gıda"
+    },
+    "FRMPL.IS": {
+      "name": "Formül Plastik",
+      "sector": "Kimyasal Ürün"
+    },
+    "FROTO.IS": {
+      "name": "Ford Otosan",
+      "sector": "Otomotiv"
+    },
+    "FZLGY.IS": {
+      "name": "Fuzul Gayrimenkul",
+      "sector": "GYO"
+    },
+    "GARAN.IS": {
+      "name": "Garanti Bankası",
+      "sector": "Bankacılık"
+    },
+    "GARFA.IS": {
+      "name": "Garanti BBVA Faktoring",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "GATEG.IS": {
+      "name": "Gate Group",
+      "sector": "Medya"
+    },
+    "GEDIK.IS": {
+      "name": "Gedik Yatırım",
+      "sector": "Aracı Kurumlar"
+    },
+    "GEDZA.IS": {
+      "name": "Gediz Ambalaj Sanayi",
+      "sector": "Kimyasal Ürün"
+    },
+    "GENIL.IS": {
+      "name": "Gen İlaç",
+      "sector": "Sağlık ve İlaç"
+    },
+    "GENKM.IS": {
+      "name": "Gentaş Kimya",
+      "sector": "Kimyasal Ürün"
+    },
+    "GENTS.IS": {
+      "name": "Gentaş",
+      "sector": "Mobilya"
+    },
+    "GEREL.IS": {
+      "name": "Gersan Elektrik",
+      "sector": "Kablo"
+    },
+    "GESAN.IS": {
+      "name": "Girişim Elektrik",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "GIPTA.IS": {
+      "name": "Gıpta",
+      "sector": "Kırtasiye"
+    },
+    "GLBMD.IS": {
+      "name": "Global Menkul Değerler",
+      "sector": "Aracı Kurumlar"
+    },
+    "GLCVY.IS": {
+      "name": "Gelecek Varlık Yön.",
+      "sector": "Varlık Yönetim"
+    },
+    "GLRMK.IS": {
+      "name": "Gülermak Ağır Sanayi",
+      "sector": "İnşaat- Taahhüt"
+    },
+    "GLRYH.IS": {
+      "name": "Güler Yatırım Holding",
+      "sector": "Holdingler"
+    },
+    "GLYHO.IS": {
+      "name": "Global Yatırım Holding",
+      "sector": "Holdingler"
+    },
+    "GMTAS.IS": {
+      "name": "Gimat Mağazacılık",
+      "sector": "Perakande - Ticaret"
+    },
+    "GOKNR.IS": {
+      "name": "Göknur Gıda",
+      "sector": "Gıda"
+    },
+    "GOLTS.IS": {
+      "name": "Göltaş Çimento",
+      "sector": "Çimento"
+    },
+    "GOODY.IS": {
+      "name": "Goodyear",
+      "sector": "Otomotiv Lastiği"
+    },
+    "GOZDE.IS": {
+      "name": "Gözde Girisim Sermayesi",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "GRNYO.IS": {
+      "name": "Garanti YO",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "GRSEL.IS": {
+      "name": "Gürsel Taşımacılık",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "GRTHO.IS": {
+      "name": "GrainTurk Tarım",
+      "sector": "Perakande - Ticaret"
+    },
+    "GSDDE.IS": {
+      "name": "GSD Denizcilik Gayrimenkul İnş",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "GSDHO.IS": {
+      "name": "GSD Holding A.Ş.",
+      "sector": "Holdingler"
+    },
+    "GSRAY.IS": {
+      "name": "Galatasaray Sportif A.Ş",
+      "sector": "Spor"
+    },
+    "GUBRF.IS": {
+      "name": "Gübre Fabrikaları",
+      "sector": "Tarım Kimyasalları"
+    },
+    "GUNDG.IS": {
+      "name": "Gündoğdu Gıda",
+      "sector": "Gıda"
+    },
+    "GWIND.IS": {
+      "name": "Galata Wind Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "GZNMI.IS": {
+      "name": "Gezinomi Seyahat",
+      "sector": "Turizm"
+    },
+    "HALKB.IS": {
+      "name": "Halkbank",
+      "sector": "Bankacılık"
+    },
+    "HATEK.IS": {
+      "name": "Hateks Hatay Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "HATSN.IS": {
+      "name": "Hat-San",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "HDFGS.IS": {
+      "name": "Hedef Girişim Sermayesi",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "HEDEF.IS": {
+      "name": "Hedef Holding",
+      "sector": "Holdingler"
+    },
+    "HEKTS.IS": {
+      "name": "Hektaş",
+      "sector": "Tarım Kimyasalları"
+    },
+    "HKTM.IS": {
+      "name": "Hidropar",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "HLGYO.IS": {
+      "name": "Halk GYO",
+      "sector": "GYO"
+    },
+    "HOROZ.IS": {
+      "name": "Horoz Lojistik",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "HRKET.IS": {
+      "name": "Hareket Proje",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "HTTBT.IS": {
+      "name": "Hitit Bilgisayar",
+      "sector": "Teknoloji"
+    },
+    "HUBVC.IS": {
+      "name": "Hub Girişim Ser. Y.O.",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "HUNER.IS": {
+      "name": "Hun Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "HURGZ.IS": {
+      "name": "Hürriyet",
+      "sector": "Medya"
+    },
+    "ICBCT.IS": {
+      "name": "ICBC Turkey Bank",
+      "sector": "Bankacılık"
+    },
+    "ICUGS.IS": {
+      "name": "Icu Girişim Ser. Y.O.",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "IDGYO.IS": {
+      "name": "İdealist GYO",
+      "sector": "GYO"
+    },
+    "IEYHO.IS": {
+      "name": "Işıklar Enerji ve Yapı Holding",
+      "sector": "Holdingler"
+    },
+    "IHAAS.IS": {
+      "name": "İhlas Haber Ajansı",
+      "sector": "Medya"
+    },
+    "IHEVA.IS": {
+      "name": "İhlas Ev Aletleri",
+      "sector": "Dayanıklı Tüketim"
+    },
+    "IHGZT.IS": {
+      "name": "İhlas Gazetecilik",
+      "sector": "Medya"
+    },
+    "IHLAS.IS": {
+      "name": "İhlas Holding",
+      "sector": "Holdingler"
+    },
+    "IHLGM.IS": {
+      "name": "İhlas Gayrimenkul",
+      "sector": "GYO"
+    },
+    "IHYAY.IS": {
+      "name": "İhlas Yayın Holding",
+      "sector": "Medya"
+    },
+    "IMASM.IS": {
+      "name": "İmaş Makine",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "INDES.IS": {
+      "name": "İndeks Bilgisayar",
+      "sector": "Bilgisayar Toptancılığı"
+    },
+    "INFO.IS": {
+      "name": "İnfo Yatırım",
+      "sector": "Aracı Kurumlar"
+    },
+    "INGRM.IS": {
+      "name": "İngram Bilişim",
+      "sector": "Bilgisayar Toptancılığı"
+    },
+    "INTEK.IS": {
+      "name": "Innosa Teknoloji",
+      "sector": "Teknoloji"
+    },
+    "INTEM.IS": {
+      "name": "İntema",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "INVEO.IS": {
+      "name": "İnveo Yatırım Holding",
+      "sector": "Holdingler"
+    },
+    "INVES.IS": {
+      "name": "Investco Holding",
+      "sector": "Holdingler"
+    },
+    "ISATR.IS": {
+      "name": "İş Bankası (A)",
+      "sector": "Bankacılık"
+    },
+    "ISBIR.IS": {
+      "name": "İşbir Holding",
+      "sector": "Holdingler"
+    },
+    "ISBTR.IS": {
+      "name": "İş Bankası (B)",
+      "sector": "Bankacılık"
+    },
+    "ISCTR.IS": {
+      "name": "İş Bankası (C)",
+      "sector": "Bankacılık"
+    },
+    "ISDMR.IS": {
+      "name": "İskenderun Demir Çelik",
+      "sector": "Demir-Çelik Temel"
+    },
+    "ISFIN.IS": {
+      "name": "İş Finansal Kiralama",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "ISGSY.IS": {
+      "name": "İş Girişim",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "ISGYO.IS": {
+      "name": "İş GYO",
+      "sector": "GYO"
+    },
+    "ISKPL.IS": {
+      "name": "Işıklar Plastik",
+      "sector": "Kimyasal Ürün"
+    },
+    "ISKUR.IS": {
+      "name": "İş Bankası Kurucu",
+      "sector": "Bankacılık"
+    },
+    "ISMEN.IS": {
+      "name": "İş Yatırım",
+      "sector": "Aracı Kurumlar"
+    },
+    "ISSEN.IS": {
+      "name": "İşbir Sentetik",
+      "sector": "Tekstil Entegre"
+    },
+    "ISYAT.IS": {
+      "name": "İs YO",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "IZENR.IS": {
+      "name": "İzdemir Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "IZFAS.IS": {
+      "name": "İzmir Fırça",
+      "sector": "Boya"
+    },
+    "IZINV.IS": {
+      "name": "İz Yatırım Holding",
+      "sector": "Gıda"
+    },
+    "IZMDC.IS": {
+      "name": "İzmir Demir Çelik",
+      "sector": "Demir-Çelik Temel"
+    },
+    "JANTS.IS": {
+      "name": "Jantsa Jant",
+      "sector": "Otomotiv Parçası"
+    },
+    "KAPLM.IS": {
+      "name": "Kaplamin",
+      "sector": "Kağıt Ürünleri"
+    },
+    "KAREL.IS": {
+      "name": "Karel Elektronik",
+      "sector": "İletişim Cihazları"
+    },
+    "KARSN.IS": {
+      "name": "Karsan Otomotiv",
+      "sector": "Otomotiv"
+    },
+    "KARTN.IS": {
+      "name": "Kartonsan",
+      "sector": "Kağıt Ürünleri"
+    },
+    "KATMR.IS": {
+      "name": "Katmerciler Araç Üstü Ekipman",
+      "sector": "Otomotiv Parçası"
+    },
+    "KAYSE.IS": {
+      "name": "Kayseri Şeker",
+      "sector": "Gıda"
+    },
+    "KBORU.IS": {
+      "name": "Kuzey Boru",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "KCAER.IS": {
+      "name": "Kocaer Çelik Sanayi",
+      "sector": "Demir-Çelik Temel"
+    },
+    "KCHOL.IS": {
+      "name": "Koç Holding",
+      "sector": "Holdingler"
+    },
+    "KENT.IS": {
+      "name": "Kent Gıda",
+      "sector": "Gıda"
+    },
+    "KERVN.IS": {
+      "name": "Kervansaray Yat. Holding",
+      "sector": "Holdingler"
+    },
+    "KFEIN.IS": {
+      "name": "Kafein Yazılım",
+      "sector": "Teknoloji"
+    },
+    "KGYO.IS": {
+      "name": "Koray GYO",
+      "sector": "GYO"
+    },
+    "KIMMR.IS": {
+      "name": "Ersan Alışveriş Hizmetleri",
+      "sector": "Perakande - Ticaret"
+    },
+    "KLGYO.IS": {
+      "name": "Kiler GYO",
+      "sector": "GYO"
+    },
+    "KLKIM.IS": {
+      "name": "Kalekim Kimyevi Maddeler",
+      "sector": "Seramik"
+    },
+    "KLMSN.IS": {
+      "name": "Klimasan",
+      "sector": "Dayanıklı Tüketim"
+    },
+    "KLNMA.IS": {
+      "name": "T. Kalkınma Bankası",
+      "sector": "Bankacılık"
+    },
+    "KLRHO.IS": {
+      "name": "Kiler Holding",
+      "sector": "Holdingler"
+    },
+    "KLSER.IS": {
+      "name": "Kaleseramik",
+      "sector": "Seramik"
+    },
+    "KLSYN.IS": {
+      "name": "Koleksiyon Mobilya",
+      "sector": "Mobilya"
+    },
+    "KLYPV.IS": {
+      "name": "Kalyon Güneş Teknolojileri",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "KMPUR.IS": {
+      "name": "Kimteks Poliüretan",
+      "sector": "Kimyasal Ürün"
+    },
+    "KNFRT.IS": {
+      "name": "Konfrut Gıda",
+      "sector": "Meşrubat / İçecek"
+    },
+    "KOCMT.IS": {
+      "name": "Koç Metalurji",
+      "sector": "Demir-Çelik Temel"
+    },
+    "KONKA.IS": {
+      "name": "Konya Kağıt",
+      "sector": "Kağıt Ürünleri"
+    },
+    "KONTR.IS": {
+      "name": "Kontrolmatik Teknoloji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "KONYA.IS": {
+      "name": "Konya Çimento",
+      "sector": "Çimento"
+    },
+    "KOPOL.IS": {
+      "name": "Koza Polyester",
+      "sector": "Endüstriyel Tekstil"
+    },
+    "KORDS.IS": {
+      "name": "Kordsa Teknik Tekstil",
+      "sector": "Endüstriyel Tekstil"
+    },
+    "KOTON.IS": {
+      "name": "Koton",
+      "sector": "Tekstil Entegre"
+    },
+    "KRDMA.IS": {
+      "name": "Kardemir (A)",
+      "sector": "Demir-Çelik Temel"
+    },
+    "KRDMB.IS": {
+      "name": "Kardemir (B)",
+      "sector": "Demir-Çelik Temel"
+    },
+    "KRDMD.IS": {
+      "name": "Kardemir (D)",
+      "sector": "Demir-Çelik Temel"
+    },
+    "KRGYO.IS": {
+      "name": "Korfez GYO",
+      "sector": "GYO"
+    },
+    "KRONT.IS": {
+      "name": "Kron Teknoloji",
+      "sector": "Teknoloji"
+    },
+    "KRPLS.IS": {
+      "name": "Koroplast Temizlik Ambalaj",
+      "sector": "Kağıt Ürünleri"
+    },
+    "KRSTL.IS": {
+      "name": "Kristal Kola",
+      "sector": "Meşrubat / İçecek"
+    },
+    "KRTEK.IS": {
+      "name": "Karsu Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "KRVGD.IS": {
+      "name": "Kervan Gıda",
+      "sector": "Gıda"
+    },
+    "KSTUR.IS": {
+      "name": "Kuştur Turizm",
+      "sector": "Turizm"
+    },
+    "KTLEV.IS": {
+      "name": "Katılımevim",
+      "sector": "Diğer"
+    },
+    "KTSKR.IS": {
+      "name": "Kütahya Şeker",
+      "sector": "Gıda"
+    },
+    "KUTPO.IS": {
+      "name": "Kütahya Porselen",
+      "sector": "Seramik"
+    },
+    "KUVVA.IS": {
+      "name": "Kuvva Gıda",
+      "sector": "Gıda"
+    },
+    "KUYAS.IS": {
+      "name": "Kuyas Yatırım AŞ",
+      "sector": "İnşaat- Taahhüt"
+    },
+    "KZBGY.IS": {
+      "name": "Kızılbük GYO",
+      "sector": "GYO"
+    },
+    "KZGYO.IS": {
+      "name": "Kuzugrup GYO",
+      "sector": "GYO"
+    },
+    "LIDER.IS": {
+      "name": "Lider Turizm",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "LIDFA.IS": {
+      "name": "Lider Faktoring",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "LILAK.IS": {
+      "name": "Lila Kağıt",
+      "sector": "Kağıt Ürünleri"
+    },
+    "LINK.IS": {
+      "name": "Link Bilgisayar",
+      "sector": "Teknoloji"
+    },
+    "LKMNH.IS": {
+      "name": "Lokman Hekim Engurusag",
+      "sector": "Sağlık ve İlaç"
+    },
+    "LMKDC.IS": {
+      "name": "Limak Doğu Anadolu Çimento",
+      "sector": "Çimento"
+    },
+    "LOGO.IS": {
+      "name": "Logo Yazılım",
+      "sector": "Teknoloji"
+    },
+    "LRSHO.IS": {
+      "name": "Loras Holding",
+      "sector": "Holdingler"
+    },
+    "LUKSK.IS": {
+      "name": "Lüks Kadife",
+      "sector": "Tekstil Entegre"
+    },
+    "LXGYO.IS": {
+      "name": "Luxera GYO",
+      "sector": "GYO"
+    },
+    "LYDHO.IS": {
+      "name": "Lydia Holding",
+      "sector": "Holdingler"
+    },
+    "LYDYE.IS": {
+      "name": "Lydia Yeşil Enerji",
+      "sector": "Gıda"
+    },
+    "MAALT.IS": {
+      "name": "Marmaris Altınyunus",
+      "sector": "Turizm"
+    },
+    "MACKO.IS": {
+      "name": "Maçkolik",
+      "sector": "Eğlence Hizmetleri"
+    },
+    "MAGEN.IS": {
+      "name": "Margün Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "MAKIM.IS": {
+      "name": "Makim Makina",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "MAKTK.IS": {
+      "name": "Makina Takım",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "MANAS.IS": {
+      "name": "Manas Enerji Yönetimi",
+      "sector": "Teknoloji"
+    },
+    "MARBL.IS": {
+      "name": "Tureks Turunç",
+      "sector": "Madencilik"
+    },
+    "MARKA.IS": {
+      "name": "Marka Yatırım Holding",
+      "sector": "Holdingler"
+    },
+    "MARMR.IS": {
+      "name": "Marmara Holding",
+      "sector": "Kimyasal Ürün"
+    },
+    "MARTI.IS": {
+      "name": "Martı Otel İşletmeleri",
+      "sector": "Turizm"
+    },
+    "MAVI.IS": {
+      "name": "Mavi Giyim Sanayi Tic.A.S",
+      "sector": "Tekstil Entegre"
+    },
+    "MCARD.IS": {
+      "name": "MetropolCard",
+      "sector": "Teknoloji"
+    },
+    "MEDTR.IS": {
+      "name": "Meditera Tıbbi Malzeme",
+      "sector": "Sağlık ve İlaç"
+    },
+    "MEGAP.IS": {
+      "name": "Mega Polietilen Köpük",
+      "sector": "Tekstil Entegre"
+    },
+    "MEGMT.IS": {
+      "name": "Mega Metal",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "MEKAG.IS": {
+      "name": "Meka Beton",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "MEPET.IS": {
+      "name": "Metro Petrol ve Tesisleri",
+      "sector": "Petrol"
+    },
+    "MERCN.IS": {
+      "name": "Mercan Kimya",
+      "sector": "Kimyasal Ürün"
+    },
+    "MERIT.IS": {
+      "name": "Merit Turizm Yatırım",
+      "sector": "Turizm"
+    },
+    "MERKO.IS": {
+      "name": "Merko Gıda",
+      "sector": "Gıda"
+    },
+    "METRO.IS": {
+      "name": "Metro Tic. Mali Yat.",
+      "sector": "Holdingler"
+    },
+    "MEYSU.IS": {
+      "name": "Meysu Gıda",
+      "sector": "Gıda"
+    },
+    "MGROS.IS": {
+      "name": "Migros",
+      "sector": "Perakande - Ticaret"
+    },
+    "MHRGY.IS": {
+      "name": "Mhr GYO",
+      "sector": "GYO"
+    },
+    "MIATK.IS": {
+      "name": "Mia Teknoloji",
+      "sector": "Teknoloji"
+    },
+    "MMCAS.IS": {
+      "name": "MMC San.ve Tic. Yatırımlar A.Ş",
+      "sector": "Holdingler"
+    },
+    "MNDRS.IS": {
+      "name": "Menderes Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "MNDTR.IS": {
+      "name": "Mondi Tire",
+      "sector": "Kağıt Ürünleri"
+    },
+    "MOBTL.IS": {
+      "name": "Mobitel İletişim",
+      "sector": "İletişim"
+    },
+    "MOGAN.IS": {
+      "name": "Mogan Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "MOPAS.IS": {
+      "name": "Mopaş",
+      "sector": "Perakande - Ticaret"
+    },
+    "MPARK.IS": {
+      "name": "MLP Sağlık Hizmetleri",
+      "sector": "Sağlık ve İlaç"
+    },
+    "MRGYO.IS": {
+      "name": "Martı GYO",
+      "sector": "GYO"
+    },
+    "MRSHL.IS": {
+      "name": "Marshall",
+      "sector": "Boya"
+    },
+    "MSGYO.IS": {
+      "name": "Mistral GYO",
+      "sector": "GYO"
+    },
+    "MTRKS.IS": {
+      "name": "Matriks Finansal Teknolojiler",
+      "sector": "Teknoloji"
+    },
+    "MTRYO.IS": {
+      "name": "Metro YO",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "MZHLD.IS": {
+      "name": "Mazhar Zorlu Holding",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "NATEN.IS": {
+      "name": "Naturel Yenilenebilir Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "NETAS.IS": {
+      "name": "Netaş",
+      "sector": "İletişim Cihazları"
+    },
+    "NETCD.IS": {
+      "name": "Netcad Yazılım",
+      "sector": "Teknoloji"
+    },
+    "NIBAS.IS": {
+      "name": "Niğde Beton Sanayi",
+      "sector": "Çimento"
+    },
+    "NTGAZ.IS": {
+      "name": "Naturel Gaz",
+      "sector": "Petrol"
+    },
+    "NTHOL.IS": {
+      "name": "Net Holding",
+      "sector": "Holdingler"
+    },
+    "NUGYO.IS": {
+      "name": "Nurol GYO",
+      "sector": "GYO"
+    },
+    "NUHCM.IS": {
+      "name": "Nuh Çimento",
+      "sector": "Çimento"
+    },
+    "OBAMS.IS": {
+      "name": "Oba Makarnacılık",
+      "sector": "Gıda"
+    },
+    "OBASE.IS": {
+      "name": "Obase Bilgisayar Danışmanlık",
+      "sector": "Teknoloji"
+    },
+    "ODAS.IS": {
+      "name": "Odaş Elektrik Üretim",
+      "sector": "Elektrik Üretim"
+    },
+    "ODINE.IS": {
+      "name": "Odine Solutions",
+      "sector": "Teknoloji"
+    },
+    "OFSYM.IS": {
+      "name": "Ofis Yem",
+      "sector": "Gıda"
+    },
+    "ONCSM.IS": {
+      "name": "Oncosem",
+      "sector": "Sağlık ve İlaç"
+    },
+    "ONRYT.IS": {
+      "name": "Onur Yüksek Teknoloji",
+      "sector": "Savunma"
+    },
+    "ORCAY.IS": {
+      "name": "Ortaköy Çay Sanayi",
+      "sector": "Meşrubat / İçecek"
+    },
+    "ORGE.IS": {
+      "name": "ORGE Enerji Elektrik",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "ORMA.IS": {
+      "name": "Orma Orman Mahsulleri",
+      "sector": "Kağıt Ürünleri"
+    },
+    "OSMEN.IS": {
+      "name": "Osmanlı Menkul Değ.",
+      "sector": "Aracı Kurumlar"
+    },
+    "OSTIM.IS": {
+      "name": "Ostim Endüst. Yatırımlar",
+      "sector": "Diğer"
+    },
+    "OTKAR.IS": {
+      "name": "Otokar",
+      "sector": "Otomotiv"
+    },
+    "OTTO.IS": {
+      "name": "Otto Holding",
+      "sector": "Gıda"
+    },
+    "OYAKC.IS": {
+      "name": "Oyak Çimento",
+      "sector": "Çimento"
+    },
+    "OYAYO.IS": {
+      "name": "Oyak Yatırım Ortaklığı",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "OYLUM.IS": {
+      "name": "Oylum Sınai Yatırımlar",
+      "sector": "Gıda"
+    },
+    "OYYAT.IS": {
+      "name": "Oyak Yatırım",
+      "sector": "Aracı Kurumlar"
+    },
+    "OZATD.IS": {
+      "name": "Özata Denizcilik",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "OZGYO.IS": {
+      "name": "Özderici GYO",
+      "sector": "GYO"
+    },
+    "OZKGY.IS": {
+      "name": "Özak GYO",
+      "sector": "GYO"
+    },
+    "OZRDN.IS": {
+      "name": "Özerden Plastik",
+      "sector": "Kimyasal Ürün"
+    },
+    "OZSUB.IS": {
+      "name": "Özsu Balık",
+      "sector": "Hayvancılık"
+    },
+    "OZYSR.IS": {
+      "name": "Özyaşar Tel",
+      "sector": "Demir-Çelik Temel"
+    },
+    "PAGYO.IS": {
+      "name": "Panora GYO",
+      "sector": "GYO"
+    },
+    "PAHOL.IS": {
+      "name": "Pasifik Holding",
+      "sector": "Holdingler"
+    },
+    "PAMEL.IS": {
+      "name": "Pamel Yenilenebilir Elekt.",
+      "sector": "Elektrik Üretim"
+    },
+    "PAPIL.IS": {
+      "name": "Papilon Savunma",
+      "sector": "Teknoloji"
+    },
+    "PARSN.IS": {
+      "name": "Parsan",
+      "sector": "Otomotiv Parçası"
+    },
+    "PASEU.IS": {
+      "name": "Pasifik Eurasia",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "PATEK.IS": {
+      "name": "Pasifik Teknoloji",
+      "sector": "Teknoloji"
+    },
+    "PCILT.IS": {
+      "name": "PC İletişim ve Medya",
+      "sector": "Medya"
+    },
+    "PEKGY.IS": {
+      "name": "Peker GYO",
+      "sector": "GYO"
+    },
+    "PENGD.IS": {
+      "name": "Penguen Gıda",
+      "sector": "Gıda"
+    },
+    "PENTA.IS": {
+      "name": "Penta Teknoloji",
+      "sector": "Bilgisayar Toptancılığı"
+    },
+    "PETKM.IS": {
+      "name": "Petkim",
+      "sector": "Petrol"
+    },
+    "PETUN.IS": {
+      "name": "Pınar Et ve Un",
+      "sector": "Gıda"
+    },
+    "PGSUS.IS": {
+      "name": "Pegasus Hava Taşımacılığı",
+      "sector": "Havayolları ve Hizm."
+    },
+    "PINSU.IS": {
+      "name": "Pınar Su",
+      "sector": "Meşrubat / İçecek"
+    },
+    "PKART.IS": {
+      "name": "Plastikkart A.Ş",
+      "sector": "Teknoloji"
+    },
+    "PKENT.IS": {
+      "name": "Petrokent",
+      "sector": "Turizm"
+    },
+    "PLTUR.IS": {
+      "name": "Platform Turizm",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "PNLSN.IS": {
+      "name": "Panelsan Çatı Cephe",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "PNSUT.IS": {
+      "name": "Pınar Süt",
+      "sector": "Meşrubat / İçecek"
+    },
+    "POLHO.IS": {
+      "name": "Polisan Holding",
+      "sector": "Holdingler"
+    },
+    "POLTK.IS": {
+      "name": "Politeknik Metal",
+      "sector": "Kimyasal Ürün"
+    },
+    "PRDGS.IS": {
+      "name": "Pardus Girişim",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "PRKAB.IS": {
+      "name": "Prysmian Kablo",
+      "sector": "Kablo"
+    },
+    "PRKME.IS": {
+      "name": "Park Elek. Madencilik",
+      "sector": "Madencilik"
+    },
+    "PRZMA.IS": {
+      "name": "Prizma Pres Matbaacılık",
+      "sector": "Kağıt Ürünleri"
+    },
+    "PSDTC.IS": {
+      "name": "Pergamon Status",
+      "sector": "Perakande - Ticaret"
+    },
+    "PSGYO.IS": {
+      "name": "Pasifik GYO",
+      "sector": "GYO"
+    },
+    "QNBFK.IS": {
+      "name": "QNB Finans Fin. Kir.",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "QNBTR.IS": {
+      "name": "QNB Bank",
+      "sector": "Bankacılık"
+    },
+    "QUAGR.IS": {
+      "name": "QUA Granite",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "RALYH.IS": {
+      "name": "Ral Yatırım Holding",
+      "sector": "Tekstil Entegre"
+    },
+    "RAYSG.IS": {
+      "name": "Ray Sigorta",
+      "sector": "Sigorta"
+    },
+    "REEDR.IS": {
+      "name": "Reeder",
+      "sector": "İletişim Cihazları"
+    },
+    "RGYAS.IS": {
+      "name": "Rönesans Gayrimenkul",
+      "sector": "GYO"
+    },
+    "RNPOL.IS": {
+      "name": "Rainbow Polikarbonat",
+      "sector": "Kimyasal Ürün"
+    },
+    "RODRG.IS": {
+      "name": "Rodrigo Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "RTALB.IS": {
+      "name": "RTA laboratuvarlari",
+      "sector": "Sağlık ve İlaç"
+    },
+    "RUBNS.IS": {
+      "name": "Rubenis Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "RUZYE.IS": {
+      "name": "Ruzy Madencilik ve Enerji",
+      "sector": "Madencilik"
+    },
+    "RYGYO.IS": {
+      "name": "Reysaş GYO",
+      "sector": "GYO"
+    },
+    "RYSAS.IS": {
+      "name": "Reysaş Taşımacılık",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "SAFKR.IS": {
+      "name": "Safkar Ege Soğutmacılık",
+      "sector": "Dayanıklı Tüketim"
+    },
+    "SAHOL.IS": {
+      "name": "Sabancı Holding",
+      "sector": "Holdingler"
+    },
+    "SAMAT.IS": {
+      "name": "Saray Matbaacılık",
+      "sector": "Kağıt Ürünleri"
+    },
+    "SANEL.IS": {
+      "name": "San-El Muhendislik",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "SANFM.IS": {
+      "name": "Sanifoam Sünger Sanayi",
+      "sector": "Kimyasal Ürün"
+    },
+    "SANKO.IS": {
+      "name": "Sanko Pazarlama",
+      "sector": "Pazarlama"
+    },
+    "SARKY.IS": {
+      "name": "Sarkuysan",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "SASA.IS": {
+      "name": "Sasa Polyester Sanayi A.Ş.",
+      "sector": "Endüstriyel Tekstil"
+    },
+    "SAYAS.IS": {
+      "name": "Say Yenilenebilir Enerji",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "SDTTR.IS": {
+      "name": "SDT Uzay",
+      "sector": "Savunma"
+    },
+    "SEGMN.IS": {
+      "name": "Seğmen Gıda",
+      "sector": "Gıda"
+    },
+    "SEGYO.IS": {
+      "name": "Şeker GYO",
+      "sector": "GYO"
+    },
+    "SEKFK.IS": {
+      "name": "Şeker Finansal Kiralama A.Ş",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "SEKUR.IS": {
+      "name": "Sekuro Plastik",
+      "sector": "Kimyasal Ürün"
+    },
+    "SELEC.IS": {
+      "name": "Selçuk Ecza Deposu",
+      "sector": "Sağlık ve İlaç"
+    },
+    "SELVA.IS": {
+      "name": "Selva Gıda",
+      "sector": "Gıda"
+    },
+    "SERNT.IS": {
+      "name": "Seranit Granit",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "SEYKM.IS": {
+      "name": "Seyitler Kimya",
+      "sector": "Kimyasal Ürün"
+    },
+    "SILVR.IS": {
+      "name": "Silverline",
+      "sector": "Endüstriyel Makine -Teçhizat Üretim"
+    },
+    "SISE.IS": {
+      "name": "Şişecam",
+      "sector": "Cam"
+    },
+    "SKBNK.IS": {
+      "name": "Şekerbank",
+      "sector": "Bankacılık"
+    },
+    "SKTAS.IS": {
+      "name": "Söktaş",
+      "sector": "Tekstil Entegre"
+    },
+    "SKYLP.IS": {
+      "name": "Skyalp Fin. Tek.ve Danışmanlık",
+      "sector": "Diğer"
+    },
+    "SKYMD.IS": {
+      "name": "Şeker Yatırım",
+      "sector": "Aracı Kurumlar"
+    },
+    "SMART.IS": {
+      "name": "Smartiks Yazılım",
+      "sector": "Teknoloji"
+    },
+    "SMRTG.IS": {
+      "name": "Smart Güneş Enerjisi",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "SMRVA.IS": {
+      "name": "Sümer Varlık Yönetim",
+      "sector": "Varlık Yönetim"
+    },
+    "SNGYO.IS": {
+      "name": "Sinpas GYO",
+      "sector": "GYO"
+    },
+    "SNICA.IS": {
+      "name": "Sanica Isı Sanayi",
+      "sector": "Dayanıklı Tüketim"
+    },
+    "SNPAM.IS": {
+      "name": "Sönmez Pamuklu",
+      "sector": "Tekstil Entegre"
+    },
+    "SODSN.IS": {
+      "name": "Sodaş Sodyum Sanayii",
+      "sector": "Kimyasal Ürün"
+    },
+    "SOKE.IS": {
+      "name": "Söke Değirmencilik",
+      "sector": "Gıda"
+    },
+    "SOKM.IS": {
+      "name": "Şok Marketler",
+      "sector": "Perakande - Ticaret"
+    },
+    "SONME.IS": {
+      "name": "Sönmez Filament",
+      "sector": "Tekstil Entegre"
+    },
+    "SRVGY.IS": {
+      "name": "Servet GYO",
+      "sector": "GYO"
+    },
+    "SUMAS.IS": {
+      "name": "Sumas Mobilya",
+      "sector": "Mobilya"
+    },
+    "SUNTK.IS": {
+      "name": "Sun Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "SURGY.IS": {
+      "name": "Sur GYO",
+      "sector": "GYO"
+    },
+    "SUWEN.IS": {
+      "name": "Suwen Tekstil",
+      "sector": "Tekstil Entegre"
+    },
+    "SVGYO.IS": {
+      "name": "Savur GYO",
+      "sector": "GYO"
+    },
+    "TABGD.IS": {
+      "name": "Tab Gıda",
+      "sector": "Gıda"
+    },
+    "TARKM.IS": {
+      "name": "Tarkim",
+      "sector": "Tarım Kimyasalları"
+    },
+    "TATEN.IS": {
+      "name": "Tatlıpınar Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "TATGD.IS": {
+      "name": "Tat Gıda",
+      "sector": "Gıda"
+    },
+    "TAVHL.IS": {
+      "name": "TAV Holding",
+      "sector": "Havayolları ve Hizm."
+    },
+    "TBORG.IS": {
+      "name": "Tuborg",
+      "sector": "Meşrubat / İçecek"
+    },
+    "TCELL.IS": {
+      "name": "Turkcell",
+      "sector": "İletişim"
+    },
+    "TCKRC.IS": {
+      "name": "Kıraç Galvaniz",
+      "sector": "Diğer"
+    },
+    "TDGYO.IS": {
+      "name": "Trend GYO",
+      "sector": "GYO"
+    },
+    "TEHOL.IS": {
+      "name": "Tera Holding",
+      "sector": "Holdingler"
+    },
+    "TEKTU.IS": {
+      "name": "Tek-Art Turizm",
+      "sector": "Turizm"
+    },
+    "TERA.IS": {
+      "name": "Tera Yatırım",
+      "sector": "Aracı Kurumlar"
+    },
+    "TEZOL.IS": {
+      "name": "Europap Tezol",
+      "sector": "Kağıt Ürünleri"
+    },
+    "TGSAS.IS": {
+      "name": "TGS Dış Ticaret",
+      "sector": "Pazarlama"
+    },
+    "THYAO.IS": {
+      "name": "Türk Hava Yolları",
+      "sector": "Havayolları ve Hizm."
+    },
+    "TKFEN.IS": {
+      "name": "Tekfen Holding",
+      "sector": "İnşaat- Taahhüt"
+    },
+    "TKNSA.IS": {
+      "name": "Teknosa İç ve Dış Tic.",
+      "sector": "Perakande - Ticaret"
+    },
+    "TLMAN.IS": {
+      "name": "Trabzon Liman İşletmeciliği",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "TMPOL.IS": {
+      "name": "TE-MAPOL Polimer Plastik",
+      "sector": "Kimyasal Ürün"
+    },
+    "TMSN.IS": {
+      "name": "Tümosan Motor ve Traktör",
+      "sector": "Otomotiv"
+    },
+    "TNZTP.IS": {
+      "name": "Tapdi Oksijen",
+      "sector": "Sağlık ve İlaç"
+    },
+    "TOASO.IS": {
+      "name": "Tofaş Fabrika",
+      "sector": "Otomotiv"
+    },
+    "TRALT.IS": {
+      "name": "Türk Altın",
+      "sector": "Madencilik"
+    },
+    "TRCAS.IS": {
+      "name": "Turcas Holding",
+      "sector": "Petrol"
+    },
+    "TRENJ.IS": {
+      "name": "TR Doğal Enerji Kaynakları",
+      "sector": "Elektrik Üretim"
+    },
+    "TRGYO.IS": {
+      "name": "Torunlar GYO",
+      "sector": "GYO"
+    },
+    "TRHOL.IS": {
+      "name": "Tera Finansal Yat. Holding",
+      "sector": "Holdingler"
+    },
+    "TRILC.IS": {
+      "name": "Turk İlaç ve Serum Sanayi",
+      "sector": "Sağlık ve İlaç"
+    },
+    "TRMET.IS": {
+      "name": "TR Anadolu Metal",
+      "sector": "Madencilik"
+    },
+    "TSGYO.IS": {
+      "name": "TSKB GYO",
+      "sector": "GYO"
+    },
+    "TSKB.IS": {
+      "name": "TSKB",
+      "sector": "Bankacılık"
+    },
+    "TSPOR.IS": {
+      "name": "Trabzonspor A.Ş",
+      "sector": "Spor"
+    },
+    "TTKOM.IS": {
+      "name": "Türk Telekom",
+      "sector": "İletişim"
+    },
+    "TTRAK.IS": {
+      "name": "Türk Traktör",
+      "sector": "Otomotiv"
+    },
+    "TUCLK.IS": {
+      "name": "Tuğçelik Alüminyum ve Metal",
+      "sector": "Otomotiv Parçası"
+    },
+    "TUKAS.IS": {
+      "name": "Tukaş",
+      "sector": "Gıda"
+    },
+    "TUPRS.IS": {
+      "name": "Tüpraş",
+      "sector": "Petrol"
+    },
+    "TUREX.IS": {
+      "name": "Tureks Tur.Taşımacılık",
+      "sector": "Ulaştırma-Lojistik"
+    },
+    "TURGG.IS": {
+      "name": "Türker Proje Gay.Gel.",
+      "sector": "GYO"
+    },
+    "TURSG.IS": {
+      "name": "Türkiye Sigorta",
+      "sector": "Sigorta"
+    },
+    "UCAYM.IS": {
+      "name": "Üçay Mühendislik",
+      "sector": "Diğer"
+    },
+    "UFUK.IS": {
+      "name": "Ufuk Yat.Yön.ve Gay. AŞ.",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "ULAS.IS": {
+      "name": "Ulaşlar Turizm Yatırımları",
+      "sector": "Turizm"
+    },
+    "ULKER.IS": {
+      "name": "Ülker Bisküvi",
+      "sector": "Gıda"
+    },
+    "ULUFA.IS": {
+      "name": "Ulusal Faktoring",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "ULUSE.IS": {
+      "name": "Ulusoy Elektrik",
+      "sector": "Elektrik Enerji Ürt.Teçh/Tesis Kurulum"
+    },
+    "ULUUN.IS": {
+      "name": "Ulusoy Un",
+      "sector": "Gıda"
+    },
+    "UNLU.IS": {
+      "name": "Ünlü Yatırım Holding",
+      "sector": "Aracı Kurumlar"
+    },
+    "USAK.IS": {
+      "name": "Uşak Seramik",
+      "sector": "Seramik"
+    },
+    "VAKBN.IS": {
+      "name": "Vakıfbank",
+      "sector": "Bankacılık"
+    },
+    "VAKFA.IS": {
+      "name": "Vakıf Faktoring",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "VAKFN.IS": {
+      "name": "Vakıf Fin. Kir.",
+      "sector": "Fin.Kiralama ve Faktoring"
+    },
+    "VAKKO.IS": {
+      "name": "Vakko Tekstil",
+      "sector": "Perakande - Ticaret"
+    },
+    "VANGD.IS": {
+      "name": "Vanet Gıda Sanayi",
+      "sector": "Gıda"
+    },
+    "VBTYZ.IS": {
+      "name": "VBT Yazılım",
+      "sector": "Teknoloji"
+    },
+    "VERTU.IS": {
+      "name": "Verusatürk Girişim Sermayesi",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "VERUS.IS": {
+      "name": "Verusa Holding",
+      "sector": "Holdingler"
+    },
+    "VESBE.IS": {
+      "name": "Vestel Beyaz Esya",
+      "sector": "Dayanıklı Tüketim"
+    },
+    "VESTL.IS": {
+      "name": "Vestel Elektronik",
+      "sector": "Dayanıklı Tüketim"
+    },
+    "VKFYO.IS": {
+      "name": "Vakıf YO",
+      "sector": "Yatırım Ortaklıkları"
+    },
+    "VKGYO.IS": {
+      "name": "Vakıf GYO",
+      "sector": "GYO"
+    },
+    "VKING.IS": {
+      "name": "Viking Kağıt",
+      "sector": "Kağıt Ürünleri"
+    },
+    "VRGYO.IS": {
+      "name": "Vera GYO",
+      "sector": "GYO"
+    },
+    "VSNMD.IS": {
+      "name": "Vişne Madencilik",
+      "sector": "Madencilik"
+    },
+    "YAPRK.IS": {
+      "name": "Yaprak Süt & Besi Çiftlikleri",
+      "sector": "Gıda"
+    },
+    "YATAS.IS": {
+      "name": "Yataş Yatak",
+      "sector": "Mobilya"
+    },
+    "YAYLA.IS": {
+      "name": "Yayla Enerji Uretim Turizm",
+      "sector": "Elektrik Üretim"
+    },
+    "YBTAS.IS": {
+      "name": "Yibitaş İnş. Malzemeleri",
+      "sector": "İnşaat Malzemeleri"
+    },
+    "YEOTK.IS": {
+      "name": "YEO Teknoloji",
+      "sector": "İnşaat- Taahhüt"
+    },
+    "YESIL.IS": {
+      "name": "Yeşil Yatırım Holding",
+      "sector": "Holdingler"
+    },
+    "YGGYO.IS": {
+      "name": "Yeni Gimat GYO",
+      "sector": "GYO"
+    },
+    "YGYO.IS": {
+      "name": "Yeşil GYO",
+      "sector": "GYO"
+    },
+    "YIGIT.IS": {
+      "name": "Yiğit Akü",
+      "sector": "Otomotiv Parçası"
+    },
+    "YKBNK.IS": {
+      "name": "Yapı Kredi Bankası",
+      "sector": "Bankacılık"
+    },
+    "YKSLN.IS": {
+      "name": "Yükselen Çelik",
+      "sector": "Demir-Çelik Temel"
+    },
+    "YONGA.IS": {
+      "name": "Yonga Mobilya Sanayi",
+      "sector": "Mobilya"
+    },
+    "YUNSA.IS": {
+      "name": "Yünsa",
+      "sector": "Tekstil Entegre"
+    },
+    "YYAPI.IS": {
+      "name": "Yesil Yapi",
+      "sector": "İnşaat- Taahhüt"
+    },
+    "YYLGD.IS": {
+      "name": "Yayla Agro Gıda",
+      "sector": "Gıda"
+    },
+    "ZEDUR.IS": {
+      "name": "Zedur Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "ZERGY.IS": {
+      "name": "Zeray GYO",
+      "sector": "GYO"
+    },
+    "ZGYO.IS": {
+      "name": "Z GYO",
+      "sector": "GYO"
+    },
+    "ZOREN.IS": {
+      "name": "Zorlu Enerji",
+      "sector": "Elektrik Üretim"
+    },
+    "ZRGYO.IS": {
+      "name": "Ziraat GYO",
+      "sector": "GYO"
     },
     "DMLKTG.IS": {
       "name": "DMLKTG",
       "sector": "Bilinmiyor"
     },
-    "DMRGD.IS": {
-      "name": "DMRGD",
-      "sector": "Bilinmiyor"
-    },
-    "DMSAS.IS": {
-      "name": "DMSAS",
-      "sector": "Bilinmiyor"
-    },
-    "DNISI.IS": {
-      "name": "DNISI",
-      "sector": "Bilinmiyor"
-    },
-    "DOAS.IS": {
-      "name": "DOAS",
-      "sector": "Bilinmiyor"
-    },
-    "DOCO.IS": {
-      "name": "DOCO",
-      "sector": "Bilinmiyor"
-    },
-    "DOFER.IS": {
-      "name": "DOFER",
-      "sector": "Bilinmiyor"
-    },
-    "DOFRB.IS": {
-      "name": "DOFRB",
-      "sector": "Bilinmiyor"
-    },
-    "DOGUB.IS": {
-      "name": "DOGUB",
-      "sector": "Bilinmiyor"
-    },
-    "DOHOL.IS": {
-      "name": "DOHOL",
-      "sector": "Bilinmiyor"
-    },
-    "DOKTA.IS": {
-      "name": "DOKTA",
-      "sector": "Bilinmiyor"
-    },
-    "DSTKF.IS": {
-      "name": "DSTKF",
-      "sector": "Bilinmiyor"
-    },
-    "DUNYH.IS": {
-      "name": "DUNYH",
-      "sector": "Bilinmiyor"
-    },
-    "DURDO.IS": {
-      "name": "DURDO",
-      "sector": "Bilinmiyor"
-    },
-    "DURKN.IS": {
-      "name": "DURKN",
-      "sector": "Bilinmiyor"
-    },
-    "DYOBY.IS": {
-      "name": "DYOBY",
-      "sector": "Bilinmiyor"
-    },
-    "DZGYO.IS": {
-      "name": "DZGYO",
-      "sector": "Bilinmiyor"
-    },
-    "EBEBK.IS": {
-      "name": "EBEBK",
-      "sector": "Bilinmiyor"
-    },
-    "ECILC.IS": {
-      "name": "ECILC",
-      "sector": "Bilinmiyor"
-    },
-    "ECOGR.IS": {
-      "name": "ECOGR",
-      "sector": "Bilinmiyor"
-    },
-    "ECZYT.IS": {
-      "name": "ECZYT",
-      "sector": "Bilinmiyor"
-    },
-    "EDATA.IS": {
-      "name": "EDATA",
-      "sector": "Bilinmiyor"
-    },
-    "EDIP.IS": {
-      "name": "EDIP",
-      "sector": "Bilinmiyor"
-    },
-    "EFOR.IS": {
-      "name": "EFOR",
-      "sector": "Bilinmiyor"
-    },
-    "EGEEN.IS": {
-      "name": "EGEEN",
-      "sector": "Bilinmiyor"
-    },
-    "EGEGY.IS": {
-      "name": "EGEGY",
-      "sector": "Bilinmiyor"
-    },
-    "EGEPO.IS": {
-      "name": "EGEPO",
-      "sector": "Bilinmiyor"
-    },
-    "EGGUB.IS": {
-      "name": "EGGUB",
-      "sector": "Bilinmiyor"
-    },
-    "EGPRO.IS": {
-      "name": "EGPRO",
-      "sector": "Bilinmiyor"
-    },
-    "EGSER.IS": {
-      "name": "EGSER",
-      "sector": "Bilinmiyor"
-    },
-    "EKGYO.IS": {
-      "name": "EKGYO",
-      "sector": "Bilinmiyor"
-    },
-    "EKIZ.IS": {
-      "name": "EKIZ",
-      "sector": "Bilinmiyor"
-    },
-    "EKOS.IS": {
-      "name": "EKOS",
-      "sector": "Bilinmiyor"
-    },
-    "EKSUN.IS": {
-      "name": "EKSUN",
-      "sector": "Bilinmiyor"
-    },
-    "ELITE.IS": {
-      "name": "ELITE",
-      "sector": "Bilinmiyor"
-    },
-    "EMKEL.IS": {
-      "name": "EMKEL",
-      "sector": "Bilinmiyor"
-    },
-    "EMNIS.IS": {
-      "name": "EMNIS",
-      "sector": "Bilinmiyor"
-    },
-    "EMPAE.IS": {
-      "name": "EMPAE",
-      "sector": "Bilinmiyor"
-    },
-    "ENDAE.IS": {
-      "name": "ENDAE",
-      "sector": "Bilinmiyor"
-    },
-    "ENERY.IS": {
-      "name": "ENERY",
-      "sector": "Bilinmiyor"
-    },
-    "ENJSA.IS": {
-      "name": "ENJSA",
-      "sector": "Bilinmiyor"
-    },
-    "ENKAI.IS": {
-      "name": "ENKAI",
-      "sector": "Bilinmiyor"
-    },
-    "ENSRI.IS": {
-      "name": "ENSRI",
-      "sector": "Bilinmiyor"
-    },
-    "ENTRA.IS": {
-      "name": "ENTRA",
-      "sector": "Bilinmiyor"
-    },
-    "EPLAS.IS": {
-      "name": "EPLAS",
-      "sector": "Bilinmiyor"
-    },
-    "ERBOS.IS": {
-      "name": "ERBOS",
-      "sector": "Bilinmiyor"
-    },
-    "ERCB.IS": {
-      "name": "ERCB",
-      "sector": "Bilinmiyor"
-    },
-    "EREGL.IS": {
-      "name": "EREGL",
-      "sector": "Bilinmiyor"
-    },
-    "ERSU.IS": {
-      "name": "ERSU",
-      "sector": "Bilinmiyor"
-    },
-    "ESCAR.IS": {
-      "name": "ESCAR",
-      "sector": "Bilinmiyor"
-    },
-    "ESCOM.IS": {
-      "name": "ESCOM",
-      "sector": "Bilinmiyor"
-    },
-    "ESEN.IS": {
-      "name": "ESEN",
-      "sector": "Bilinmiyor"
-    },
-    "ETILR.IS": {
-      "name": "ETILR",
-      "sector": "Bilinmiyor"
-    },
-    "ETYAT.IS": {
-      "name": "ETYAT",
-      "sector": "Bilinmiyor"
-    },
-    "EUHOL.IS": {
-      "name": "EUHOL",
-      "sector": "Bilinmiyor"
-    },
-    "EUKYO.IS": {
-      "name": "EUKYO",
-      "sector": "Bilinmiyor"
-    },
-    "EUPWR.IS": {
-      "name": "EUPWR",
-      "sector": "Bilinmiyor"
-    },
-    "EUREN.IS": {
-      "name": "EUREN",
-      "sector": "Bilinmiyor"
-    },
-    "EUYO.IS": {
-      "name": "EUYO",
-      "sector": "Bilinmiyor"
-    },
-    "EYGYO.IS": {
-      "name": "EYGYO",
-      "sector": "Bilinmiyor"
-    },
-    "FADE.IS": {
-      "name": "FADE",
-      "sector": "Bilinmiyor"
-    },
-    "FENER.IS": {
-      "name": "FENER",
-      "sector": "Bilinmiyor"
-    },
-    "FLAP.IS": {
-      "name": "FLAP",
-      "sector": "Bilinmiyor"
-    },
-    "FMIZP.IS": {
-      "name": "FMIZP",
-      "sector": "Bilinmiyor"
-    },
-    "FONET.IS": {
-      "name": "FONET",
-      "sector": "Bilinmiyor"
-    },
-    "FORMT.IS": {
-      "name": "FORMT",
-      "sector": "Bilinmiyor"
-    },
-    "FORTE.IS": {
-      "name": "FORTE",
-      "sector": "Bilinmiyor"
-    },
-    "FRIGO.IS": {
-      "name": "FRIGO",
-      "sector": "Bilinmiyor"
-    },
-    "FRMPL.IS": {
-      "name": "FRMPL",
-      "sector": "Bilinmiyor"
-    },
-    "FROTO.IS": {
-      "name": "FROTO",
-      "sector": "Bilinmiyor"
-    },
-    "FZLGY.IS": {
-      "name": "FZLGY",
-      "sector": "Bilinmiyor"
-    },
-    "GARAN.IS": {
-      "name": "GARAN",
-      "sector": "Bilinmiyor"
-    },
-    "GARFA.IS": {
-      "name": "GARFA",
-      "sector": "Bilinmiyor"
-    },
-    "GATEG.IS": {
-      "name": "GATEG",
-      "sector": "Bilinmiyor"
-    },
-    "GEDIK.IS": {
-      "name": "GEDIK",
-      "sector": "Bilinmiyor"
-    },
-    "GEDZA.IS": {
-      "name": "GEDZA",
-      "sector": "Bilinmiyor"
-    },
-    "GENIL.IS": {
-      "name": "GENIL",
-      "sector": "Bilinmiyor"
-    },
-    "GENTS.IS": {
-      "name": "GENTS",
-      "sector": "Bilinmiyor"
-    },
-    "GEREL.IS": {
-      "name": "GEREL",
-      "sector": "Bilinmiyor"
-    },
-    "GESAN.IS": {
-      "name": "GESAN",
-      "sector": "Bilinmiyor"
-    },
-    "GIPTA.IS": {
-      "name": "GIPTA",
-      "sector": "Bilinmiyor"
-    },
-    "GLBMD.IS": {
-      "name": "GLBMD",
-      "sector": "Bilinmiyor"
-    },
-    "GLCVY.IS": {
-      "name": "GLCVY",
-      "sector": "Bilinmiyor"
-    },
-    "GLRMK.IS": {
-      "name": "GLRMK",
-      "sector": "Bilinmiyor"
-    },
-    "GLRYH.IS": {
-      "name": "GLRYH",
-      "sector": "Bilinmiyor"
-    },
-    "GLYHO.IS": {
-      "name": "GLYHO",
-      "sector": "Bilinmiyor"
-    },
-    "GMTAS.IS": {
-      "name": "GMTAS",
-      "sector": "Bilinmiyor"
-    },
-    "GOKNR.IS": {
-      "name": "GOKNR",
-      "sector": "Bilinmiyor"
-    },
-    "GOLTS.IS": {
-      "name": "GOLTS",
-      "sector": "Bilinmiyor"
-    },
-    "GOODY.IS": {
-      "name": "GOODY",
-      "sector": "Bilinmiyor"
-    },
-    "GOZDE.IS": {
-      "name": "GOZDE",
-      "sector": "Bilinmiyor"
-    },
-    "GRNYO.IS": {
-      "name": "GRNYO",
-      "sector": "Bilinmiyor"
-    },
-    "GRSEL.IS": {
-      "name": "GRSEL",
-      "sector": "Bilinmiyor"
-    },
-    "GRTHO.IS": {
-      "name": "GRTHO",
-      "sector": "Bilinmiyor"
-    },
-    "GSDDE.IS": {
-      "name": "GSDDE",
-      "sector": "Bilinmiyor"
-    },
-    "GSDHO.IS": {
-      "name": "GSDHO",
-      "sector": "Bilinmiyor"
-    },
-    "GSRAY.IS": {
-      "name": "GSRAY",
-      "sector": "Bilinmiyor"
-    },
-    "GUBRF.IS": {
-      "name": "GUBRF",
-      "sector": "Bilinmiyor"
-    },
-    "GUNDG.IS": {
-      "name": "GUNDG",
-      "sector": "Bilinmiyor"
-    },
-    "GWIND.IS": {
-      "name": "GWIND",
-      "sector": "Bilinmiyor"
-    },
-    "GZNMI.IS": {
-      "name": "GZNMI",
-      "sector": "Bilinmiyor"
-    },
-    "HALKB.IS": {
-      "name": "HALKB",
-      "sector": "Bilinmiyor"
-    },
-    "HATEK.IS": {
-      "name": "HATEK",
-      "sector": "Bilinmiyor"
-    },
-    "HATSN.IS": {
-      "name": "HATSN",
-      "sector": "Bilinmiyor"
-    },
-    "HDFGS.IS": {
-      "name": "HDFGS",
-      "sector": "Bilinmiyor"
-    },
-    "HEDEF.IS": {
-      "name": "HEDEF",
-      "sector": "Bilinmiyor"
-    },
-    "HEKTS.IS": {
-      "name": "HEKTS",
-      "sector": "Bilinmiyor"
-    },
-    "HKTM.IS": {
-      "name": "HKTM",
-      "sector": "Bilinmiyor"
-    },
-    "HLGYO.IS": {
-      "name": "HLGYO",
-      "sector": "Bilinmiyor"
-    },
-    "HOROZ.IS": {
-      "name": "HOROZ",
-      "sector": "Bilinmiyor"
-    },
-    "HRKET.IS": {
-      "name": "HRKET",
-      "sector": "Bilinmiyor"
-    },
-    "HTTBT.IS": {
-      "name": "HTTBT",
-      "sector": "Bilinmiyor"
-    },
-    "HUBVC.IS": {
-      "name": "HUBVC",
-      "sector": "Bilinmiyor"
-    },
-    "HUNER.IS": {
-      "name": "HUNER",
-      "sector": "Bilinmiyor"
-    },
-    "HURGZ.IS": {
-      "name": "HURGZ",
-      "sector": "Bilinmiyor"
-    },
-    "ICBCT.IS": {
-      "name": "ICBCT",
-      "sector": "Bilinmiyor"
-    },
-    "ICUGS.IS": {
-      "name": "ICUGS",
-      "sector": "Bilinmiyor"
-    },
-    "IDGYO.IS": {
-      "name": "IDGYO",
-      "sector": "Bilinmiyor"
-    },
-    "IEYHO.IS": {
-      "name": "IEYHO",
-      "sector": "Bilinmiyor"
-    },
-    "IHAAS.IS": {
-      "name": "IHAAS",
-      "sector": "Bilinmiyor"
-    },
-    "IHEVA.IS": {
-      "name": "IHEVA",
-      "sector": "Bilinmiyor"
-    },
-    "IHGZT.IS": {
-      "name": "IHGZT",
-      "sector": "Bilinmiyor"
-    },
-    "IHLAS.IS": {
-      "name": "IHLAS",
-      "sector": "Bilinmiyor"
-    },
-    "IHLGM.IS": {
-      "name": "IHLGM",
-      "sector": "Bilinmiyor"
-    },
-    "IHYAY.IS": {
-      "name": "IHYAY",
-      "sector": "Bilinmiyor"
-    },
-    "IMASM.IS": {
-      "name": "IMASM",
-      "sector": "Bilinmiyor"
-    },
-    "INDES.IS": {
-      "name": "INDES",
-      "sector": "Bilinmiyor"
-    },
-    "INFO.IS": {
-      "name": "INFO",
-      "sector": "Bilinmiyor"
-    },
-    "INGRM.IS": {
-      "name": "INGRM",
-      "sector": "Bilinmiyor"
-    },
-    "INTEK.IS": {
-      "name": "INTEK",
-      "sector": "Bilinmiyor"
-    },
-    "INTEM.IS": {
-      "name": "INTEM",
-      "sector": "Bilinmiyor"
-    },
-    "INVEO.IS": {
-      "name": "INVEO",
-      "sector": "Bilinmiyor"
-    },
-    "INVES.IS": {
-      "name": "INVES",
-      "sector": "Bilinmiyor"
-    },
-    "ISATR.IS": {
-      "name": "ISATR",
-      "sector": "Bilinmiyor"
-    },
-    "ISBIR.IS": {
-      "name": "ISBIR",
-      "sector": "Bilinmiyor"
-    },
-    "ISBTR.IS": {
-      "name": "ISBTR",
-      "sector": "Bilinmiyor"
-    },
-    "ISCTR.IS": {
-      "name": "ISCTR",
-      "sector": "Bilinmiyor"
-    },
-    "ISDMR.IS": {
-      "name": "ISDMR",
-      "sector": "Bilinmiyor"
-    },
-    "ISFIN.IS": {
-      "name": "ISFIN",
-      "sector": "Bilinmiyor"
-    },
-    "ISGSY.IS": {
-      "name": "ISGSY",
-      "sector": "Bilinmiyor"
-    },
-    "ISGYO.IS": {
-      "name": "ISGYO",
-      "sector": "Bilinmiyor"
-    },
-    "ISKPL.IS": {
-      "name": "ISKPL",
-      "sector": "Bilinmiyor"
-    },
-    "ISKUR.IS": {
-      "name": "ISKUR",
-      "sector": "Bilinmiyor"
-    },
-    "ISMEN.IS": {
-      "name": "ISMEN",
-      "sector": "Bilinmiyor"
-    },
-    "ISSEN.IS": {
-      "name": "ISSEN",
-      "sector": "Bilinmiyor"
-    },
-    "ISYAT.IS": {
-      "name": "ISYAT",
-      "sector": "Bilinmiyor"
-    },
-    "IZENR.IS": {
-      "name": "IZENR",
-      "sector": "Bilinmiyor"
-    },
-    "IZFAS.IS": {
-      "name": "IZFAS",
-      "sector": "Bilinmiyor"
-    },
-    "IZINV.IS": {
-      "name": "IZINV",
-      "sector": "Bilinmiyor"
-    },
-    "IZMDC.IS": {
-      "name": "IZMDC",
-      "sector": "Bilinmiyor"
-    },
-    "JANTS.IS": {
-      "name": "JANTS",
-      "sector": "Bilinmiyor"
-    },
-    "KAPLM.IS": {
-      "name": "KAPLM",
-      "sector": "Bilinmiyor"
-    },
-    "KAREL.IS": {
-      "name": "KAREL",
-      "sector": "Bilinmiyor"
-    },
-    "KARSN.IS": {
-      "name": "KARSN",
-      "sector": "Bilinmiyor"
-    },
-    "KARTN.IS": {
-      "name": "KARTN",
-      "sector": "Bilinmiyor"
-    },
-    "KATMR.IS": {
-      "name": "KATMR",
-      "sector": "Bilinmiyor"
-    },
-    "KAYSE.IS": {
-      "name": "KAYSE",
-      "sector": "Bilinmiyor"
-    },
-    "KBORU.IS": {
-      "name": "KBORU",
-      "sector": "Bilinmiyor"
-    },
-    "KCAER.IS": {
-      "name": "KCAER",
-      "sector": "Bilinmiyor"
-    },
-    "KCHOL.IS": {
-      "name": "KCHOL",
-      "sector": "Bilinmiyor"
-    },
-    "KENT.IS": {
-      "name": "KENT",
-      "sector": "Bilinmiyor"
-    },
-    "KERVN.IS": {
-      "name": "KERVN",
-      "sector": "Bilinmiyor"
-    },
-    "KFEIN.IS": {
-      "name": "KFEIN",
-      "sector": "Bilinmiyor"
-    },
-    "KGYO.IS": {
-      "name": "KGYO",
-      "sector": "Bilinmiyor"
-    },
-    "KIMMR.IS": {
-      "name": "KIMMR",
-      "sector": "Bilinmiyor"
-    },
-    "KLGYO.IS": {
-      "name": "KLGYO",
-      "sector": "Bilinmiyor"
-    },
-    "KLKIM.IS": {
-      "name": "KLKIM",
-      "sector": "Bilinmiyor"
-    },
-    "KLMSN.IS": {
-      "name": "KLMSN",
-      "sector": "Bilinmiyor"
-    },
-    "KLNMA.IS": {
-      "name": "KLNMA",
-      "sector": "Bilinmiyor"
-    },
-    "KLRHO.IS": {
-      "name": "KLRHO",
-      "sector": "Bilinmiyor"
-    },
-    "KLSER.IS": {
-      "name": "KLSER",
-      "sector": "Bilinmiyor"
-    },
-    "KLSYN.IS": {
-      "name": "KLSYN",
-      "sector": "Bilinmiyor"
-    },
-    "KLYPV.IS": {
-      "name": "KLYPV",
-      "sector": "Bilinmiyor"
-    },
-    "KMPUR.IS": {
-      "name": "KMPUR",
-      "sector": "Bilinmiyor"
-    },
-    "KNFRT.IS": {
-      "name": "KNFRT",
-      "sector": "Bilinmiyor"
-    },
-    "KOCMT.IS": {
-      "name": "KOCMT",
-      "sector": "Bilinmiyor"
-    },
-    "KONKA.IS": {
-      "name": "KONKA",
-      "sector": "Bilinmiyor"
-    },
-    "KONTR.IS": {
-      "name": "KONTR",
-      "sector": "Bilinmiyor"
-    },
-    "KONYA.IS": {
-      "name": "KONYA",
-      "sector": "Bilinmiyor"
-    },
-    "KOPOL.IS": {
-      "name": "KOPOL",
-      "sector": "Bilinmiyor"
-    },
-    "KORDS.IS": {
-      "name": "KORDS",
-      "sector": "Bilinmiyor"
-    },
-    "KOTON.IS": {
-      "name": "KOTON",
-      "sector": "Bilinmiyor"
-    },
-    "KRDMA.IS": {
-      "name": "KRDMA",
-      "sector": "Bilinmiyor"
-    },
-    "KRDMB.IS": {
-      "name": "KRDMB",
-      "sector": "Bilinmiyor"
-    },
-    "KRDMD.IS": {
-      "name": "KRDMD",
-      "sector": "Bilinmiyor"
-    },
-    "KRGYO.IS": {
-      "name": "KRGYO",
-      "sector": "Bilinmiyor"
-    },
-    "KRONT.IS": {
-      "name": "KRONT",
-      "sector": "Bilinmiyor"
-    },
-    "KRPLS.IS": {
-      "name": "KRPLS",
-      "sector": "Bilinmiyor"
-    },
-    "KRSTL.IS": {
-      "name": "KRSTL",
-      "sector": "Bilinmiyor"
-    },
-    "KRTEK.IS": {
-      "name": "KRTEK",
-      "sector": "Bilinmiyor"
-    },
-    "KRVGD.IS": {
-      "name": "KRVGD",
-      "sector": "Bilinmiyor"
-    },
-    "KSTUR.IS": {
-      "name": "KSTUR",
-      "sector": "Bilinmiyor"
-    },
-    "KTLEV.IS": {
-      "name": "KTLEV",
-      "sector": "Bilinmiyor"
-    },
-    "KTSKR.IS": {
-      "name": "KTSKR",
-      "sector": "Bilinmiyor"
-    },
-    "KUTPO.IS": {
-      "name": "KUTPO",
-      "sector": "Bilinmiyor"
-    },
-    "KUVVA.IS": {
-      "name": "KUVVA",
-      "sector": "Bilinmiyor"
-    },
-    "KUYAS.IS": {
-      "name": "KUYAS",
-      "sector": "Bilinmiyor"
-    },
-    "KZBGY.IS": {
-      "name": "KZBGY",
-      "sector": "Bilinmiyor"
-    },
-    "KZGYO.IS": {
-      "name": "KZGYO",
-      "sector": "Bilinmiyor"
-    },
-    "LIDER.IS": {
-      "name": "LIDER",
-      "sector": "Bilinmiyor"
-    },
-    "LIDFA.IS": {
-      "name": "LIDFA",
-      "sector": "Bilinmiyor"
-    },
-    "LILAK.IS": {
-      "name": "LILAK",
-      "sector": "Bilinmiyor"
-    },
-    "LINK.IS": {
-      "name": "LINK",
-      "sector": "Bilinmiyor"
-    },
-    "LKMNH.IS": {
-      "name": "LKMNH",
-      "sector": "Bilinmiyor"
-    },
-    "LMKDC.IS": {
-      "name": "LMKDC",
-      "sector": "Bilinmiyor"
-    },
-    "LOGO.IS": {
-      "name": "LOGO",
-      "sector": "Bilinmiyor"
-    },
-    "LRSHO.IS": {
-      "name": "LRSHO",
-      "sector": "Bilinmiyor"
-    },
-    "LUKSK.IS": {
-      "name": "LUKSK",
-      "sector": "Bilinmiyor"
-    },
-    "LYDHO.IS": {
-      "name": "LYDHO",
-      "sector": "Bilinmiyor"
-    },
-    "LYDYE.IS": {
-      "name": "LYDYE",
-      "sector": "Bilinmiyor"
-    },
-    "MAALT.IS": {
-      "name": "MAALT",
-      "sector": "Bilinmiyor"
-    },
-    "MACKO.IS": {
-      "name": "MACKO",
-      "sector": "Bilinmiyor"
-    },
-    "MAGEN.IS": {
-      "name": "MAGEN",
-      "sector": "Bilinmiyor"
-    },
-    "MAKIM.IS": {
-      "name": "MAKIM",
-      "sector": "Bilinmiyor"
-    },
-    "MAKTK.IS": {
-      "name": "MAKTK",
-      "sector": "Bilinmiyor"
-    },
-    "MANAS.IS": {
-      "name": "MANAS",
-      "sector": "Bilinmiyor"
-    },
-    "MARBL.IS": {
-      "name": "MARBL",
-      "sector": "Bilinmiyor"
-    },
-    "MARKA.IS": {
-      "name": "MARKA",
-      "sector": "Bilinmiyor"
-    },
-    "MARMR.IS": {
-      "name": "MARMR",
-      "sector": "Bilinmiyor"
-    },
-    "MARTI.IS": {
-      "name": "MARTI",
-      "sector": "Bilinmiyor"
-    },
-    "MAVI.IS": {
-      "name": "MAVI",
-      "sector": "Bilinmiyor"
-    },
-    "MEDTR.IS": {
-      "name": "MEDTR",
-      "sector": "Bilinmiyor"
-    },
-    "MEGAP.IS": {
-      "name": "MEGAP",
-      "sector": "Bilinmiyor"
-    },
-    "MEGMT.IS": {
-      "name": "MEGMT",
-      "sector": "Bilinmiyor"
-    },
-    "MEKAG.IS": {
-      "name": "MEKAG",
-      "sector": "Bilinmiyor"
-    },
-    "MEPET.IS": {
-      "name": "MEPET",
-      "sector": "Bilinmiyor"
-    },
-    "MERCN.IS": {
-      "name": "MERCN",
-      "sector": "Bilinmiyor"
-    },
-    "MERIT.IS": {
-      "name": "MERIT",
-      "sector": "Bilinmiyor"
-    },
-    "MERKO.IS": {
-      "name": "MERKO",
-      "sector": "Bilinmiyor"
-    },
-    "METRO.IS": {
-      "name": "METRO",
-      "sector": "Bilinmiyor"
-    },
-    "MEYSU.IS": {
-      "name": "MEYSU",
-      "sector": "Bilinmiyor"
-    },
-    "MGROS.IS": {
-      "name": "MGROS",
-      "sector": "Bilinmiyor"
-    },
-    "MHRGY.IS": {
-      "name": "MHRGY",
-      "sector": "Bilinmiyor"
-    },
-    "MIATK.IS": {
-      "name": "MIATK",
-      "sector": "Bilinmiyor"
-    },
-    "MMCAS.IS": {
-      "name": "MMCAS",
-      "sector": "Bilinmiyor"
-    },
-    "MNDRS.IS": {
-      "name": "MNDRS",
-      "sector": "Bilinmiyor"
-    },
-    "MNDTR.IS": {
-      "name": "MNDTR",
-      "sector": "Bilinmiyor"
-    },
-    "MOBTL.IS": {
-      "name": "MOBTL",
-      "sector": "Bilinmiyor"
-    },
-    "MOGAN.IS": {
-      "name": "MOGAN",
-      "sector": "Bilinmiyor"
-    },
-    "MOPAS.IS": {
-      "name": "MOPAS",
-      "sector": "Bilinmiyor"
-    },
-    "MPARK.IS": {
-      "name": "MPARK",
-      "sector": "Bilinmiyor"
-    },
-    "MRGYO.IS": {
-      "name": "MRGYO",
-      "sector": "Bilinmiyor"
-    },
-    "MRSHL.IS": {
-      "name": "MRSHL",
-      "sector": "Bilinmiyor"
-    },
-    "MSGYO.IS": {
-      "name": "MSGYO",
-      "sector": "Bilinmiyor"
-    },
-    "MTRKS.IS": {
-      "name": "MTRKS",
-      "sector": "Bilinmiyor"
-    },
-    "MTRYO.IS": {
-      "name": "MTRYO",
-      "sector": "Bilinmiyor"
-    },
-    "MZHLD.IS": {
-      "name": "MZHLD",
-      "sector": "Bilinmiyor"
-    },
-    "NATEN.IS": {
-      "name": "NATEN",
-      "sector": "Bilinmiyor"
-    },
-    "NETAS.IS": {
-      "name": "NETAS",
-      "sector": "Bilinmiyor"
-    },
-    "NETCD.IS": {
-      "name": "NETCD",
-      "sector": "Bilinmiyor"
-    },
-    "NIBAS.IS": {
-      "name": "NIBAS",
-      "sector": "Bilinmiyor"
-    },
-    "NTGAZ.IS": {
-      "name": "NTGAZ",
-      "sector": "Bilinmiyor"
-    },
-    "NTHOL.IS": {
-      "name": "NTHOL",
-      "sector": "Bilinmiyor"
-    },
-    "NUGYO.IS": {
-      "name": "NUGYO",
-      "sector": "Bilinmiyor"
-    },
-    "NUHCM.IS": {
-      "name": "NUHCM",
-      "sector": "Bilinmiyor"
-    },
-    "OBAMS.IS": {
-      "name": "OBAMS",
-      "sector": "Bilinmiyor"
-    },
-    "OBASE.IS": {
-      "name": "OBASE",
-      "sector": "Bilinmiyor"
-    },
-    "ODAS.IS": {
-      "name": "ODAS",
-      "sector": "Bilinmiyor"
-    },
-    "ODINE.IS": {
-      "name": "ODINE",
-      "sector": "Bilinmiyor"
-    },
-    "OFSYM.IS": {
-      "name": "OFSYM",
-      "sector": "Bilinmiyor"
-    },
-    "ONCSM.IS": {
-      "name": "ONCSM",
-      "sector": "Bilinmiyor"
-    },
-    "ONRYT.IS": {
-      "name": "ONRYT",
-      "sector": "Bilinmiyor"
-    },
-    "ORCAY.IS": {
-      "name": "ORCAY",
-      "sector": "Bilinmiyor"
-    },
-    "ORGE.IS": {
-      "name": "ORGE",
-      "sector": "Bilinmiyor"
-    },
-    "ORMA.IS": {
-      "name": "ORMA",
-      "sector": "Bilinmiyor"
-    },
-    "OSMEN.IS": {
-      "name": "OSMEN",
-      "sector": "Bilinmiyor"
-    },
-    "OSTIM.IS": {
-      "name": "OSTIM",
-      "sector": "Bilinmiyor"
-    },
-    "OTKAR.IS": {
-      "name": "OTKAR",
-      "sector": "Bilinmiyor"
-    },
-    "OTTO.IS": {
-      "name": "OTTO",
-      "sector": "Bilinmiyor"
-    },
-    "OYAKC.IS": {
-      "name": "OYAKC",
-      "sector": "Bilinmiyor"
-    },
-    "OYAYO.IS": {
-      "name": "OYAYO",
-      "sector": "Bilinmiyor"
-    },
-    "OYLUM.IS": {
-      "name": "OYLUM",
-      "sector": "Bilinmiyor"
-    },
-    "OYYAT.IS": {
-      "name": "OYYAT",
-      "sector": "Bilinmiyor"
-    },
-    "OZATD.IS": {
-      "name": "OZATD",
-      "sector": "Bilinmiyor"
-    },
-    "OZGYO.IS": {
-      "name": "OZGYO",
-      "sector": "Bilinmiyor"
-    },
-    "OZKGY.IS": {
-      "name": "OZKGY",
-      "sector": "Bilinmiyor"
-    },
-    "OZRDN.IS": {
-      "name": "OZRDN",
-      "sector": "Bilinmiyor"
-    },
-    "OZSUB.IS": {
-      "name": "OZSUB",
-      "sector": "Bilinmiyor"
-    },
-    "OZYSR.IS": {
-      "name": "OZYSR",
-      "sector": "Bilinmiyor"
-    },
-    "PAGYO.IS": {
-      "name": "PAGYO",
-      "sector": "Bilinmiyor"
-    },
-    "PAHOL.IS": {
-      "name": "PAHOL",
-      "sector": "Bilinmiyor"
-    },
-    "PAMEL.IS": {
-      "name": "PAMEL",
-      "sector": "Bilinmiyor"
-    },
-    "PAPIL.IS": {
-      "name": "PAPIL",
-      "sector": "Bilinmiyor"
-    },
-    "PARSN.IS": {
-      "name": "PARSN",
-      "sector": "Bilinmiyor"
-    },
-    "PASEU.IS": {
-      "name": "PASEU",
-      "sector": "Bilinmiyor"
-    },
-    "PATEK.IS": {
-      "name": "PATEK",
-      "sector": "Bilinmiyor"
-    },
-    "PCILT.IS": {
-      "name": "PCILT",
-      "sector": "Bilinmiyor"
-    },
-    "PEKGY.IS": {
-      "name": "PEKGY",
-      "sector": "Bilinmiyor"
-    },
-    "PENGD.IS": {
-      "name": "PENGD",
-      "sector": "Bilinmiyor"
-    },
-    "PENTA.IS": {
-      "name": "PENTA",
-      "sector": "Bilinmiyor"
-    },
-    "PETKM.IS": {
-      "name": "PETKM",
-      "sector": "Bilinmiyor"
-    },
-    "PETUN.IS": {
-      "name": "PETUN",
-      "sector": "Bilinmiyor"
-    },
-    "PGSUS.IS": {
-      "name": "PGSUS",
-      "sector": "Bilinmiyor"
-    },
-    "PINSU.IS": {
-      "name": "PINSU",
-      "sector": "Bilinmiyor"
-    },
-    "PKART.IS": {
-      "name": "PKART",
-      "sector": "Bilinmiyor"
-    },
-    "PKENT.IS": {
-      "name": "PKENT",
-      "sector": "Bilinmiyor"
-    },
-    "PLTUR.IS": {
-      "name": "PLTUR",
-      "sector": "Bilinmiyor"
-    },
-    "PNLSN.IS": {
-      "name": "PNLSN",
-      "sector": "Bilinmiyor"
-    },
-    "PNSUT.IS": {
-      "name": "PNSUT",
-      "sector": "Bilinmiyor"
-    },
-    "POLHO.IS": {
-      "name": "POLHO",
-      "sector": "Bilinmiyor"
-    },
-    "POLTK.IS": {
-      "name": "POLTK",
-      "sector": "Bilinmiyor"
-    },
-    "PRDGS.IS": {
-      "name": "PRDGS",
-      "sector": "Bilinmiyor"
-    },
-    "PRKAB.IS": {
-      "name": "PRKAB",
-      "sector": "Bilinmiyor"
-    },
-    "PRKME.IS": {
-      "name": "PRKME",
-      "sector": "Bilinmiyor"
-    },
-    "PRZMA.IS": {
-      "name": "PRZMA",
-      "sector": "Bilinmiyor"
-    },
-    "PSDTC.IS": {
-      "name": "PSDTC",
-      "sector": "Bilinmiyor"
-    },
-    "PSGYO.IS": {
-      "name": "PSGYO",
-      "sector": "Bilinmiyor"
-    },
-    "QNBFK.IS": {
-      "name": "QNBFK",
-      "sector": "Bilinmiyor"
-    },
-    "QNBTR.IS": {
-      "name": "QNBTR",
-      "sector": "Bilinmiyor"
-    },
-    "QUAGR.IS": {
-      "name": "QUAGR",
-      "sector": "Bilinmiyor"
-    },
-    "RALYH.IS": {
-      "name": "RALYH",
-      "sector": "Bilinmiyor"
-    },
-    "RAYSG.IS": {
-      "name": "RAYSG",
-      "sector": "Bilinmiyor"
-    },
-    "REEDR.IS": {
-      "name": "REEDR",
-      "sector": "Bilinmiyor"
-    },
-    "RGYAS.IS": {
-      "name": "RGYAS",
-      "sector": "Bilinmiyor"
-    },
-    "RNPOL.IS": {
-      "name": "RNPOL",
-      "sector": "Bilinmiyor"
-    },
-    "RODRG.IS": {
-      "name": "RODRG",
-      "sector": "Bilinmiyor"
-    },
-    "ROYAL.IS": {
-      "name": "ROYAL",
-      "sector": "Bilinmiyor"
-    },
-    "RTALB.IS": {
-      "name": "RTALB",
-      "sector": "Bilinmiyor"
-    },
-    "RUBNS.IS": {
-      "name": "RUBNS",
-      "sector": "Bilinmiyor"
-    },
-    "RUZYE.IS": {
-      "name": "RUZYE",
-      "sector": "Bilinmiyor"
-    },
-    "RYGYO.IS": {
-      "name": "RYGYO",
-      "sector": "Bilinmiyor"
-    },
-    "RYSAS.IS": {
-      "name": "RYSAS",
-      "sector": "Bilinmiyor"
-    },
-    "SAFKR.IS": {
-      "name": "SAFKR",
-      "sector": "Bilinmiyor"
-    },
-    "SAHOL.IS": {
-      "name": "SAHOL",
-      "sector": "Bilinmiyor"
-    },
-    "SAMAT.IS": {
-      "name": "SAMAT",
-      "sector": "Bilinmiyor"
-    },
-    "SANEL.IS": {
-      "name": "SANEL",
-      "sector": "Bilinmiyor"
-    },
-    "SANFM.IS": {
-      "name": "SANFM",
-      "sector": "Bilinmiyor"
-    },
-    "SANKO.IS": {
-      "name": "SANKO",
-      "sector": "Bilinmiyor"
-    },
-    "SARKY.IS": {
-      "name": "SARKY",
-      "sector": "Bilinmiyor"
-    },
-    "SASA.IS": {
-      "name": "SASA",
-      "sector": "Bilinmiyor"
-    },
-    "SAYAS.IS": {
-      "name": "SAYAS",
-      "sector": "Bilinmiyor"
-    },
-    "SDTTR.IS": {
-      "name": "SDTTR",
-      "sector": "Bilinmiyor"
-    },
-    "SEGMN.IS": {
-      "name": "SEGMN",
-      "sector": "Bilinmiyor"
-    },
-    "SEGYO.IS": {
-      "name": "SEGYO",
-      "sector": "Bilinmiyor"
-    },
-    "SEKFK.IS": {
-      "name": "SEKFK",
-      "sector": "Bilinmiyor"
-    },
-    "SEKUR.IS": {
-      "name": "SEKUR",
-      "sector": "Bilinmiyor"
-    },
-    "SELEC.IS": {
-      "name": "SELEC",
-      "sector": "Bilinmiyor"
-    },
-    "SELVA.IS": {
-      "name": "SELVA",
-      "sector": "Bilinmiyor"
-    },
-    "SERNT.IS": {
-      "name": "SERNT",
-      "sector": "Bilinmiyor"
-    },
-    "SEYKM.IS": {
-      "name": "SEYKM",
-      "sector": "Bilinmiyor"
-    },
-    "SILVR.IS": {
-      "name": "SILVR",
-      "sector": "Bilinmiyor"
-    },
-    "SISE.IS": {
-      "name": "SISE",
-      "sector": "Bilinmiyor"
-    },
-    "SKBNK.IS": {
-      "name": "SKBNK",
-      "sector": "Bilinmiyor"
-    },
-    "SKTAS.IS": {
-      "name": "SKTAS",
-      "sector": "Bilinmiyor"
-    },
-    "SKYLP.IS": {
-      "name": "SKYLP",
-      "sector": "Bilinmiyor"
-    },
-    "SKYMD.IS": {
-      "name": "SKYMD",
-      "sector": "Bilinmiyor"
-    },
-    "SMART.IS": {
-      "name": "SMART",
-      "sector": "Bilinmiyor"
-    },
-    "SMRTG.IS": {
-      "name": "SMRTG",
-      "sector": "Bilinmiyor"
-    },
-    "SMRVA.IS": {
-      "name": "SMRVA",
-      "sector": "Bilinmiyor"
-    },
-    "SNGYO.IS": {
-      "name": "SNGYO",
-      "sector": "Bilinmiyor"
-    },
-    "SNICA.IS": {
-      "name": "SNICA",
-      "sector": "Bilinmiyor"
-    },
-    "SNPAM.IS": {
-      "name": "SNPAM",
-      "sector": "Bilinmiyor"
-    },
-    "SODSN.IS": {
-      "name": "SODSN",
-      "sector": "Bilinmiyor"
-    },
-    "SOKE.IS": {
-      "name": "SOKE",
-      "sector": "Bilinmiyor"
-    },
-    "SOKM.IS": {
-      "name": "SOKM",
-      "sector": "Bilinmiyor"
-    },
-    "SONME.IS": {
-      "name": "SONME",
-      "sector": "Bilinmiyor"
-    },
-    "SRVGY.IS": {
-      "name": "SRVGY",
-      "sector": "Bilinmiyor"
-    },
-    "SUMAS.IS": {
-      "name": "SUMAS",
-      "sector": "Bilinmiyor"
-    },
-    "SUNTK.IS": {
-      "name": "SUNTK",
-      "sector": "Bilinmiyor"
-    },
-    "SURGY.IS": {
-      "name": "SURGY",
-      "sector": "Bilinmiyor"
-    },
-    "SUWEN.IS": {
-      "name": "SUWEN",
-      "sector": "Bilinmiyor"
-    },
-    "TABGD.IS": {
-      "name": "TABGD",
-      "sector": "Bilinmiyor"
-    },
-    "TARKM.IS": {
-      "name": "TARKM",
-      "sector": "Bilinmiyor"
-    },
-    "TATEN.IS": {
-      "name": "TATEN",
-      "sector": "Bilinmiyor"
-    },
-    "TATGD.IS": {
-      "name": "TATGD",
-      "sector": "Bilinmiyor"
-    },
-    "TAVHL.IS": {
-      "name": "TAVHL",
-      "sector": "Bilinmiyor"
-    },
-    "TBORG.IS": {
-      "name": "TBORG",
-      "sector": "Bilinmiyor"
-    },
-    "TCELL.IS": {
-      "name": "TCELL",
-      "sector": "Bilinmiyor"
-    },
-    "TCKRC.IS": {
-      "name": "TCKRC",
-      "sector": "Bilinmiyor"
-    },
-    "TDGYO.IS": {
-      "name": "TDGYO",
-      "sector": "Bilinmiyor"
-    },
-    "TEHOL.IS": {
-      "name": "TEHOL",
-      "sector": "Bilinmiyor"
-    },
-    "TEKTU.IS": {
-      "name": "TEKTU",
-      "sector": "Bilinmiyor"
-    },
-    "TERA.IS": {
-      "name": "TERA",
-      "sector": "Bilinmiyor"
-    },
-    "TEZOL.IS": {
-      "name": "TEZOL",
-      "sector": "Bilinmiyor"
-    },
-    "TGSAS.IS": {
-      "name": "TGSAS",
-      "sector": "Bilinmiyor"
-    },
-    "THYAO.IS": {
-      "name": "THYAO",
-      "sector": "Bilinmiyor"
-    },
-    "TKFEN.IS": {
-      "name": "TKFEN",
-      "sector": "Bilinmiyor"
-    },
-    "TKNSA.IS": {
-      "name": "TKNSA",
-      "sector": "Bilinmiyor"
-    },
-    "TLMAN.IS": {
-      "name": "TLMAN",
-      "sector": "Bilinmiyor"
-    },
-    "TMPOL.IS": {
-      "name": "TMPOL",
-      "sector": "Bilinmiyor"
-    },
-    "TMSN.IS": {
-      "name": "TMSN",
-      "sector": "Bilinmiyor"
-    },
-    "TNZTP.IS": {
-      "name": "TNZTP",
-      "sector": "Bilinmiyor"
-    },
-    "TOASO.IS": {
-      "name": "TOASO",
-      "sector": "Bilinmiyor"
-    },
-    "TRALT.IS": {
-      "name": "TRALT",
-      "sector": "Bilinmiyor"
-    },
-    "TRCAS.IS": {
-      "name": "TRCAS",
-      "sector": "Bilinmiyor"
-    },
-    "TRENJ.IS": {
-      "name": "TRENJ",
-      "sector": "Bilinmiyor"
-    },
-    "TRGYO.IS": {
-      "name": "TRGYO",
-      "sector": "Bilinmiyor"
-    },
-    "TRHOL.IS": {
-      "name": "TRHOL",
-      "sector": "Bilinmiyor"
-    },
-    "TRILC.IS": {
-      "name": "TRILC",
-      "sector": "Bilinmiyor"
-    },
-    "TRMET.IS": {
-      "name": "TRMET",
-      "sector": "Bilinmiyor"
-    },
-    "TSGYO.IS": {
-      "name": "TSGYO",
-      "sector": "Bilinmiyor"
-    },
-    "TSKB.IS": {
-      "name": "TSKB",
-      "sector": "Bilinmiyor"
-    },
-    "TSPOR.IS": {
-      "name": "TSPOR",
-      "sector": "Bilinmiyor"
-    },
-    "TTKOM.IS": {
-      "name": "TTKOM",
-      "sector": "Bilinmiyor"
-    },
-    "TTRAK.IS": {
-      "name": "TTRAK",
-      "sector": "Bilinmiyor"
-    },
-    "TUCLK.IS": {
-      "name": "TUCLK",
-      "sector": "Bilinmiyor"
-    },
-    "TUKAS.IS": {
-      "name": "TUKAS",
-      "sector": "Bilinmiyor"
-    },
-    "TUPRS.IS": {
-      "name": "TUPRS",
-      "sector": "Bilinmiyor"
-    },
-    "TUREX.IS": {
-      "name": "TUREX",
-      "sector": "Bilinmiyor"
-    },
-    "TURGG.IS": {
-      "name": "TURGG",
-      "sector": "Bilinmiyor"
-    },
-    "TURSG.IS": {
-      "name": "TURSG",
-      "sector": "Bilinmiyor"
-    },
-    "UCAYM.IS": {
-      "name": "UCAYM",
-      "sector": "Bilinmiyor"
-    },
-    "UFUK.IS": {
-      "name": "UFUK",
-      "sector": "Bilinmiyor"
-    },
-    "ULAS.IS": {
-      "name": "ULAS",
-      "sector": "Bilinmiyor"
-    },
-    "ULKER.IS": {
-      "name": "ULKER",
-      "sector": "Bilinmiyor"
-    },
-    "ULUFA.IS": {
-      "name": "ULUFA",
-      "sector": "Bilinmiyor"
-    },
-    "ULUSE.IS": {
-      "name": "ULUSE",
-      "sector": "Bilinmiyor"
-    },
-    "ULUUN.IS": {
-      "name": "ULUUN",
-      "sector": "Bilinmiyor"
-    },
     "UMPAS.IS": {
       "name": "UMPAS",
       "sector": "Bilinmiyor"
-    },
-    "UNLU.IS": {
-      "name": "UNLU",
-      "sector": "Bilinmiyor"
-    },
-    "USAK.IS": {
-      "name": "USAK",
-      "sector": "Bilinmiyor"
-    },
-    "VAKBN.IS": {
-      "name": "VAKBN",
-      "sector": "Bilinmiyor"
-    },
-    "VAKFA.IS": {
-      "name": "VAKFA",
-      "sector": "Bilinmiyor"
-    },
-    "VAKFN.IS": {
-      "name": "VAKFN",
-      "sector": "Bilinmiyor"
-    },
-    "VAKKO.IS": {
-      "name": "VAKKO",
-      "sector": "Bilinmiyor"
-    },
-    "VANGD.IS": {
-      "name": "VANGD",
-      "sector": "Bilinmiyor"
-    },
-    "VBTYZ.IS": {
-      "name": "VBTYZ",
-      "sector": "Bilinmiyor"
-    },
-    "VERTU.IS": {
-      "name": "VERTU",
-      "sector": "Bilinmiyor"
-    },
-    "VERUS.IS": {
-      "name": "VERUS",
-      "sector": "Bilinmiyor"
-    },
-    "VESBE.IS": {
-      "name": "VESBE",
-      "sector": "Bilinmiyor"
-    },
-    "VESTL.IS": {
-      "name": "VESTL",
-      "sector": "Bilinmiyor"
-    },
-    "VKFYO.IS": {
-      "name": "VKFYO",
-      "sector": "Bilinmiyor"
-    },
-    "VKGYO.IS": {
-      "name": "VKGYO",
-      "sector": "Bilinmiyor"
-    },
-    "VKING.IS": {
-      "name": "VKING",
-      "sector": "Bilinmiyor"
-    },
-    "VRGYO.IS": {
-      "name": "VRGYO",
-      "sector": "Bilinmiyor"
-    },
-    "VSNMD.IS": {
-      "name": "VSNMD",
-      "sector": "Bilinmiyor"
-    },
-    "YAPRK.IS": {
-      "name": "YAPRK",
-      "sector": "Bilinmiyor"
-    },
-    "YATAS.IS": {
-      "name": "YATAS",
-      "sector": "Bilinmiyor"
-    },
-    "YAYLA.IS": {
-      "name": "YAYLA",
-      "sector": "Bilinmiyor"
-    },
-    "YBTAS.IS": {
-      "name": "YBTAS",
-      "sector": "Bilinmiyor"
-    },
-    "YEOTK.IS": {
-      "name": "YEOTK",
-      "sector": "Bilinmiyor"
-    },
-    "YESIL.IS": {
-      "name": "YESIL",
-      "sector": "Bilinmiyor"
-    },
-    "YGGYO.IS": {
-      "name": "YGGYO",
-      "sector": "Bilinmiyor"
-    },
-    "YGYO.IS": {
-      "name": "YGYO",
-      "sector": "Bilinmiyor"
-    },
-    "YIGIT.IS": {
-      "name": "YIGIT",
-      "sector": "Bilinmiyor"
-    },
-    "YKBNK.IS": {
-      "name": "YKBNK",
-      "sector": "Bilinmiyor"
-    },
-    "YKSLN.IS": {
-      "name": "YKSLN",
-      "sector": "Bilinmiyor"
-    },
-    "YONGA.IS": {
-      "name": "YONGA",
-      "sector": "Bilinmiyor"
-    },
-    "YUNSA.IS": {
-      "name": "YUNSA",
-      "sector": "Bilinmiyor"
-    },
-    "YYAPI.IS": {
-      "name": "YYAPI",
-      "sector": "Bilinmiyor"
-    },
-    "YYLGD.IS": {
-      "name": "YYLGD",
-      "sector": "Bilinmiyor"
-    },
-    "ZEDUR.IS": {
-      "name": "ZEDUR",
-      "sector": "Bilinmiyor"
-    },
-    "ZERGY.IS": {
-      "name": "ZERGY",
-      "sector": "Bilinmiyor"
-    },
-    "ZGYO.IS": {
-      "name": "ZGYO",
-      "sector": "Bilinmiyor"
-    },
-    "ZOREN.IS": {
-      "name": "ZOREN",
-      "sector": "Bilinmiyor"
-    },
-    "ZRGYO.IS": {
-      "name": "ZRGYO",
-      "sector": "Bilinmiyor"
     }
-  }
+  },
+  "sorted_tickers": [
+    "THYAO.IS",
+    "SASA.IS",
+    "ASTOR.IS",
+    "AKBNK.IS",
+    "EREGL.IS",
+    "ISCTR.IS",
+    "ASELS.IS",
+    "YKBNK.IS",
+    "GARAN.IS",
+    "TUPRS.IS",
+    "BIMAS.IS",
+    "SAHOL.IS",
+    "PEKGY.IS",
+    "TRALT.IS",
+    "SISE.IS",
+    "IZENR.IS",
+    "KTLEV.IS",
+    "MIATK.IS",
+    "TEHOL.IS",
+    "KCHOL.IS",
+    "YEOTK.IS",
+    "KRDMD.IS",
+    "KRDMB.IS",
+    "PGSUS.IS",
+    "CWENE.IS",
+    "FROTO.IS",
+    "TCELL.IS",
+    "EKGYO.IS",
+    "HALKB.IS",
+    "VAKBN.IS",
+    "TERA.IS",
+    "HEKTS.IS",
+    "DOFRB.IS",
+    "DUNYH.IS",
+    "TAVHL.IS",
+    "SMRTG.IS",
+    "ISKPL.IS",
+    "EMPAE.IS",
+    "FENER.IS",
+    "DSTKF.IS",
+    "PASEU.IS",
+    "BRSAN.IS",
+    "ATATR.IS",
+    "MGROS.IS",
+    "CVKMD.IS",
+    "PETKM.IS",
+    "KONTR.IS",
+    "GUBRF.IS",
+    "NETCD.IS",
+    "EFOR.IS",
+    "MEKAG.IS",
+    "MCARD.IS",
+    "TKFEN.IS",
+    "ULKER.IS",
+    "HRKET.IS",
+    "GLRMK.IS",
+    "TCKRC.IS",
+    "TOASO.IS",
+    "TTKOM.IS",
+    "ENKAI.IS",
+    "SARKY.IS",
+    "SVGYO.IS",
+    "DMRGD.IS",
+    "MANAS.IS",
+    "ZGYO.IS",
+    "ATATP.IS",
+    "CANTE.IS",
+    "AEFES.IS",
+    "LINK.IS",
+    "ODINE.IS",
+    "ALFAS.IS",
+    "VAKFN.IS",
+    "AAGYO.IS",
+    "BORSK.IS",
+    "FRMPL.IS",
+    "KAREL.IS",
+    "TATEN.IS",
+    "GENIL.IS",
+    "BRLSM.IS",
+    "PSGYO.IS",
+    "BARMA.IS",
+    "OBAMS.IS",
+    "KLRHO.IS",
+    "PAHOL.IS",
+    "IEYHO.IS",
+    "MEGMT.IS",
+    "HUNER.IS",
+    "IZFAS.IS",
+    "ULUSE.IS",
+    "ALGYO.IS",
+    "ECILC.IS",
+    "EUPWR.IS",
+    "MOGAN.IS",
+    "ODAS.IS",
+    "QUAGR.IS",
+    "TSKB.IS",
+    "ALARK.IS",
+    "OYAKC.IS",
+    "TURSG.IS",
+    "SOKM.IS",
+    "AKSEN.IS",
+    "EKOS.IS",
+    "BESTE.IS",
+    "BAYRK.IS",
+    "KCAER.IS",
+    "ORGE.IS",
+    "ENJSA.IS",
+    "KARSN.IS",
+    "MEYSU.IS",
+    "AKFIS.IS",
+    "KZBGY.IS",
+    "ALVES.IS",
+    "MAGEN.IS",
+    "ZERGY.IS",
+    "OZATD.IS",
+    "GMTAS.IS",
+    "RYSAS.IS",
+    "CEMZY.IS",
+    "HATSN.IS",
+    "ALTNY.IS",
+    "PKART.IS",
+    "ALKLC.IS",
+    "GUNDG.IS",
+    "ONRYT.IS",
+    "UCAYM.IS",
+    "PATEK.IS",
+    "ECOGR.IS",
+    "SMRVA.IS",
+    "TRMET.IS",
+    "LXGYO.IS",
+    "AKCNS.IS",
+    "RALYH.IS",
+    "MPARK.IS",
+    "DCTTR.IS",
+    "KRDMA.IS",
+    "ARCLK.IS",
+    "BTCIM.IS",
+    "RGYAS.IS",
+    "TRILC.IS",
+    "CCOLA.IS",
+    "SDTTR.IS",
+    "KUYAS.IS",
+    "AKENR.IS",
+    "ONCSM.IS",
+    "GEREL.IS",
+    "BERA.IS",
+    "GENKM.IS",
+    "SKBNK.IS",
+    "GOKNR.IS",
+    "GESAN.IS",
+    "GEDZA.IS",
+    "ANELE.IS",
+    "BURCE.IS",
+    "DAPGM.IS",
+    "DOAS.IS",
+    "SERNT.IS",
+    "AKSA.IS",
+    "KLSYN.IS",
+    "ARMGD.IS",
+    "ISDMR.IS",
+    "OTKAR.IS",
+    "LMKDC.IS",
+    "CIMSA.IS",
+    "GWIND.IS",
+    "TARKM.IS",
+    "HEDEF.IS",
+    "NIBAS.IS",
+    "SKYMD.IS",
+    "ISMEN.IS",
+    "BLUME.IS",
+    "AKHAN.IS",
+    "ACSEL.IS",
+    "CELHA.IS",
+    "GRSEL.IS",
+    "BINHO.IS",
+    "TNZTP.IS",
+    "KLYPV.IS",
+    "BIENY.IS",
+    "GIPTA.IS",
+    "ARDYZ.IS",
+    "TRGYO.IS",
+    "RTALB.IS",
+    "KORDS.IS",
+    "TUKAS.IS",
+    "TRENJ.IS",
+    "MARMR.IS",
+    "ADESE.IS",
+    "TABGD.IS",
+    "KATMR.IS",
+    "TUREX.IS",
+    "AHGAZ.IS",
+    "EUREN.IS",
+    "PCILT.IS",
+    "DOHOL.IS",
+    "SURGY.IS",
+    "SANFM.IS",
+    "GSRAY.IS",
+    "GEDIK.IS",
+    "BALSU.IS",
+    "POLHO.IS",
+    "BIGTK.IS",
+    "REEDR.IS",
+    "A1YEN.IS",
+    "HLGYO.IS",
+    "BRYAT.IS",
+    "PRKAB.IS",
+    "MRGYO.IS",
+    "KFEIN.IS",
+    "AHSGY.IS",
+    "AZTEK.IS",
+    "EDATA.IS",
+    "ALBRK.IS",
+    "ARFYE.IS",
+    "ENERY.IS",
+    "AKFYE.IS",
+    "ENSRI.IS",
+    "VESTL.IS",
+    "KGYO.IS",
+    "VBTYZ.IS",
+    "MAVI.IS",
+    "LILAK.IS",
+    "BSOKE.IS",
+    "ESCOM.IS",
+    "SAYAS.IS",
+    "HOROZ.IS",
+    "ECZYT.IS",
+    "ESEN.IS",
+    "MARKA.IS",
+    "TEZOL.IS",
+    "FONET.IS",
+    "DURKN.IS",
+    "TUCLK.IS",
+    "EMKEL.IS",
+    "SMART.IS",
+    "CGCAM.IS",
+    "KAPLM.IS",
+    "INVES.IS",
+    "MOPAS.IS",
+    "MOBTL.IS",
+    "ZOREN.IS",
+    "BULGS.IS",
+    "MAALT.IS",
+    "AYGAZ.IS",
+    "BMSTL.IS",
+    "FORTE.IS",
+    "MARTI.IS",
+    "TEKTU.IS",
+    "SELVA.IS",
+    "GLYHO.IS",
+    "SEGMN.IS",
+    "LIDER.IS",
+    "KOCMT.IS",
+    "PENGD.IS",
+    "ISGSY.IS",
+    "MERKO.IS",
+    "ESCAR.IS",
+    "EKSUN.IS",
+    "YYLGD.IS",
+    "TRHOL.IS",
+    "ADEL.IS",
+    "IHAAS.IS",
+    "OTTO.IS",
+    "GSDHO.IS",
+    "HURGZ.IS",
+    "CEOEM.IS",
+    "AGHOL.IS",
+    "AYCES.IS",
+    "BVSAN.IS",
+    "SNGYO.IS",
+    "BIOEN.IS",
+    "FADE.IS",
+    "YUNSA.IS",
+    "SAFKR.IS",
+    "KLGYO.IS",
+    "ELITE.IS",
+    "DGATE.IS",
+    "FZLGY.IS",
+    "ARENA.IS",
+    "A1CAP.IS",
+    "GSDDE.IS",
+    "GRTHO.IS",
+    "DYOBY.IS",
+    "GZNMI.IS",
+    "DOCO.IS",
+    "TMPOL.IS",
+    "KBORU.IS",
+    "ENTRA.IS",
+    "YIGIT.IS",
+    "HDFGS.IS",
+    "PAPIL.IS",
+    "ARTMS.IS",
+    "EGPRO.IS",
+    "KNFRT.IS",
+    "LKMNH.IS",
+    "DARDL.IS",
+    "RUBNS.IS",
+    "NTHOL.IS",
+    "GENTS.IS",
+    "EGEPO.IS",
+    "ENDAE.IS",
+    "EGEGY.IS",
+    "BIGEN.IS",
+    "KMPUR.IS",
+    "CRFSA.IS",
+    "IMASM.IS",
+    "CRDFA.IS",
+    "METRO.IS",
+    "LOGO.IS",
+    "USAK.IS",
+    "VAKFA.IS",
+    "INDES.IS",
+    "YATAS.IS",
+    "AGROT.IS",
+    "NATEN.IS",
+    "KRSTL.IS",
+    "SELEC.IS",
+    "CLEBI.IS",
+    "KRONT.IS",
+    "ISSEN.IS",
+    "SRVGY.IS",
+    "TGSAS.IS",
+    "AGESA.IS",
+    "ANSGR.IS",
+    "FORMT.IS",
+    "KTSKR.IS",
+    "EGGUB.IS",
+    "BORLS.IS",
+    "CEMAS.IS",
+    "VSNMD.IS",
+    "BLCYT.IS",
+    "RUZYE.IS",
+    "SOKE.IS",
+    "ARSAN.IS",
+    "FRIGO.IS",
+    "OFSYM.IS",
+    "DITAS.IS",
+    "MERCN.IS",
+    "TSPOR.IS",
+    "ANHYT.IS",
+    "MAKTK.IS",
+    "PNLSN.IS",
+    "PRZMA.IS",
+    "HKTM.IS",
+    "MACKO.IS",
+    "KAYSE.IS",
+    "ERCB.IS",
+    "KOPOL.IS",
+    "INFO.IS",
+    "EBEBK.IS",
+    "LYDHO.IS",
+    "LIDFA.IS",
+    "TMSN.IS",
+    "BJKAS.IS",
+    "AKFGY.IS",
+    "AVHOL.IS",
+    "KLSER.IS",
+    "ISGYO.IS",
+    "EGEEN.IS",
+    "BOBET.IS",
+    "KLKIM.IS",
+    "KIMMR.IS",
+    "BINBN.IS",
+    "AKSUE.IS",
+    "TKNSA.IS",
+    "NTGAZ.IS",
+    "ALKA.IS",
+    "OZGYO.IS",
+    "KARTN.IS",
+    "PRDGS.IS",
+    "OZSUB.IS",
+    "BAHKM.IS",
+    "BESLR.IS",
+    "VKGYO.IS",
+    "ULUUN.IS",
+    "IZMDC.IS",
+    "LRSHO.IS",
+    "TLMAN.IS",
+    "ADGYO.IS",
+    "PLTUR.IS",
+    "INVEO.IS",
+    "AKGRT.IS",
+    "VRGYO.IS",
+    "IHLAS.IS",
+    "TTRAK.IS",
+    "ISFIN.IS",
+    "MNDRS.IS",
+    "OZKGY.IS",
+    "GARFA.IS",
+    "ASGYO.IS",
+    "PKENT.IS",
+    "TATGD.IS",
+    "YAPRK.IS",
+    "GLCVY.IS",
+    "AVOD.IS",
+    "RAYSG.IS",
+    "AVPGY.IS",
+    "CONSE.IS",
+    "DOFER.IS",
+    "BAGFS.IS",
+    "YGGYO.IS",
+    "IHLGM.IS",
+    "PRKME.IS",
+    "ANGEN.IS",
+    "EUKYO.IS",
+    "DAGI.IS",
+    "TRCAS.IS",
+    "VERTU.IS",
+    "HATEK.IS",
+    "ZRGYO.IS",
+    "PENTA.IS",
+    "JANTS.IS",
+    "SUNTK.IS",
+    "DOGUB.IS",
+    "SNICA.IS",
+    "GOZDE.IS",
+    "BRKVY.IS",
+    "CATES.IS",
+    "MHRGY.IS",
+    "CEMTS.IS",
+    "DURDO.IS",
+    "DERHL.IS",
+    "IZINV.IS",
+    "ARZUM.IS",
+    "BNTAS.IS",
+    "YKSLN.IS",
+    "SAMAT.IS",
+    "SKTAS.IS",
+    "AYEN.IS",
+    "AYDEM.IS",
+    "RYGYO.IS",
+    "BUCIM.IS",
+    "KONKA.IS",
+    "NETAS.IS",
+    "PINSU.IS",
+    "ARASE.IS",
+    "EYGYO.IS",
+    "BURVA.IS",
+    "ASUZU.IS",
+    "GOODY.IS",
+    "KOTON.IS",
+    "ZEDUR.IS",
+    "EDIP.IS",
+    "ATAKP.IS",
+    "ULUFA.IS",
+    "PNSUT.IS",
+    "ICUGS.IS",
+    "MRSHL.IS",
+    "BEGYO.IS",
+    "VESBE.IS",
+    "POLTK.IS",
+    "ETYAT.IS",
+    "OSTIM.IS",
+    "EGSER.IS",
+    "BANVT.IS",
+    "KRPLS.IS",
+    "SEYKM.IS",
+    "VERUS.IS",
+    "FLAP.IS",
+    "BAKAB.IS",
+    "IDGYO.IS",
+    "UFUK.IS",
+    "MTRKS.IS",
+    "KZGYO.IS",
+    "PARSN.IS",
+    "BFREN.IS",
+    "BIGCH.IS",
+    "DOKTA.IS",
+    "MERIT.IS",
+    "DEVA.IS",
+    "MAKIM.IS",
+    "KONYA.IS",
+    "KUVVA.IS",
+    "GOLTS.IS",
+    "ALKIM.IS",
+    "FMIZP.IS",
+    "ALCTL.IS",
+    "SKYLP.IS",
+    "INTEM.IS",
+    "OBASE.IS",
+    "VAKKO.IS",
+    "ALCAR.IS",
+    "AFYON.IS",
+    "YAYLA.IS",
+    "ICBCT.IS",
+    "AKMGY.IS",
+    "KRGYO.IS",
+    "KLMSN.IS",
+    "KUTPO.IS",
+    "INGRM.IS",
+    "MARBL.IS",
+    "HTTBT.IS",
+    "YESIL.IS",
+    "KRVGD.IS",
+    "GLRYH.IS",
+    "DMSAS.IS",
+    "SEGYO.IS",
+    "OZYSR.IS",
+    "BEYAZ.IS",
+    "TBORG.IS",
+    "OZRDN.IS",
+    "CMBTN.IS",
+    "DENGE.IS",
+    "PAMEL.IS",
+    "BMSCH.IS",
+    "NUGYO.IS",
+    "MEDTR.IS",
+    "DESPC.IS",
+    "CUSAN.IS",
+    "AKSGY.IS",
+    "PETUN.IS",
+    "DZGYO.IS",
+    "TURGG.IS",
+    "EUHOL.IS",
+    "IHGZT.IS",
+    "UNLU.IS",
+    "EPLAS.IS",
+    "EKDMR.IS",
+    "ETILR.IS",
+    "PAGYO.IS",
+    "SUWEN.IS",
+    "LYDYE.IS",
+    "BASGZ.IS",
+    "TSGYO.IS",
+    "MNDTR.IS",
+    "SANEL.IS",
+    "ORCAY.IS",
+    "OSMEN.IS",
+    "NUHCM.IS",
+    "BRISA.IS",
+    "SEKUR.IS",
+    "DGNMO.IS",
+    "BYDNR.IS",
+    "ERBOS.IS",
+    "ULAS.IS",
+    "DESA.IS",
+    "IHYAY.IS",
+    "MSGYO.IS",
+    "DNISI.IS",
+    "KERVN.IS",
+    "VKFYO.IS",
+    "BOSSA.IS",
+    "VKING.IS",
+    "OYAYO.IS",
+    "VANGD.IS",
+    "DERIM.IS",
+    "LUKSK.IS",
+    "MEPET.IS",
+    "OYLUM.IS",
+    "BIZIM.IS",
+    "AVGYO.IS",
+    "ENPRA.IS",
+    "OYYAT.IS",
+    "BRMEN.IS",
+    "AYES.IS",
+    "ERSU.IS",
+    "HUBVC.IS",
+    "RNPOL.IS",
+    "ISYAT.IS",
+    "AKYHO.IS",
+    "COSMO.IS",
+    "ATLAS.IS",
+    "GRNYO.IS",
+    "SANKO.IS",
+    "YYAPI.IS",
+    "SEKFK.IS",
+    "GATEG.IS",
+    "TDGYO.IS",
+    "RODRG.IS",
+    "KLNMA.IS",
+    "PSDTC.IS",
+    "ORMA.IS",
+    "AVTUR.IS",
+    "CASA.IS",
+    "CMENT.IS",
+    "ISBIR.IS",
+    "ISBTR.IS",
+    "BRKSN.IS",
+    "EUYO.IS",
+    "ATEKS.IS",
+    "KSTUR.IS",
+    "SONME.IS",
+    "SILVR.IS",
+    "BRKO.IS",
+    "AGYO.IS",
+    "GLBMD.IS",
+    "ISKUR.IS",
+    "DGGYO.IS",
+    "QNBTR.IS",
+    "MTRYO.IS",
+    "MEGAP.IS",
+    "KRTEK.IS",
+    "SUMAS.IS",
+    "MMCAS.IS",
+    "ATAGY.IS",
+    "INTEK.IS",
+    "BALAT.IS",
+    "ATSYH.IS",
+    "YONGA.IS",
+    "MZHLD.IS",
+    "EMNIS.IS",
+    "KENT.IS",
+    "IHEVA.IS",
+    "EKIZ.IS",
+    "DIRIT.IS",
+    "QNBFK.IS",
+    "YBTAS.IS",
+    "BASCM.IS",
+    "SODSN.IS",
+    "SNPAM.IS",
+    "ISATR.IS",
+    "YGYO.IS",
+    "DMLKTG.IS",
+    "UMPAS.IS"
+  ]
 }

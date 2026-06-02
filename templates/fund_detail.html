@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Geri Dönüş Linki -->
+<a href="/" class="back-link">← Ana Sayfa / Panel</a>
+
+{% if error %}
+<section class="glass-card error-card">
+    <h2>⚠️ Hata Oluştu</h2>
+    <p>{{ error }}</p>
+</section>
+{% else %}
+
+<!-- Fon Detay Başlığı -->
+<section class="glass-card">
+    <div class="stock-header">
+        <div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+                <span class="asset-type-badge type-fund">YATIRIM FONU</span>
+                <span class="stock-code">{{ result.code }}</span>
+            </div>
+            <h1>{{ result.name }}</h1>
+            <p class="hero-sub" style="margin: 0.5rem 0 0; text-align: left;">Kategori: <strong>{{ result.category }}</strong></p>
+            <div class="price-display">
+                <span class="current-price">₺{{ "%.6f"|format(result.price) }}</span>
+                {% set change = result.daily_return %}
+                <span class="price-change {% if change > 0 %}text-green{% elif change < 0 %}text-red{% endif %}">
+                    {% if change > 0 %}+{% endif %}{{ "%.2f"|format(change) }}% (Günlük)
+                </span>
+            </div>
+        </div>
+        <div class="stock-header-right">
+            <div class="overall-score-display" style="margin-right: 1.5rem;">
+                <span class="score-label">Momentum Skoru</span>
+                <span class="score-value" style="font-size: 2.2rem;">{{ result.score }}/100</span>
+            </div>
+            <div class="signal-display signal-{{ result.signal_class }}">
+                <span class="signal-label">Sistem Eğilimi</span>
+                <span class="signal-value">{{ result.signal }}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Temel Metrikler (Stat Kartları) -->
+<section class="summary-cards">
+    <div class="stat-card total-card">
+        <div class="stat-number">₺{{ "%.1f"|format(result.portfolio_size / 1000000) }}M</div>
+        <div class="stat-label">Portföy Büyüklüğü</div>
+        <div class="stat-icon">💰</div>
+    </div>
+    <div class="stat-card hold-card">
+        <div class="stat-number">{{ "{:,}".format(result.investor_count) }}</div>
+        <div class="stat-label">Aktif Yatırımcı Sayısı</div>
+        <div class="stat-icon">👥</div>
+    </div>
+    <div class="stat-card {% if result.risk_value >= 5 %}sell-card{% elif result.risk_value >= 3 %}hold-card{% else %}buy-card{% endif %}">
+        <div class="stat-number">{{ result.risk_value }} / 7</div>
+        <div class="stat-label">Risk Seviyesi</div>
+        <div class="stat-icon">⚠️</div>
+    </div>
+    <div class="stat-card buy-card">
+        <div class="stat-number">%{{ "%.1f"|format(result.yearly_return) }}</div>
+        <div class="stat-label">1 Yıllık Getiri</div>
+        <div class="stat-icon">📈</div>
+    </div>
+</section>
+
+<div class="detail-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+    <!-- Grafik Paneli -->
+    <div class="glass-card" style="margin-bottom: 0;">
+        <h2>📊 Son 30 Günlük Fiyat Değişimi</h2>
+        {% if history %}
+        <div class="chart-container" style="position: relative; height: 350px; width: 100%;">
+            <canvas id="fundChart"></canvas>
+        </div>
+        {% else %}
+        <div class="empty-state" style="padding: 2rem;">
+            <p>Bu fon için son 30 günlük geçmiş fiyat verisi bulunamadı veya TEFAS'tan çekilemedi.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Getiri Tablosu -->
+    <div class="glass-card" style="margin-bottom: 0;">
+        <h2>📅 Dönemsel Getiri Performansı</h2>
+        <div class="price-grid" style="grid-template-columns: 1fr; gap: 0.6rem;">
+            <div class="price-item" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+                <span class="price-item-label" style="margin-bottom:0;">Günlük Getiri</span>
+                <span class="price-item-value {% if result.daily_return > 0 %}text-green{% elif result.daily_return < 0 %}text-red{% endif %}">
+                    {% if result.daily_return > 0 %}+{% endif %}{{ "%.2f"|format(result.daily_return) }}%
+                </span>
+            </div>
+            <div class="price-item" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+                <span class="price-item-label" style="margin-bottom:0;">Haftalık Getiri (5 İş Günü)</span>
+                <span class="price-item-value {% if result.weekly_return > 0 %}text-green{% elif result.weekly_return < 0 %}text-red{% endif %}">
+                    {% if result.weekly_return > 0 %}+{% endif %}{{ "%.2f"|format(result.weekly_return) }}%
+                </span>
+            </div>
+            <div class="price-item" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+                <span class="price-item-label" style="margin-bottom:0;">1 Aylık Getiri</span>
+                <span class="price-item-value {% if result.monthly_return > 0 %}text-green{% elif result.monthly_return < 0 %}text-red{% endif %}">
+                    {% if result.monthly_return > 0 %}+{% endif %}{{ "%.2f"|format(result.monthly_return) }}%
+                </span>
+            </div>
+            <div class="price-item" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+                <span class="price-item-label" style="margin-bottom:0;">3 Aylık Getiri</span>
+                <span class="price-item-value {% if result.three_month_return > 0 %}text-green{% elif result.three_month_return < 0 %}text-red{% endif %}">
+                    {% if result.three_month_return > 0 %}+{% endif %}{{ "%.2f"|format(result.three_month_return) }}%
+                </span>
+            </div>
+            <div class="price-item" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+                <span class="price-item-label" style="margin-bottom:0;">6 Aylık Getiri</span>
+                <span class="price-item-value {% if result.six_month_return > 0 %}text-green{% elif result.six_month_return < 0 %}text-red{% endif %}">
+                    {% if result.six_month_return > 0 %}+{% endif %}{{ "%.2f"|format(result.six_month_return) }}%
+                </span>
+            </div>
+            <div class="price-item" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+                <span class="price-item-label" style="margin-bottom:0;">1 Yıllık Getiri</span>
+                <span class="price-item-value {% if result.yearly_return > 0 %}text-green{% elif result.yearly_return < 0 %}text-red{% endif %}">
+                    {% if result.yearly_return > 0 %}+{% endif %}{{ "%.2f"|format(result.yearly_return) }}%
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Gemini AI Yorum Alanı -->
+<section class="glass-card ai-section" style="border: 1px solid rgba(139, 92, 246, 0.25);">
+    <h2>✨ Gemini AI Portföy ve Performans Yorumu</h2>
+    <div id="aiContainer">
+        <button id="getAiCommentBtn" class="btn-ai">🤖 Gemini AI Analizi Üret</button>
+        <p class="ai-hint">Gemini AI, fonun getiri momentumunu, risk değerini, piyasa kategorisini inceleyerek derinlemesine bir profesyonel analiz raporu hazırlar.</p>
+    </div>
+</section>
+
+{% endif %}
+
+<!-- Chart.js CDN Dahil Et -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // ==========================================
+    // Grafik Çizimi (Chart.js)
+    // ==========================================
+    {% if history %}
+    (function() {
+        const ctx = document.getElementById('fundChart').getContext('2d');
+        const historyData = {{ history|tojson }};
+        
+        const labels = historyData.map(d => {
+            const date = new Date(d.date);
+            return date.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
+        });
+        const prices = historyData.map(d => d.price);
+        
+        // Gradient rengi tanımla
+        const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, 'rgba(139, 92, 246, 0.3)');
+        gradient.addColorStop(1, 'rgba(139, 92, 246, 0.0)');
+        
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Fon Fiyatı (₺)',
+                    data: prices,
+                    borderColor: '#8b5cf6',
+                    borderWidth: 3,
+                    backgroundColor: gradient,
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: '#8b5cf6',
+                    pointBorderColor: '#0a0e1a',
+                    pointBorderWidth: 2,
+                    pointRadius: 3,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: '#111827',
+                        titleColor: '#f1f5f9',
+                        bodyColor: '#e2e8f0',
+                        borderColor: 'rgba(255,255,255,0.08)',
+                        borderWidth: 1,
+                        padding: 10,
+                        callbacks: {
+                            label: function(context) {
+                                return `Fiyat: ₺${context.parsed.y.toFixed(6)}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.03)'
+                        },
+                        ticks: {
+                            color: '#94a3b8',
+                            maxTicksLimit: 12
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.03)'
+                        },
+                        ticks: {
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return '₺' + value.toFixed(4);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    })();
+    {% endif %}
+
+    // ==========================================
+    // Gemini AI Yorum Çekimi (AJAX)
+    // ==========================================
+    const aiContainer = document.getElementById('aiContainer');
+    const aiBtn = document.getElementById('getAiCommentBtn');
+    
+    if (aiBtn) {
+        aiBtn.addEventListener('click', function() {
+            aiContainer.innerHTML = `
+                <div class="ai-loading">
+                    <div class="spinner" style="border-top-color: #8b5cf6;"></div>
+                    <p style="font-weight: 500; letter-spacing: 0.02em;">Gemini AI fon verilerini analiz ediyor, rapor hazırlanıyor...</p>
+                </div>
+            `;
+            
+            fetch('/ai-comment/{{ result.code }}')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.commentary) {
+                        // Markdown paragraflarını ve bold ifadelerini HTML'e dönüştür
+                        let formattedText = data.commentary
+                            .replace(/\n\n/g, '</p><p>')
+                            .replace(/\n/g, '<br>')
+                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                            .replace(/\*(.*?)\*/g, '<em>$1</em>');
+                        
+                        aiContainer.innerHTML = `
+                            <div class="ai-result">
+                                <p>${formattedText}</p>
+                            </div>
+                            <button id="refreshAiCommentBtn" class="btn-ai btn-ai-refresh" style="margin-top: 1rem;">🔄 Yorumu Yenile</button>
+                        `;
+                        
+                        // Yenileme butonunu bağla
+                        document.getElementById('refreshAiCommentBtn').addEventListener('click', function() {
+                            aiBtn.click();
+                        });
+                    } else {
+                        aiContainer.innerHTML = `
+                            <div class="ai-error">
+                                ⚠️ Yorum alınamadı. Lütfen daha sonra tekrar deneyin.
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    aiContainer.innerHTML = `
+                        <div class="ai-error">
+                            ⚠️ Hata oluştu: ${error.message}
+                        </div>
+                    `;
+                });
+        });
+    }
+</script>
+
+<style>
+    @media (max-width: 992px) {
+        .detail-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+
+{% endblock %}

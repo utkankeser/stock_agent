@@ -14,19 +14,21 @@ import config
 from analysis.data_fetcher import fetch_stock_data
 from analysis.technical import calculate_indicators, get_technical_score
 from analysis.news_scraper import fetch_news, get_news_score
-from data.bist_stocks import get_stock_name
+from data.bist_stocks import get_stock_name, get_stock_info
+from analysis.tefas_fetcher import fetch_and_analyze_funds
 
 # Paralel analiz için max worker sayısı
 MAX_WORKERS = 10
 
 
-def analyze_stock(ticker, period=None, skip_news=False):
+def analyze_stock(ticker, period=None, interval=None, skip_news=False):
     """
     Bir hisse için kapsamlı analiz yapar.
     
     Args:
         ticker: yfinance ticker (ör: "THYAO.IS")
         period: Veri periyodu
+        interval: Mum süresi (1h, 1d, 1wk vb.)
         skip_news: True ise haber analizi atlanır (hızlı tarama)
     
     Returns:
@@ -39,23 +41,40 @@ def analyze_stock(ticker, period=None, skip_news=False):
         "ticker": ticker,
         "code": stock_code,
         "name": stock_name,
+        "interval": interval or "1d",
         "indicators": None,
         "news": [],
         "technical_score": 50,
         "news_score": 50,
         "overall_score": 50,
+        "score": 50,  # fon uyumluluğu için
         "signal": "TUT",
         "signal_class": "hold",
+        "type": "Hisse",
+        "category": "Diğer",
+        "price": 0.0,
+        "daily_return": 0.0,
+        "weekly_return": 0.0,
+        "monthly_return": 0.0,
+        "volume_size": 0.0,
         "summary": "",
         "details": [],
         "error": None,
     }
     
+    # Sektör bilgisini cache'den hızlıca al
+    info = get_stock_info(ticker)
+    if info:
+        result["category"] = info.get("sector", "Diğer")
+    
     # 1. Fiyat verilerini çek
-    df = fetch_stock_data(ticker, period)
+    df = fetch_stock_data(ticker, period, interval)
     if df is None:
         result["error"] = f"{stock_code} için fiyat verisi bulunamadı"
         return result
+        
+    # yfinance kaynaklı eksik/boş satırları temizle
+    df = df.dropna(subset=["Kapanış"])
     
     # 2. Teknik analiz yap
     indicators = calculate_indicators(df)
@@ -89,17 +108,50 @@ def analyze_stock(ticker, period=None, skip_news=False):
         overall = round(tech_score * tech_weight + news_sc * config.WEIGHT_NEWS)
     
     result["overall_score"] = overall
+    result["score"] = overall
     
     # 6. Sinyal üret
-    if overall >= config.SIGNAL_BUY_THRESHOLD:
+    if overall >= 75:
+        result["signal"] = "GÜÇLÜ AL"
+        result["signal_class"] = "buy"
+    elif overall >= config.SIGNAL_BUY_THRESHOLD:
         result["signal"] = "AL"
         result["signal_class"] = "buy"
+    elif overall <= 25:
+        result["signal"] = "GÜÇLÜ SAT"
+        result["signal_class"] = "sell"
     elif overall <= config.SIGNAL_SELL_THRESHOLD:
         result["signal"] = "SAT"
         result["signal_class"] = "sell"
     else:
         result["signal"] = "TUT"
         result["signal_class"] = "hold"
+        
+    import math
+    def _clean_val(v):
+        try:
+            fv = float(v)
+            if math.isnan(fv) or math.isinf(fv):
+                return 0.0
+            return fv
+        except Exception:
+            return 0.0
+
+    # Fiyat, Getiri ve Hacim bilgilerini üst seviyeye çıkar
+    if "price_info" in indicators:
+        pi = indicators["price_info"]
+        result["price"] = _clean_val(pi.get("current", 0.0))
+        result["daily_return"] = _clean_val(pi.get("change_1d", 0.0))
+        result["weekly_return"] = _clean_val(pi.get("change_1w", 0.0))
+        result["monthly_return"] = _clean_val(pi.get("change_1m", 0.0))
+        
+    # TL cinsinden işlem hacmini hesapla
+    try:
+        last_price = _clean_val(df["Kapanış"].iloc[-1])
+        last_volume = _clean_val(df["Hacim"].iloc[-1]) if "Hacim" in df.columns else 0.0
+        result["volume_size"] = _clean_val(last_price * last_volume)
+    except Exception:
+        result["volume_size"] = 0.0
     
     # 7. Özet oluştur
     result["summary"] = _generate_summary(result)
@@ -110,10 +162,10 @@ def analyze_stock(ticker, period=None, skip_news=False):
 
 def _safe_analyze(args):
     """Thread-safe wrapper for analyze_stock."""
-    ticker, period, skip_news, index, total = args
+    ticker, period, interval, skip_news, index, total = args
     try:
         print(f"[{index}/{total}] {ticker} analiz ediliyor...")
-        return analyze_stock(ticker, period, skip_news)
+        return analyze_stock(ticker, period, interval, skip_news)
     except Exception as e:
         print(f"  [HATA] {ticker}: {e}")
         return {
@@ -125,45 +177,52 @@ def _safe_analyze(args):
             "technical_score": 50,
             "news_score": 50,
             "overall_score": 50,
+            "score": 50,
             "signal": "TUT",
             "signal_class": "hold",
+            "type": "Hisse",
+            "category": "Diğer",
+            "price": 0.0,
+            "daily_return": 0.0,
+            "weekly_return": 0.0,
+            "monthly_return": 0.0,
+            "volume_size": 0.0,
             "summary": "",
             "details": [],
             "error": str(e),
         }
 
 
-def analyze_multiple(tickers, period=None, skip_news=False, max_stocks=None):
+def analyze_multiple(tickers, period=None, interval=None, skip_news=False, max_stocks=None):
     """
     Birden fazla hisseyi PARALEL olarak analiz eder.
     
     Args:
         tickers: Analiz edilecek ticker listesi
         period: Veri periyodu
+        interval: Mum süresi (1h, 1d, 1wk vb.)
         skip_news: True ise haber analizi atlanır (çok daha hızlı)
         max_stocks: Maksimum analiz edilecek hisse sayısı
     
     Returns:
         list: Analiz sonuçları listesi (skora göre sıralı)
     """
-    # Hisse sayısını sınırla
     if max_stocks and len(tickers) > max_stocks:
-        print(f"⚠️  {len(tickers)} hisseden ilk {max_stocks} tanesi analiz edilecek.")
+        print(f"[UYARI] {len(tickers)} hisseden ilk {max_stocks} tanesi analiz edilecek.")
         tickers = tickers[:max_stocks]
     
     total = len(tickers)
-    mode = "Hızlı Tarama (habersiz)" if skip_news else "Detaylı Analiz"
+    mode = "Hizli Tarama (habersiz)" if skip_news else "Detayli Analiz"
     print(f"\n{'='*60}")
-    print(f"  📊 {total} hisse analiz ediliyor... [{mode}]")
-    print(f"  ⚡ {MAX_WORKERS} paralel worker aktif")
+    print(f"  [ANALIZ] {total} hisse analiz ediliyor... [{mode}]")
+    print(f"  [INFO] {MAX_WORKERS} paralel worker aktif")
     print(f"{'='*60}\n")
     
     start_time = time.time()
     results = []
     
-    # Paralel analiz
     args_list = [
-        (ticker, period, skip_news, i, total)
+        (ticker, period, interval, skip_news, i, total)
         for i, ticker in enumerate(tickers, 1)
     ]
     
@@ -172,7 +231,7 @@ def analyze_multiple(tickers, period=None, skip_news=False, max_stocks=None):
         
         for future in as_completed(futures):
             try:
-                result = future.result(timeout=60)  # 60 saniye timeout per stock
+                result = future.result(timeout=60)
                 results.append(result)
             except Exception as e:
                 ticker = futures[future]
@@ -182,20 +241,82 @@ def analyze_multiple(tickers, period=None, skip_news=False, max_stocks=None):
                     "code": ticker.replace(".IS", ""),
                     "name": ticker.replace(".IS", ""),
                     "indicators": None, "news": [],
-                    "technical_score": 50, "news_score": 50, "overall_score": 50,
+                    "technical_score": 50, "news_score": 50, "overall_score": 50, "score": 50,
                     "signal": "TUT", "signal_class": "hold",
+                    "type": "Hisse", "category": "Diğer",
+                    "price": 0.0, "daily_return": 0.0, "weekly_return": 0.0, "monthly_return": 0.0, "volume_size": 0.0,
                     "summary": "", "details": [],
-                    "error": f"Zaman aşımı: {e}",
+                    "error": f"Zaman asimi: {e}",
                 })
     
     elapsed = round(time.time() - start_time, 1)
     success_count = sum(1 for r in results if not r.get("error"))
-    print(f"\n✅ {success_count}/{total} hisse başarıyla analiz edildi ({elapsed} saniye)")
+    print(f"\n[OK] {success_count}/{total} hisse basariyla analiz edildi ({elapsed} saniye)")
     
-    # Skora göre sırala (yüksek skor = daha iyi alım fırsatı)
     results.sort(key=lambda x: x["overall_score"], reverse=True)
-    
     return results
+
+
+def analyze_all_assets(sector="all", period=None, interval=None, scan_mode="quick", max_stocks=100, max_funds=100, force_refresh=False):
+    """
+    Hem BIST hisselerini hem de TEFAS fonlarını analiz edip tek bir birleşik yapıda birleştirir.
+    
+    Args:
+        sector (str): "all" ise hepsi, değilse belirli bir hisse sektörü (bu durumda fonlar dahil edilmez)
+        period (str): Veri periyodu
+        interval (str): Mum süresi
+        scan_mode (str): "quick" veya "detailed"
+        max_stocks (int): Maksimum hisse sayısı
+        max_funds (int): Maksimum fon sayısı
+        
+    Returns:
+        list: Birleşik analiz sonuçları
+    """
+    combined_results = []
+    
+    # 1. Hisseleri analiz et (Eğer sektör "all" ise veya geçerli bir sektörse)
+    from data.bist_stocks import get_all_tickers, get_stocks_by_sector
+    
+    if sector == "all":
+        tickers = get_all_tickers()
+    else:
+        tickers = list(get_stocks_by_sector(sector).keys())
+        
+    if tickers:
+        skip_news = (scan_mode == "quick")
+        stock_results = analyze_multiple(tickers, period, interval, skip_news=skip_news, max_stocks=max_stocks)
+        combined_results.extend(stock_results)
+        
+    # 2. Fonları analiz et (Yalnızca genel taramada 'sector == all' durumunda fonları ekliyoruz)
+    if sector == "all" and max_funds and max_funds > 0:
+        print("\n[ANALIZ] TEFAS yatırım fonları getirileri ve momentum trendleri hesaplanıyor...")
+        try:
+            fund_results = fetch_and_analyze_funds(top_n=max_funds, force_refresh=force_refresh)
+            
+            # Fon sinyallerini stock sinyal_class yapılarına eşle
+            # GÜÇLÜ TREND -> buy, NÖTR -> hold, ZAYIF TREND -> sell
+            signal_class_map = {
+                "GÜÇLÜ TREND": "buy",
+                "NÖTR": "hold",
+                "ZAYIF TREND": "sell"
+            }
+            
+            for f in fund_results:
+                f["signal_class"] = signal_class_map.get(f["signal"], "hold")
+                # app.py aramasında ve detay rotalarında uyumluluk için ticker alanını dolduralım
+                f["ticker"] = f["code"] 
+                # Genel sıralama için overall_score alanını da dolduralım
+                f["overall_score"] = f["score"]
+                
+            combined_results.extend(fund_results)
+            print(f"[OK] {len(fund_results)} TEFAS fonu birleşik listeye eklendi.")
+        except Exception as e:
+            print(f"[HATA] Fon analizleri birleşik listeye eklenemedi: {e}")
+            
+    # Tüm varlıkları skorlarına göre yeniden sırala
+    combined_results.sort(key=lambda x: x.get("score", x.get("overall_score", 50)), reverse=True)
+    return combined_results
+
 
 
 def _generate_summary(result):
@@ -212,9 +333,15 @@ def _generate_summary(result):
     change = price_info.get("change_1d", 0)
     change_sign = "+" if change >= 0 else ""
     
-    if signal == "AL":
+    if signal == "GÜÇLÜ AL":
+        action = "Güçlü alım fırsatı görünüyor"
+        reason = "Teknik göstergelerin neredeyse tamamı çok güçlü alım sinyali veriyor"
+    elif signal == "AL":
         action = "Alım fırsatı görünüyor"
         reason = "Teknik göstergeler olumlu sinyal veriyor"
+    elif signal == "GÜÇLÜ SAT":
+        action = "Güçlü satış baskısı mevcut"
+        reason = "Teknik göstergelerin neredeyse tamamı çok güçlü satış sinyali veriyor"
     elif signal == "SAT":
         action = "Satış düşünülebilir"
         reason = "Teknik göstergeler olumsuz sinyal veriyor"

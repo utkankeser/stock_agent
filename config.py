@@ -94,25 +94,45 @@ CMF_PERIOD = 20
 CMF_BULLISH = 0.05
 CMF_BEARISH = -0.05
 
+# ATR (Average True Range)
+ATR_PERIOD = 14
+ATR_MULTIPLIER = 1.5
+
+# McGinley Dynamic
+MCGINLEY_PERIOD = 14
+
+# SMI (Stochastic Momentum Index)
+SMI_FAST = 5
+SMI_SLOW = 20
+SMI_SIGNAL = 5
+
+# Zigzag
+ZIGZAG_DEVIATION = 5.0
+
+
 # =============================================
 # Sinyal Motoru Ağırlıkları (toplam teknik = 1.0)
-# 15 indikatör, eşit dağıtılmış ağırlıklar
+# 19 indikatör, dengelenmiş ağırlıklar
 # =============================================
-WEIGHT_RSI = 0.08
-WEIGHT_MACD = 0.08
-WEIGHT_SMA = 0.07
-WEIGHT_EMA = 0.07
-WEIGHT_BOLLINGER = 0.07
-WEIGHT_STOCHASTIC = 0.07
-WEIGHT_ADX = 0.07
-WEIGHT_CCI = 0.06
-WEIGHT_WILLIAMS = 0.06
-WEIGHT_OBV = 0.06
-WEIGHT_MFI = 0.07
-WEIGHT_PSAR = 0.07
-WEIGHT_ICHIMOKU = 0.07
+WEIGHT_RSI = 0.06
+WEIGHT_MACD = 0.06
+WEIGHT_SMA = 0.05
+WEIGHT_EMA = 0.05
+WEIGHT_BOLLINGER = 0.05
+WEIGHT_STOCHASTIC = 0.05
+WEIGHT_ADX = 0.05
+WEIGHT_CCI = 0.05
+WEIGHT_WILLIAMS = 0.05
+WEIGHT_OBV = 0.05
+WEIGHT_MFI = 0.05
+WEIGHT_PSAR = 0.05
+WEIGHT_ICHIMOKU = 0.05
 WEIGHT_ROC = 0.05
 WEIGHT_CMF = 0.05
+WEIGHT_ATR = 0.06
+WEIGHT_MCGINLEY = 0.05
+WEIGHT_SMI = 0.06
+WEIGHT_ZIGZAG = 0.05
 
 # Haber ağırlığı (genel skordaki)
 WEIGHT_NEWS = 0.15

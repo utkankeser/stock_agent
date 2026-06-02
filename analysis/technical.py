@@ -1,7 +1,7 @@
 """
-Teknik Analiz Modülü — 15 İndikatör
+Teknik Analiz Modülü — 19 İndikatör
 RSI, MACD, SMA, EMA, Bollinger, Stokastik, ADX, CCI, Williams %R,
-OBV, MFI, Parabolic SAR, Ichimoku, ROC, CMF
+OBV, MFI, Parabolic SAR, Ichimoku, ROC, CMF, ATR, McGinley, SMI, Zigzag
 Sinyal etiketleri: AL / SAT / NÖTR
 """
 
@@ -22,7 +22,13 @@ def calculate_indicators(df):
     Returns:
         dict: Tüm teknik gösterge değerleri ve sinyalleri
     """
-    if df is None or len(df) < config.SMA_LONG:
+    if df is None:
+        return None
+        
+    # yfinance kaynaklı eksik/boş satırları temizle
+    df = df.dropna(subset=["Kapanış"])
+    
+    if len(df) < config.SMA_LONG:
         return None
 
     close = df["Kapanış"]
@@ -152,14 +158,22 @@ def calculate_indicators(df):
 
     # --- 8. CCI ---
     try:
-        cci = ta.cci(high, low, close, length=config.CCI_PERIOD)
-        if cci is not None and len(cci.dropna()) > 0:
-            cci_value = round(cci.iloc[-1], 2)
-            results["cci"] = {
-                "value": cci_value,
-                "signal": _cci_signal(cci_value),
-                "description": _cci_description(cci_value),
-            }
+        # pandas_ta'in pure-python CCI formülünde işlem önceliği hatası (parantez eksikliği) olduğu için elle hesaplıyoruz
+        tp = (high + low + close) / 3
+        tp_sma = tp.rolling(window=config.CCI_PERIOD).mean()
+        tp_mad = tp.rolling(window=config.CCI_PERIOD).apply(lambda x: np.abs(x - x.mean()).mean(), raw=True)
+        
+        mad_val = tp_mad.iloc[-1]
+        if mad_val > 0:
+            cci_value = round((tp.iloc[-1] - tp_sma.iloc[-1]) / (0.015 * mad_val), 2)
+        else:
+            cci_value = 0.0
+            
+        results["cci"] = {
+            "value": cci_value,
+            "signal": _cci_signal(cci_value),
+            "description": _cci_description(cci_value),
+        }
     except Exception:
         pass
 
@@ -240,10 +254,18 @@ def calculate_indicators(df):
                                         senkou=config.ICHIMOKU_SENKOU)
         if ichimoku_data is not None and len(ichimoku_data.dropna()) > 0:
             current_price = round(close.iloc[-1], 2)
-            tenkan = round(ichimoku_data.iloc[-1, 0], 2)  # Tenkan-sen
-            kijun = round(ichimoku_data.iloc[-1, 1], 2)   # Kijun-sen
-            senkou_a = round(ichimoku_data.iloc[-1, 2], 2) # Senkou Span A
-            senkou_b = round(ichimoku_data.iloc[-1, 3], 2) # Senkou Span B
+            
+            # Dinamik sütun eşleme (pandas_ta sütun sırası işletim sistemine/sürüme göre değişebilir)
+            tenkan_col = [c for c in ichimoku_data.columns if "ITS" in c][0]
+            kijun_col = [c for c in ichimoku_data.columns if "IKS" in c][0]
+            senkou_a_col = [c for c in ichimoku_data.columns if "ISA" in c][0]
+            senkou_b_col = [c for c in ichimoku_data.columns if "ISB" in c][0]
+            
+            tenkan = round(float(ichimoku_data[tenkan_col].iloc[-1]), 2)
+            kijun = round(float(ichimoku_data[kijun_col].iloc[-1]), 2)
+            senkou_a = round(float(ichimoku_data[senkou_a_col].iloc[-1]), 2)
+            senkou_b = round(float(ichimoku_data[senkou_b_col].iloc[-1]), 2)
+            
             cloud_top = max(senkou_a, senkou_b)
             cloud_bottom = min(senkou_a, senkou_b)
             results["ichimoku"] = {
@@ -284,14 +306,127 @@ def calculate_indicators(df):
         except Exception:
             pass
 
+    # --- 16. ATR (Average True Range) ---
+    try:
+        atr = ta.atr(high, low, close, length=config.ATR_PERIOD)
+        if atr is not None and len(atr.dropna()) > 0:
+            atr_value = round(atr.iloc[-1], 2)
+            current_price = round(close.iloc[-1], 2)
+            results["atr"] = {
+                "value": atr_value,
+                "signal": _atr_signal(current_price, atr_value),
+                "description": _atr_description(current_price, atr_value),
+            }
+    except Exception:
+        pass
+
+    # --- 17. McGinley Dynamic ---
+    try:
+        mcgd = ta.mcgd(close, length=config.MCGINLEY_PERIOD)
+        if mcgd is not None and len(mcgd.dropna()) > 0:
+            mcgd_value = round(mcgd.iloc[-1], 2)
+            current_price = round(close.iloc[-1], 2)
+            results["mcginley"] = {
+                "value": mcgd_value,
+                "signal": _mcginley_signal(current_price, mcgd_value),
+                "description": _mcginley_description(current_price, mcgd_value),
+            }
+    except Exception:
+        pass
+
+    # --- 18. SMI (Stochastic Momentum Index) ---
+    try:
+        smi = ta.smi(close, fast=config.SMI_FAST, slow=config.SMI_SLOW, signal=config.SMI_SIGNAL)
+        if smi is not None and len(smi.dropna()) > 0:
+            smi_value = round(smi.iloc[-1, 0], 2)
+            smi_signal_line = round(smi.iloc[-1, 1], 2)
+            results["smi"] = {
+                "value": smi_value,
+                "signal_line": smi_signal_line,
+                "signal": _smi_signal(smi_value, smi_signal_line),
+                "description": _smi_description(smi_value, smi_signal_line),
+            }
+    except Exception:
+        pass
+
+    # --- 19. Zigzag ---
+    try:
+        zigzag = _calculate_zigzag(close, deviation=config.ZIGZAG_DEVIATION)
+        if zigzag is not None:
+            zz_non_null = zigzag["ZIGZAGv"].dropna()
+            if len(zz_non_null) >= 2:
+                last_pivot = zz_non_null.iloc[-1]
+                prev_pivot = zz_non_null.iloc[-2]
+                current_price = round(close.iloc[-1], 2)
+                results["zigzag"] = {
+                    "last_pivot": round(last_pivot, 2),
+                    "signal": _zigzag_signal(current_price, last_pivot, prev_pivot),
+                    "description": _zigzag_description(current_price, last_pivot, prev_pivot),
+                }
+    except Exception:
+        pass
+
     # --- Genel Fiyat Bilgisi ---
+    import math
+    def _clean_val(v):
+        try:
+            fv = float(v)
+            if math.isnan(fv) or math.isinf(fv):
+                return 0.0
+            return fv
+        except Exception:
+            return 0.0
+
+    current_val = _clean_val(close.iloc[-1])
+    
+    # Takvim gününe göre en yakın geçmiş fiyatı bulma yardımcısı
+    def _get_price_at_delta(df_in, delta_days):
+        try:
+            if df_in is None or len(df_in) < 2:
+                return 0.0
+            df_past = df_in.iloc[:-1].dropna(subset=["Kapanış"])
+            timestamps = pd.to_datetime(df_past.index)
+            last_time = pd.to_datetime(df_in.index[-1])
+            target_time = last_time - pd.Timedelta(days=delta_days)
+            idx = np.abs((timestamps - target_time).total_seconds()).argmin()
+            return float(df_past["Kapanış"].iloc[idx])
+        except Exception:
+            return 0.0
+
+    change_1d = 0.0
+    price_1d = _get_price_at_delta(df, 1)
+    if price_1d > 0:
+        change_1d = round(((current_val - price_1d) / price_1d) * 100, 2)
+    elif len(close) > 1:
+        c2 = _clean_val(close.iloc[-2])
+        if c2 > 0:
+            change_1d = round(((current_val - c2) / c2) * 100, 2)
+            
+    change_1w = 0.0
+    price_1w = _get_price_at_delta(df, 7)
+    if price_1w > 0:
+        change_1w = round(((current_val - price_1w) / price_1w) * 100, 2)
+    elif len(close) > 5:
+        c5 = _clean_val(close.iloc[-5])
+        if c5 > 0:
+            change_1w = round(((current_val - c5) / c5) * 100, 2)
+            
+    change_1m = 0.0
+    price_1m = _get_price_at_delta(df, 30)
+    if price_1m > 0:
+        change_1m = round(((current_val - price_1m) / price_1m) * 100, 2)
+    elif len(close) > 22:
+        c22 = _clean_val(close.iloc[-22])
+        if c22 > 0:
+            change_1m = round(((current_val - c22) / c22) * 100, 2)
+
     results["price_info"] = {
-        "current": round(close.iloc[-1], 2),
-        "change_1d": round(((close.iloc[-1] - close.iloc[-2]) / close.iloc[-2]) * 100, 2) if len(close) > 1 else 0,
-        "change_1w": round(((close.iloc[-1] - close.iloc[-5]) / close.iloc[-5]) * 100, 2) if len(close) > 5 else 0,
-        "change_1m": round(((close.iloc[-1] - close.iloc[-22]) / close.iloc[-22]) * 100, 2) if len(close) > 22 else 0,
-        "high_period": round(high.max(), 2),
-        "low_period": round(low.min(), 2),
+        "current": round(current_val, 2),
+        "change_1d": _clean_val(change_1d),
+        "change_1w": _clean_val(change_1w),
+        "change_1m": _clean_val(change_1m),
+        "high_period": round(_clean_val(high.max()), 2),
+        "low_period": round(_clean_val(low.min()), 2),
     }
 
     return results
@@ -539,13 +674,80 @@ def _cmf_description(cmf):
     return f"CMF {cmf:.4f} → Nötr para akışı"
 
 
+# --- 16. ATR ---
+def _atr_signal(price, atr):
+    """ATR dalgalanma ölçer. Nötr kalarak stop-loss takibi sağlar."""
+    return "NÖTR"
+
+def _atr_description(price, atr):
+    return f"ATR: {atr} → Günlük ortalama dalgalanma payı. Stop-loss: {round(price - atr*config.ATR_MULTIPLIER, 2)} seviyesine çekilebilir."
+
+# --- 17. McGinley Dynamic ---
+def _mcginley_signal(price, mcgd):
+    """Fiyat > McGinley → AL, Fiyat < McGinley → SAT"""
+    if price > mcgd:
+        return "AL"
+    elif price < mcgd:
+        return "SAT"
+    return "NÖTR"
+
+def _mcginley_description(price, mcgd):
+    if price > mcgd:
+        return f"Fiyat ({price}), McGinley ({mcgd}) üzerinde → Yükseliş"
+    elif price < mcgd:
+        return f"Fiyat ({price}), McGinley ({mcgd}) altında → Düşüş"
+    return f"Fiyat ({price}) McGinley ({mcgd}) seviyesinde → Nötr"
+
+# --- 18. SMI ---
+def _smi_signal(smi_val, smi_sig):
+    """SMI > Signal → AL, SMI < Signal → SAT"""
+    if smi_val > smi_sig:
+        return "AL"
+    elif smi_val < smi_sig:
+        return "SAT"
+    return "NÖTR"
+
+def _smi_description(smi_val, smi_sig):
+    if smi_val > smi_sig:
+        return f"SMI ({smi_val}) Sinyal ({smi_sig}) üzerinde → Pozitif momentum"
+    elif smi_val < smi_sig:
+        return f"SMI ({smi_val}) Sinyal ({smi_sig}) altında → Negatif momentum"
+    return "SMI ve Sinyal kesişiyor → Kararsız"
+
+# --- 19. Zigzag ---
+def _zigzag_signal(price, last_pivot, prev_pivot):
+    """Son pivot dip ise ve fiyat yükseliyorsa AL, tepe ise ve fiyat düşüyorsa SAT"""
+    if last_pivot > prev_pivot: # Son pivot bir tepeydi
+        if price > last_pivot:
+            return "AL"
+        else:
+            return "SAT"
+    else: # Son pivot bir dipti
+        if price > last_pivot:
+            return "AL"
+        else:
+            return "SAT"
+
+def _zigzag_description(price, last_pivot, prev_pivot):
+    if last_pivot > prev_pivot:
+        if price > last_pivot:
+            return f"Zigzag: Son tepe ({last_pivot}) aşıldı → Yükseliş"
+        else:
+            return f"Zigzag: Son tepe ({last_pivot}) altında → Düzeltme"
+    else:
+        if price > last_pivot:
+            return f"Zigzag: Son dip ({last_pivot}) korundu → Tepki Alımı"
+        else:
+            return f"Zigzag: Son dip ({last_pivot}) kırıldı → Düşüş"
+
+
 # ============================================================
-# TEKNİK SKOR HESAPLAMA — 15 İndikatör
+# TEKNİK SKOR HESAPLAMA — 19 İndikatör
 # ============================================================
 
 def get_technical_score(indicators):
     """
-    15 teknik göstergeden 0-100 arası skor hesaplar.
+    19 teknik göstergeden 0-100 arası skor hesaplar.
     AL = yüksek skor, SAT = düşük skor, NÖTR = 50
 
     Returns:
@@ -557,27 +759,27 @@ def get_technical_score(indicators):
     scores = []
 
     # Sinyal → skor dönüşümü
-    signal_score = {"AL": 75, "SAT": 25, "NÖTR": 50}
+    signal_score = {"AL": 100, "SAT": 0, "NÖTR": 50}
 
     # RSI — özel: değer bazlı interpolasyon
     if "rsi" in indicators:
         rsi = indicators["rsi"]["value"]
         sig = indicators["rsi"]["signal"]
         if sig == "AL":
-            score = 80
+            score = 100
         elif sig == "SAT":
-            score = 20
+            score = 0
         else:
             # 30-70 arası → 50 merkezli (RSI 50 = skor 50)
-            score = 50 + (50 - rsi) * 0.30
-            score = max(30, min(70, score))
+            score = 50 + (50 - rsi) * 1.25
+            score = max(10, min(90, score))
         scores.append(("rsi", score))
 
     # Genel desenli indikatörler
     indicator_keys = [
         "macd", "sma", "ema", "bollinger", "stochastic",
         "adx", "cci", "williams", "obv", "mfi",
-        "psar", "ichimoku", "roc", "cmf",
+        "psar", "ichimoku", "roc", "cmf", "atr", "mcginley", "smi", "zigzag"
     ]
 
     for key in indicator_keys:
@@ -605,9 +807,92 @@ def get_technical_score(indicators):
         "ichimoku": config.WEIGHT_ICHIMOKU,
         "roc": config.WEIGHT_ROC,
         "cmf": config.WEIGHT_CMF,
+        "atr": config.WEIGHT_ATR,
+        "mcginley": config.WEIGHT_MCGINLEY,
+        "smi": config.WEIGHT_SMI,
+        "zigzag": config.WEIGHT_ZIGZAG,
     }
 
     total_weight = sum(weights.get(name, 0.05) for name, _ in scores)
     weighted_score = sum(weights.get(name, 0.05) * sc for name, sc in scores)
 
     return round(weighted_score / total_weight)
+
+
+def _calculate_zigzag(close, deviation=5.0):
+    """
+    Çökme korumalı, saf Python Zigzag pivot hesaplaması.
+    pandas_ta.zigzag'ın illikit veya yatay seyreden hisselerde sebep olduğu
+    C-level çökme/kilitlenme (segfault) riskini sıfırlar.
+    """
+    n = len(close)
+    if n < 2:
+        return None
+    
+    pivots_v = [np.nan] * n
+    pivots_d = [0] * n
+    
+    last_pivot_val = close.iloc[0]
+    last_pivot_idx = 0
+    trend = 0
+    
+    for i in range(1, n):
+        if last_pivot_val == 0 or pd.isna(last_pivot_val):
+            last_pivot_val = close.iloc[i]
+            last_pivot_idx = i
+            continue
+        diff_pct = ((close.iloc[i] - last_pivot_val) / last_pivot_val) * 100
+        if diff_pct >= deviation:
+            trend = 1
+            last_pivot_val = close.iloc[i]
+            last_pivot_idx = i
+            break
+        elif diff_pct <= -deviation:
+            trend = -1
+            last_pivot_val = close.iloc[i]
+            last_pivot_idx = i
+            break
+            
+    if trend == 0:
+        return None
+
+    pivots_v[last_pivot_idx] = last_pivot_val
+    pivots_d[last_pivot_idx] = trend
+    
+    for i in range(last_pivot_idx + 1, n):
+        if trend == 1:
+            if close.iloc[i] > last_pivot_val:
+                last_pivot_val = close.iloc[i]
+                last_pivot_idx = i
+            else:
+                if last_pivot_val != 0 and not pd.isna(last_pivot_val):
+                    retrace = ((last_pivot_val - close.iloc[i]) / last_pivot_val) * 100
+                    if retrace >= deviation:
+                        pivots_v[last_pivot_idx] = last_pivot_val
+                        pivots_d[last_pivot_idx] = 1
+                        trend = -1
+                        last_pivot_val = close.iloc[i]
+                        last_pivot_idx = i
+        else:
+            if close.iloc[i] < last_pivot_val:
+                last_pivot_val = close.iloc[i]
+                last_pivot_idx = i
+            else:
+                if last_pivot_val != 0 and not pd.isna(last_pivot_val):
+                    retrace = ((close.iloc[i] - last_pivot_val) / last_pivot_val) * 100
+                    if retrace >= deviation:
+                        pivots_v[last_pivot_idx] = last_pivot_val
+                        pivots_d[last_pivot_idx] = -1
+                        trend = 1
+                        last_pivot_val = close.iloc[i]
+                        last_pivot_idx = i
+                        
+    pivots_v[last_pivot_idx] = last_pivot_val
+    pivots_d[last_pivot_idx] = trend
+    
+    df_out = pd.DataFrame({
+        "ZIGZAGs": pivots_d,
+        "ZIGZAGv": pivots_v,
+    }, index=close.index)
+    
+    return df_out

@@ -3,55 +3,97 @@
 
 <!-- Hero Section -->
 <section class="hero">
-    <h1>📈 BIST Borsa Analiz Paneli</h1>
-    <p class="hero-sub">Tüm BIST hisselerini teknik analiz ile tarayın, haberleri kontrol edin ve AL/SAT/TUT önerisi
-        alın.</p>
-    <p class="hero-count">📋 Sistemde <strong>{{ stock_count }}</strong> hisse bulunuyor</p>
+    <h1>📈 BIST Borsa & Fon Analiz Paneli</h1>
+    <p class="hero-sub">Tüm BIST hisselerini ve TEFAS fonlarını tek panelde canlı takip edin, teknik indikatör / getiri performanslarını analiz edip Gemini AI yorumları alın.</p>
+    <p class="hero-count">📋 Sistemde <strong>{{ stock_count }}</strong> hisse ve canlı TEFAS yatırım fonu havuzu taranmaktadır</p>
 </section>
 
 {% if refreshed %}
 <div class="notification success-notification">
-    ✅ Hisse listesi güncellendi! Toplam {{ refresh_count }} hisse yüklendi.
+    ✅ Varlık listeleri güncellendi! Toplam {{ refresh_count }} hisse/fon yüklendi.
 </div>
 {% endif %}
+
+<!-- Yapay Zeka Portföy Danışmanı -->
+<section class="ai-portfolio-advisor glass-card" style="background: linear-gradient(135deg, rgba(88, 28, 135, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%); border: 1px solid rgba(139, 92, 246, 0.25); margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.1);">
+    <div class="glow-effect" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%); pointer-events: none; animation: float 10s infinite linear;"></div>
+    <h2 style="display: flex; align-items: center; gap: 10px; color: #a78bfa; margin-bottom: 0.5rem; font-size: 1.6rem;"><span style="font-size: 1.8rem;">🤖</span> Gemini AI Akıllı Portföy Danışmanı</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; max-width: 900px;">Yatırım yapmak istediğiniz TL tutarını ve hedef vadenizi girin; Gemini AI, canlı teknik analiz puanları en yüksek hisseleri ve en iyi TEFAS fonlarını tarayarak bütçenizi optimize edilmiş, dengeli bir şekilde bölüştürsün!</p>
+    
+    <div class="controls-row" style="display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap; margin-bottom: 1rem;">
+        <div class="control-group" style="flex: 1; min-width: 200px;">
+            <label for="portfolio_budget" style="color: #c084fc; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.4rem; display: block;">Yatırım Bütçesi (TL)</label>
+            <div style="position: relative; display: flex; align-items: center;">
+                <span style="position: absolute; left: 12px; color: var(--text-secondary); font-weight: bold;">₺</span>
+                <input type="text" id="portfolio_budget" value="20.000" style="padding-left: 28px; width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-primary); height: 42px;" class="search-input" placeholder="Örn: 20.000">
+            </div>
+        </div>
+        <div class="control-group" style="flex: 1; min-width: 200px;">
+            <label for="portfolio_horizon" style="color: #c084fc; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.4rem; display: block;">Hedef Vade / Getiri Süresi</label>
+            <select id="portfolio_horizon" style="background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-primary); height: 42px; width: 100%; padding: 0 10px;">
+                <option value="1m">1 Ay (Çok Kısa Vade)</option>
+                <option value="3m">3 Ay (Kısa Vade)</option>
+                <option value="6m" selected>6 Ay (Orta Vade)</option>
+                <option value="1y">1 Yıl (Uzun Vade)</option>
+            </select>
+        </div>
+        <div class="control-group" style="min-width: 200px;">
+            <button id="generatePortfolioBtn" class="btn-analyze" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); border: none; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4); color: white; height: 42px; padding: 0 20px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.2s;">
+                🧠 Portföy Dağılımı Öner
+            </button>
+        </div>
+    </div>
+    
+    <!-- Portföy Sonuç Alanı -->
+    <div id="portfolioResultArea" style="display: none; margin-top: 1.5rem; padding: 1.2rem; border-radius: 12px; background: rgba(15, 12, 30, 0.6); border: 1px solid rgba(139, 92, 246, 0.15);">
+        <div id="portfolioLoading" style="display: none; text-align: center; padding: 2rem 0;">
+            <div class="spinner" style="border-top-color: #a78bfa; margin: 0 auto 1rem;"></div>
+            <p style="color: #c084fc; font-weight: 500;">Gemini AI varlık performans verilerini okuyor ve portföyü bölüştürüyor...</p>
+            <small style="color: var(--text-secondary);">En iyi hisseler ve fonlar analiz ediliyor, bütçe oranları hesaplanıyor. Lütfen bekleyin.</small>
+        </div>
+        <div id="portfolioOutput" class="ai-result-markdown" style="color: var(--text-primary); line-height: 1.7; font-size: 0.95rem;">
+            <!-- Markdown çıktısı JS ile buraya basılacak -->
+        </div>
+    </div>
+</section>
 
 <!-- Analiz Kontrol Paneli -->
 <section class="control-panel glass-card">
     <form method="POST" action="/analyze" id="analysisForm">
         <div class="controls-row">
             <div class="control-group">
-                <label for="sector">Sektör</label>
+                <label for="sector">Sektör / Kategori</label>
                 <select name="sector" id="sector">
-                    <option value="all" {% if selected_sector=='all' %}selected{% endif %}>Tüm Sektörler</option>
+                    <option value="all" {% if selected_sector=='all' %}selected{% endif %}>Tüm Hisse & Fonlar</option>
                     {% for s in sectors %}
-                    <option value="{{ s }}" {% if selected_sector==s %}selected{% endif %}>{{ s }}</option>
+                    <option value="{{ s }}" {% if selected_sector==s %}selected{% endif %}>Hisse: {{ s }}</option>
                     {% endfor %}
                 </select>
             </div>
             <div class="control-group">
-                <label for="period">Periyot</label>
-                <select name="period" id="period">
-                    <option value="1mo">1 Ay</option>
-                    <option value="3mo">3 Ay</option>
-                    <option value="6mo" selected>6 Ay</option>
-                    <option value="1y">1 Yıl</option>
-                    <option value="2y">2 Yıl</option>
+                <label for="timeframe">Zaman Dilimi / Vade</label>
+                <select name="timeframe" id="timeframe">
+                    <option value="1h" {% if selected_timeframe=='1h' %}selected{% endif %}>🕒 Saatlik (Kısa Vade)</option>
+                    <option value="1d" {% if selected_timeframe=='1d' or not selected_timeframe %}selected{% endif %}>📅 Günlük (Orta Vade)</option>
+                    <option value="1wk" {% if selected_timeframe=='1wk' %}selected{% endif %}>📊 Haftalık (Uzun Vade)</option>
+                    <option value="1mo" {% if selected_timeframe=='1mo' %}selected{% endif %}>📆 Aylık (1 Ay)</option>
+                    <option value="3mo" {% if selected_timeframe=='3mo' %}selected{% endif %}>📆 3 Aylık (3 Ay)</option>
                 </select>
             </div>
             <div class="control-group">
                 <label for="max_stocks">Hisse Limiti</label>
                 <select name="max_stocks" id="max_stocks">
-                    <option value="50">İlk 50</option>
-                    <option value="100" selected>İlk 100</option>
-                    <option value="200">İlk 200</option>
-                    <option value="all">Tümü ({{ stock_count }})</option>
+                    <option value="50" {% if selected_max_stocks=='50' %}selected{% endif %}>İlk 50</option>
+                    <option value="100" {% if selected_max_stocks=='100' or not selected_max_stocks %}selected{% endif %}>İlk 100</option>
+                    <option value="200" {% if selected_max_stocks=='200' %}selected{% endif %}>İlk 200</option>
+                    <option value="all" {% if selected_max_stocks=='all' %}selected{% endif %}>Tümü ({{ stock_count }})</option>
                 </select>
             </div>
             <div class="control-group">
-                <label for="scan_mode">Tarama Modu</label>
+                <label for="scan_mode">Tarama Modu (Hisse)</label>
                 <select name="scan_mode" id="scan_mode">
-                    <option value="quick" selected>⚡ Hızlı (habersiz)</option>
-                    <option value="detailed">📰 Detaylı (haberli)</option>
+                    <option value="quick" {% if selected_scan_mode=='quick' or not selected_scan_mode %}selected{% endif %}>⚡ Hızlı (habersiz)</option>
+                    <option value="detailed" {% if selected_scan_mode=='detailed' %}selected{% endif %}>📰 Detaylı (haberli)</option>
                 </select>
             </div>
             <div class="control-group">
@@ -61,13 +103,18 @@
             </div>
         </div>
     </form>
-    <form method="POST" action="/refresh" style="margin-top: 0.8rem;">
-        <button type="submit" class="btn-refresh">🔄 Hisse Listesini Güncelle</button>
-    </form>
+    <div style="display: flex; gap: 0.8rem; margin-top: 0.8rem; flex-wrap: wrap;">
+        <form method="POST" action="/refresh" style="margin: 0;">
+            <button type="submit" class="btn-refresh">🔄 Hisse Listesini Güncelle</button>
+        </form>
+        <button id="refreshFundsBtn" class="btn-refresh" style="background: rgba(139, 92, 246, 0.05); border-color: rgba(139, 92, 246, 0.2);">
+            💰 TEFAS Fon Cache Temizle & Çek
+        </button>
+    </div>
     <!-- Hisse Arama -->
     <form method="POST" action="/search" class="search-form">
         <div class="search-row">
-            <input type="text" name="query" placeholder="Hisse kodu veya adı (ör: THYAO, Garanti)" class="search-input"
+            <input type="text" name="query" placeholder="Hisse veya fon kodu/adı (ör: THYAO, AFT, YAS, Garanti)" class="search-input"
                 id="searchInput" autocomplete="off">
             <button type="submit" class="btn-search">🔍 Ara ve Analiz Et</button>
         </div>
@@ -82,11 +129,12 @@
     <div class="search-results">
         <h3>🔎 "{{ search_query }}" için {{ search_suggestions|length }} sonuç bulundu:</h3>
         <div class="suggestion-list">
-            {% for ticker, info, match_type in search_suggestions %}
-            <a href="/stock/{{ ticker }}" class="suggestion-card">
-                <strong>{{ ticker.replace('.IS', '') }}</strong>
-                <span class="suggestion-name">{{ info.name }}</span>
-                <span class="suggestion-sector">{{ info.sector }}</span>
+            {% for s in search_suggestions %}
+            <a href="{% if s.type == 'Hisse' %}/stock/{{ s.ticker }}{% else %}/fund/{{ s.code }}{% endif %}" class="suggestion-card">
+                <span class="asset-type-badge type-{{ 'stock' if s.type == 'Hisse' else 'fund' }}" style="font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; margin-right: 4px;">{{ 'HİSSE' if s.type == 'Hisse' else 'FON' }}</span>
+                <strong>{{ s.code }}</strong>
+                <span class="suggestion-name">{{ s.name }}</span>
+                <span class="suggestion-sector">{{ s.category }}</span>
                 <span class="suggestion-arrow">→</span>
             </a>
             {% endfor %}
@@ -99,7 +147,8 @@
 <div id="loading" class="loading-overlay" style="display:none;">
     <div class="loading-content">
         <div class="spinner"></div>
-        <p>Hisseler analiz ediliyor... Bu işlem birkaç dakika sürebilir.</p>
+        <p style="font-size: 1.1rem; font-weight: 500;">Hisseler ve Fonlar analiz ediliyor...</p>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.4rem;">Bu işlem yfinance ve TEFAS canlı veri çekiminden ötürü birkaç dakika sürebilir.</p>
     </div>
 </div>
 
@@ -110,112 +159,111 @@
     {% set sell_count = [] %}
     {% set hold_count = [] %}
     {% for ticker, r in results.items() %}
-    {% if r.signal == "AL" %}{% if buy_count.append(1) %}{% endif %}
-    {% elif r.signal == "SAT" %}{% if sell_count.append(1) %}{% endif %}
-    {% else %}{% if hold_count.append(1) %}{% endif %}
-    {% endif %}
+        {% if r.signal in ["AL", "GÜÇLÜ TREND"] %}
+            {% if buy_count.append(1) %}{% endif %}
+        {% elif r.signal in ["SAT", "ZAYIF TREND"] %}
+            {% if sell_count.append(1) %}{% endif %}
+        {% else %}
+            {% if hold_count.append(1) %}{% endif %}
+        {% endif %}
     {% endfor %}
 
     <div class="stat-card buy-card">
         <div class="stat-number">{{ buy_count|length }}</div>
-        <div class="stat-label">AL Sinyali</div>
+        <div class="stat-label">AL / GÜÇLÜ TREND</div>
         <div class="stat-icon">🟢</div>
     </div>
     <div class="stat-card hold-card">
         <div class="stat-number">{{ hold_count|length }}</div>
-        <div class="stat-label">TUT Sinyali</div>
+        <div class="stat-label">TUT / NÖTR</div>
         <div class="stat-icon">🟡</div>
     </div>
     <div class="stat-card sell-card">
         <div class="stat-number">{{ sell_count|length }}</div>
-        <div class="stat-label">SAT Sinyali</div>
+        <div class="stat-label">SAT / ZAYIF TREND</div>
         <div class="stat-icon">🔴</div>
     </div>
     <div class="stat-card total-card">
         <div class="stat-number">{{ total_analyzed }}</div>
-        <div class="stat-label">Toplam Analiz</div>
+        <div class="stat-label">Toplam Varlık</div>
         <div class="stat-icon">📊</div>
     </div>
 </section>
 
 <!-- Sonuç Tablosu -->
 <section class="results-section glass-card">
-    <div class="results-header">
-        <h2>📋 Analiz Sonuçları</h2>
+    <div class="results-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <h2>📋 Birleşik Analiz Sonuçları</h2>
+        
+        <!-- Dinamik İstemci Tarafı Filtreleme Butonları -->
+        <div class="filter-buttons" style="display: flex; gap: 0.4rem; background: var(--bg-secondary); padding: 4px; border-radius: 10px; border: 1px solid var(--glass-border);">
+            <button class="btn-filter active" data-filter="all" style="padding: 8px 16px; border: none; background: transparent; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: var(--transition);">✨ Tümü</button>
+            <button class="btn-filter" data-filter="stock" style="padding: 8px 16px; border: none; background: transparent; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: var(--transition);">📈 Hisseler</button>
+            <button class="btn-filter" data-filter="fund" style="padding: 8px 16px; border: none; background: transparent; color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: var(--transition);">💰 Fonlar (TEFAS)</button>
+        </div>
+
         <div class="results-info">
             <span id="showingCount"></span>
         </div>
     </div>
+    
     <div class="table-wrapper">
         <table class="results-table" id="resultsTable">
             <thead>
                 <tr>
-                    <th class="sortable" data-col="0" data-type="text">Hisse <span class="sort-arrow"></span></th>
-                    <th class="sortable" data-col="1" data-type="text">Sektör <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="0" data-type="text">Enstrüman <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="1" data-type="text">Kategori / Sektör <span class="sort-arrow"></span></th>
                     <th class="sortable" data-col="2" data-type="number">Fiyat <span class="sort-arrow"></span></th>
                     <th class="sortable" data-col="3" data-type="number">Günlük <span class="sort-arrow"></span></th>
-                    <th class="sortable" data-col="4" data-type="number">Haftalık <span class="sort-arrow"></span></th>
-                    <th class="sortable" data-col="5" data-type="number">Teknik <span class="sort-arrow"></span></th>
-                    <th class="sortable" data-col="6" data-type="number">Haber <span class="sort-arrow"></span></th>
-                    <th class="sortable" data-col="7" data-type="number">Genel <span class="sort-arrow"></span></th>
-                    <th>Öneri</th>
+                    <th class="sortable" data-col="4" data-type="number">Aylık <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="5" data-type="number">Hacim / Büyüklük <span class="sort-arrow"></span></th>
+                    <th class="sortable" data-col="6" data-type="number">Genel Skor <span class="sort-arrow"></span></th>
+                    <th>Öneri / Trend</th>
                     <th>Detay</th>
                 </tr>
             </thead>
             <tbody>
                 {% for ticker, r in sorted_results %}
-                <tr class="result-row {{ r.signal_class }}">
+                <tr class="result-row {{ r.signal_class }}" data-type="{{ 'stock' if r.type == 'Hisse' else 'fund' }}">
                     <td>
                         <div class="stock-name">
-                            <strong>{{ r.code }}</strong>
+                            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
+                                <span class="asset-type-badge type-{{ 'stock' if r.type == 'Hisse' else 'fund' }}" style="font-size: 0.65rem; padding: 2px 6px; border-radius: 4px;">
+                                    {{ 'HİSSE' if r.type == 'Hisse' else 'FON' }}
+                                </span>
+                                <strong>{{ r.code }}</strong>
+                            </div>
                             <small>{{ r.name }}</small>
                         </div>
                     </td>
-                    <td>{{ stocks[ticker].sector if ticker in stocks else '-' }}</td>
-                    <td
-                        data-value="{{ r.indicators.price_info.current if r.indicators and r.indicators.price_info else 0 }}">
-                        {% if r.indicators and r.indicators.price_info %}
-                        ₺{{ r.indicators.price_info.current }}
-                        {% else %}
-                        -
-                        {% endif %}
+                    <td>{{ r.category }}</td>
+                    <td data-value="{{ r.price }}">
+                        ₺{{ "%.6f"|format(r.price) if r.type == 'Yatırım Fonu' else "%.2f"|format(r.price) }}
                     </td>
-                    <td
-                        data-value="{{ r.indicators.price_info.change_1d if r.indicators and r.indicators.price_info else 0 }}">
-                        {% if r.indicators and r.indicators.price_info %}
-                        {% set change = r.indicators.price_info.change_1d %}
-                        <span class="{% if change > 0 %}text-green{% elif change < 0 %}text-red{% endif %}">
-                            {% if change > 0 %}+{% endif %}{{ change }}%
+                    <td data-value="{{ r.daily_return }}">
+                        <span class="{% if r.daily_return > 0 %}text-green{% elif r.daily_return < 0 %}text-red{% endif %}">
+                            {% if r.daily_return > 0 %}+{% endif %}{{ "%.2f"|format(r.daily_return) }}%
                         </span>
-                        {% else %}
-                        -
-                        {% endif %}
                     </td>
-                    <td
-                        data-value="{{ r.indicators.price_info.change_1w if r.indicators and r.indicators.price_info else 0 }}">
-                        {% if r.indicators and r.indicators.price_info %}
-                        {% set change_w = r.indicators.price_info.change_1w %}
-                        <span class="{% if change_w > 0 %}text-green{% elif change_w < 0 %}text-red{% endif %}">
-                            {% if change_w > 0 %}+{% endif %}{{ change_w }}%
+                    <td data-value="{{ r.monthly_return }}">
+                        <span class="{% if r.monthly_return > 0 %}text-green{% elif r.monthly_return < 0 %}text-red{% endif %}">
+                            {% if r.monthly_return > 0 %}+{% endif %}{{ "%.2f"|format(r.monthly_return) }}%
                         </span>
+                    </td>
+                    <td data-value="{% if r.type == 'Hisse' %}{{ r.volume_size }}{% else %}{{ r.portfolio_size }}{% endif %}">
+                        {% if r.type == 'Hisse' %}
+                            {% if r.volume_size and r.volume_size > 0 %}
+                                ₺{{ "%.1f"|format(r.volume_size / 1000000) }}M
+                            {% else %}
+                                ₺0.0M
+                            {% endif %}
                         {% else %}
-                        -
+                            {% if r.portfolio_size and r.portfolio_size > 0 %}
+                                ₺{{ "%.1f"|format(r.portfolio_size / 1000000) }}M
+                            {% else %}
+                                ₺0.0M
+                            {% endif %}
                         {% endif %}
-                    </td>
-                    <td data-value="{{ r.technical_score }}">
-                        <div class="score-bar">
-                            <div class="score-fill"
-                                style="width: {{ r.technical_score }}%; background: {{ _score_color(r.technical_score) }}">
-                            </div>
-                            <span class="score-text">{{ r.technical_score }}</span>
-                        </div>
-                    </td>
-                    <td data-value="{{ r.news_score }}">
-                        <div class="score-bar">
-                            <div class="score-fill"
-                                style="width: {{ r.news_score }}%; background: {{ _score_color(r.news_score) }}"></div>
-                            <span class="score-text">{{ r.news_score }}</span>
-                        </div>
                     </td>
                     <td data-value="{{ r.overall_score }}">
                         <div class="score-bar">
@@ -229,7 +277,11 @@
                         <span class="signal-badge signal-{{ r.signal_class }}">{{ r.signal }}</span>
                     </td>
                     <td>
-                        <a href="/stock/{{ ticker }}" class="btn-detail">Detay →</a>
+                        {% if r.type == 'Hisse' %}
+                        <a href="/stock/{{ r.ticker }}" class="btn-detail">Detay →</a>
+                        {% else %}
+                        <a href="/fund/{{ r.code }}" class="btn-detail">Detay →</a>
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}
@@ -246,9 +298,8 @@
 <section class="empty-state glass-card">
     <div class="empty-icon">🔎</div>
     <h2>Analiz Bekliyor</h2>
-    <p>Yukarıdaki panelden sektör ve periyot seçerek analizi başlatın.</p>
-    <p class="empty-hint">Tüm sektörler seçildiğinde {{ stock_count }} hisse analiz edilecektir. Hisse sayısına bağlı
-        olarak bu işlem birkaç dakika sürebilir.</p>
+    <p>Yukarıdaki panelden sektör/kategori filtreleyip ve periyot seçerek analizi başlatın.</p>
+    <p class="empty-hint">Varsayılan analiz başlatıldığında en yüksek hacimli 100 BIST hissesi ve TEFAS fon büyüklüğü en büyük 100 yatırım fonu taranır. Bu işlem birkaç dakika sürebilir.</p>
 </section>
 {% endif %}
 
@@ -260,8 +311,197 @@
         document.getElementById('analyzeBtn').textContent = '⏳ Analiz ediliyor...';
     });
 
+    // TEFAS Fon Cache temizle & analiz et form tetikleyici
+    const refreshFundsBtn = document.getElementById('refreshFundsBtn');
+    if (refreshFundsBtn) {
+        refreshFundsBtn.addEventListener('click', function() {
+            // Formu programatik olarak tetikle, cache'i es geçmesi için bir input ekle
+            const form = document.getElementById('analysisForm');
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'force_fund_refresh';
+            hiddenInput.value = 'true';
+            form.appendChild(hiddenInput);
+            
+            // Yükleme ekranını aç ve gönder
+            document.getElementById('loading').style.display = 'flex';
+            form.submit();
+        });
+    }
+
     // ============================================================
-    // Sıralanabilir tablo + Sayfalama
+    // Durum Kararlılığı (localStorage)
+    // ============================================================
+    (function() {
+        const timeframeEl = document.getElementById("timeframe");
+        const sectorEl = document.getElementById("sector");
+        const maxStocksEl = document.getElementById("max_stocks");
+        const scanModeEl = document.getElementById("scan_mode");
+
+        if (timeframeEl) {
+            // LocalStorage'dan yükle
+            const savedTimeframe = localStorage.getItem("stock_agent_timeframe");
+            if (savedTimeframe) timeframeEl.value = savedTimeframe;
+
+            timeframeEl.addEventListener("change", function() {
+                localStorage.setItem("stock_agent_timeframe", this.value);
+            });
+
+            // Diğer alanları kaydet/geri yükle
+            const otherFields = [
+                { el: sectorEl, name: "sector" },
+                { el: maxStocksEl, name: "max_stocks" },
+                { el: scanModeEl, name: "scan_mode" }
+            ];
+
+            otherFields.forEach(f => {
+                if (f.el) {
+                    const saved = localStorage.getItem("stock_agent_" + f.name);
+                    if (saved !== null) f.el.value = saved;
+                    
+                    f.el.addEventListener("change", function() {
+                        localStorage.setItem("stock_agent_" + f.name, this.value);
+                    });
+                }
+            });
+
+            // Form gönderildiğinde durumları son kez kaydet
+            document.getElementById("analysisForm").addEventListener("submit", function() {
+                localStorage.setItem("stock_agent_timeframe", timeframeEl.value);
+                otherFields.forEach(f => {
+                    if (f.el) localStorage.setItem("stock_agent_" + f.name, f.el.value);
+                });
+            });
+        }
+    })();
+
+    // ============================================================
+    // Yapay Zeka Portföy Danışmanı (Gemini AI)
+    // ============================================================
+    (function() {
+        const generateBtn = document.getElementById("generatePortfolioBtn");
+        const budgetInput = document.getElementById("portfolio_budget");
+        const horizonSelect = document.getElementById("portfolio_horizon");
+        const resultArea = document.getElementById("portfolioResultArea");
+        const loadingArea = document.getElementById("portfolioLoading");
+        const outputArea = document.getElementById("portfolioOutput");
+
+        if (generateBtn) {
+            // TL Bütçe otomatik binlik ayraç formatlama
+            budgetInput.addEventListener("input", function() {
+                let val = this.value.replace(/\D/g, "");
+                if (val) {
+                    this.value = parseInt(val).toLocaleString("tr-TR");
+                }
+            });
+
+            generateBtn.addEventListener("click", function() {
+                const budget = budgetInput.value;
+                const horizon = horizonSelect.value;
+
+                resultArea.style.display = "block";
+                loadingArea.style.display = "block";
+                outputArea.innerHTML = "";
+
+                fetch("/api/ai-portfolio", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ budget: budget, horizon: horizon })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    loadingArea.style.display = "none";
+                    if (data.recommendation) {
+                        let rawHtml = data.recommendation
+                            .replace(/&/g, "&amp;")
+                            .replace(/</g, "&lt;")
+                            .replace(/>/g, "&gt;");
+                        
+                        const lines = rawHtml.split("\n");
+                        let parsedHtml = "";
+                        let inTable = false;
+                        let tableRows = [];
+
+                        for (let line of lines) {
+                            line = line.trim();
+                            if (line.startsWith("|")) {
+                                if (!inTable) {
+                                    inTable = true;
+                                    tableRows = [];
+                                }
+                                tableRows.push(line);
+                            } else {
+                                if (inTable) {
+                                    parsedHtml += parseMarkdownTable(tableRows);
+                                    inTable = false;
+                                }
+                                
+                                if (line.startsWith("###")) {
+                                    parsedHtml += `<h4 style="color:#a78bfa; margin-top:1.2rem; margin-bottom:0.5rem; font-size:1.1rem;">${line.replace(/###/g, "").trim()}</h4>`;
+                                } else if (line.startsWith("##")) {
+                                    parsedHtml += `<h3 style="color:#c084fc; margin-top:1.5rem; margin-bottom:0.8rem; font-size:1.25rem; border-left: 3px solid #7c3aed; padding-left: 8px;">${line.replace(/##/g, "").trim()}</h3>`;
+                                } else if (line.startsWith("#")) {
+                                    parsedHtml += `<h2 style="color:#a78bfa; margin-top:1.8rem; margin-bottom:1rem; font-size:1.4rem;">${line.replace(/#/g, "").trim()}</h2>`;
+                                } else if (line.startsWith("-") || line.startsWith("*")) {
+                                    parsedHtml += `<li style="margin-left: 20px; margin-bottom: 0.3rem; color:var(--text-primary);">${line.substring(1).trim()}</li>`;
+                                } else if (line) {
+                                    parsedHtml += `<p style="margin-bottom: 0.8rem;">${line}</p>`;
+                                } else {
+                                    parsedHtml += `<br>`;
+                                }
+                            }
+                        }
+                        if (inTable) {
+                            parsedHtml += parseMarkdownTable(tableRows);
+                        }
+
+                        // Kalın yazıları parse et: **text**
+                        parsedHtml = parsedHtml.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+                        outputArea.innerHTML = parsedHtml;
+                    } else {
+                        outputArea.innerHTML = `<div class="ai-error" style="color:var(--red);">⚠️ Öneri oluşturulamadı. Lütfen tekrar deneyin.</div>`;
+                    }
+                })
+                .catch(err => {
+                    loadingArea.style.display = "none";
+                    outputArea.innerHTML = `<div class="ai-error" style="color:var(--red);">⚠️ Gemini AI ile iletişim kurulurken hata oluştu: ${err.message}</div>`;
+                });
+            });
+        }
+
+        function parseMarkdownTable(rows) {
+            if (rows.length < 2) return "";
+            let html = '<div class="table-wrapper" style="margin: 1.5rem 0; overflow-x:auto;"><table class="results-table" style="background:rgba(255,255,255,0.02); width:100%; border-collapse:collapse;">';
+            
+            rows.forEach((row, idx) => {
+                let cells = row.split("|").map(c => c.trim()).filter((c, i, arr) => i > 0 && i < arr.length - 1);
+                
+                // Boş veya ayrıcı satır ise atla
+                if (cells.some(c => c.match(/^:?-+:?$/))) return;
+
+                if (idx === 0) {
+                    html += '<thead><tr>';
+                    cells.forEach(c => {
+                        html += `<th style="background:rgba(124,58,237,0.1); color:#c084fc; border:1px solid rgba(139,92,246,0.15); padding:10px 15px; text-align:left; font-size:0.9rem;">${c}</th>`;
+                    });
+                    html += '</tr></thead><tbody>';
+                } else {
+                    html += '<tr style="border-bottom:1px solid rgba(255,255,255,0.05);">';
+                    cells.forEach(c => {
+                        html += `<td style="border:1px solid rgba(139,92,246,0.1); font-size:0.9rem; padding:10px 15px; color:var(--text-primary);">${c}</td>`;
+                    });
+                    html += '</tr>';
+                }
+            });
+            
+            html += '</tbody></table></div>';
+            return html;
+        }
+    })();
+
+    // ============================================================
+    // Sıralanabilir tablo + Sayfalama + İstemci Tarafı Filtreleme
     // ============================================================
     (function () {
         const table = document.getElementById('resultsTable');
@@ -271,38 +511,64 @@
         const rows = Array.from(tbody.querySelectorAll('tr'));
         const totalRows = rows.length;
         const PAGE_SIZE = 100;
-        let visibleCount = Math.min(PAGE_SIZE, totalRows);
-        let currentSortCol = null;
-        let currentSortDir = 'desc'; // varsayılan: büyükten küçüğe
+        let visibleCount = PAGE_SIZE;
+        let currentSortCol = 6; // varsayılan genel skora göre sırala
+        let currentSortDir = 'desc'; // varsayılan büyükten küçüğe
+        let currentFilter = 'all'; // 'all', 'stock', 'fund'
 
         const showMoreContainer = document.getElementById('showMoreContainer');
         const showMoreBtn = document.getElementById('showMoreBtn');
         const showingCount = document.getElementById('showingCount');
 
-        // İlk yüklemede sayfalama uygula
-        function applyPagination() {
-            rows.forEach((row, i) => {
+        // İlk yüklemede ve filtrelemelerde sayfalama/filtreleme uygula
+        function applyPaginationAndFilter() {
+            // Önce filtrele
+            const filteredRows = rows.filter(row => {
+                if (currentFilter === 'all') return true;
+                return row.dataset.type === currentFilter;
+            });
+            
+            const totalFiltered = filteredRows.length;
+            
+            // Tüm satırları gizle
+            rows.forEach(row => row.style.display = 'none');
+            
+            // Filtrelenenlerden ilk visibleCount kadarını göster
+            filteredRows.forEach((row, i) => {
                 row.style.display = i < visibleCount ? '' : 'none';
             });
+            
             if (showingCount) {
-                showingCount.textContent = `${visibleCount} / ${totalRows} hisse gösteriliyor`;
+                showingCount.textContent = `${Math.min(visibleCount, totalFiltered)} / ${totalFiltered} varlık gösteriliyor`;
             }
             if (showMoreContainer) {
-                showMoreContainer.style.display = visibleCount < totalRows ? 'flex' : 'none';
+                showMoreContainer.style.display = visibleCount < totalFiltered ? 'flex' : 'none';
             }
             if (showMoreBtn) {
-                const remaining = totalRows - visibleCount;
-                showMoreBtn.textContent = `📊 ${remaining} hisse daha göster`;
+                const remaining = totalFiltered - visibleCount;
+                showMoreBtn.textContent = `📊 ${remaining} varlık daha göster`;
             }
         }
 
         // Daha fazla göster
         if (showMoreBtn) {
             showMoreBtn.addEventListener('click', function () {
-                visibleCount = Math.min(visibleCount + PAGE_SIZE, totalRows);
-                applyPagination();
+                visibleCount += PAGE_SIZE;
+                applyPaginationAndFilter();
             });
         }
+
+        // Filtre Butonları Tıklama Olayları
+        const filterBtns = document.querySelectorAll('.btn-filter');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.filter;
+                visibleCount = PAGE_SIZE; // Her filtre değişiminde sayfa limitini sıfırla
+                applyPaginationAndFilter();
+            });
+        });
 
         // Sıralama
         const headers = table.querySelectorAll('th.sortable');
@@ -317,7 +583,7 @@
                     currentSortDir = currentSortDir === 'asc' ? 'desc' : 'asc';
                 } else {
                     currentSortCol = col;
-                    currentSortDir = 'desc'; // yeni sütunda her zaman büyükten küçüğe başla
+                    currentSortDir = 'desc'; // yeni sütunda büyükten küçüğe başla
                 }
 
                 // Ok göstergelerini güncelle
@@ -339,11 +605,10 @@
                     let aVal, bVal;
 
                     if (type === 'number') {
-                        // data-value varsa onu kullan, yoksa text'i parse et
                         const aCell = a.cells[col];
                         const bCell = b.cells[col];
-                        aVal = parseFloat(aCell.dataset.value || aCell.textContent.replace(/[₺%+\s,]/g, '')) || 0;
-                        bVal = parseFloat(bCell.dataset.value || bCell.textContent.replace(/[₺%+\s,]/g, '')) || 0;
+                        aVal = parseFloat(aCell.dataset.value || aCell.textContent.replace(/[₺%+\s,M]/g, '')) || 0;
+                        bVal = parseFloat(bCell.dataset.value || bCell.textContent.replace(/[₺%+\s,M]/g, '')) || 0;
                     } else {
                         aVal = a.cells[col].textContent.trim().toLowerCase();
                         bVal = b.cells[col].textContent.trim().toLowerCase();
@@ -356,13 +621,34 @@
 
                 // DOM'u güncelle
                 rows.forEach(row => tbody.appendChild(row));
-                applyPagination();
+                applyPaginationAndFilter();
             });
         });
 
+        // Sayfa ilk yüklendiğinde varsayılan sıralamayı göster (Sütun 6 - Genel Skor)
+        const defaultHeader = Array.from(headers).find(h => parseInt(h.dataset.col) === currentSortCol);
+        if (defaultHeader) {
+            defaultHeader.classList.add('sort-active');
+            const arrow = defaultHeader.querySelector('.sort-arrow');
+            if (arrow) arrow.textContent = ' ▼';
+        }
+
         // İlk yükleme
-        applyPagination();
+        applyPaginationAndFilter();
     })();
 </script>
+
+<style>
+    .btn-filter.active {
+        background: var(--accent-blue) !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    }
+    
+    .btn-filter:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-primary);
+    }
+</style>
 
 {% endblock %}

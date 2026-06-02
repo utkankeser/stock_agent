@@ -1,38 +1,101 @@
 {% extends "base.html" %}
 {% block content %}
 
+<style>
+    .tf-tab {
+        background: transparent;
+        color: var(--text-secondary);
+        border: none;
+    }
+    .tf-tab.active {
+        background: var(--accent-blue) !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    }
+    .tf-tab:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-primary);
+    }
+    .tab-badge {
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+    .tab-badge.signal-buy {
+        background: rgba(0, 200, 83, 0.15);
+        color: #00c853;
+        border: 1px solid rgba(0, 200, 83, 0.3);
+    }
+    .tab-badge.signal-sell {
+        background: rgba(255, 23, 68, 0.15);
+        color: #ff1744;
+        border: 1px solid rgba(255, 23, 68, 0.3);
+    }
+    .tab-badge.signal-hold {
+        background: rgba(255, 193, 7, 0.15);
+        color: #ffc107;
+        border: 1px solid rgba(255, 193, 7, 0.3);
+    }
+    
+    .timeframe-header-indicator {
+        font-size: 0.9rem;
+        background: rgba(255,255,255,0.05);
+        padding: 4px 10px;
+        border-radius: 6px;
+        color: var(--text-secondary);
+        display: inline-block;
+        margin-top: 0.5rem;
+        border: 1px solid var(--glass-border);
+    }
+</style>
+
 <a href="/" class="back-link">← Dashboard'a Dön</a>
 
 {% if result.error %}
-<section class="glass-card error-card">
+<section class="glass-card error-card" style="margin-top: 1.5rem;">
     <h2>⚠️ Hata</h2>
     <p>{{ result.error }}</p>
 </section>
 {% else %}
 
+<!-- Zaman Dilimi Sekmeleri (Investing.com Stili) -->
+<div class="timeframe-tabs-container glass-card" style="display: flex; gap: 0.5rem; padding: 6px; border-radius: 12px; margin-top: 1.5rem; margin-bottom: 1.5rem; background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border);">
+    <button class="btn-filter tf-tab active" data-interval="1h" style="flex: 1; text-align: center; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        🕒 Saatlik (Kısa Vade) 
+        <span class="tab-badge signal-{{ timeframes['1h'].signal_class }}" style="font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">{{ timeframes['1h'].signal }}</span>
+    </button>
+    <button class="btn-filter tf-tab" data-interval="1d" style="flex: 1; text-align: center; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        📅 Günlük (Orta Vade)
+        <span class="tab-badge signal-{{ timeframes['1d'].signal_class }}" style="font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">{{ timeframes['1d'].signal }}</span>
+    </button>
+    <button class="btn-filter tf-tab" data-interval="1wk" style="flex: 1; text-align: center; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        📊 Haftalık (Uzun Vade)
+        <span class="tab-badge signal-{{ timeframes['1wk'].signal_class }}" style="font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">{{ timeframes['1wk'].signal }}</span>
+    </button>
+</div>
+
 <!-- Hisse Başlık -->
 <section class="stock-header glass-card">
     <div class="stock-header-left">
-        <h1>{{ result.name }}</h1>
-        <span class="stock-code">{{ result.code }}</span>
-        {% if result.indicators and result.indicators.price_info %}
-        <div class="price-display">
-            <span class="current-price">₺{{ result.indicators.price_info.current }}</span>
-            {% set change = result.indicators.price_info.change_1d %}
-            <span class="price-change {% if change > 0 %}text-green{% elif change < 0 %}text-red{% endif %}">
-                {% if change > 0 %}+{% endif %}{{ change }}%
+        <h1 id="stockName">{{ result.name }}</h1>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="stock-code">{{ result.code }}</span>
+            <span id="activeTimeframeBadge" class="timeframe-header-indicator">Yükleniyor...</span>
+        </div>
+        <div class="price-display" style="margin-top: 1rem;">
+            <span class="current-price" id="currentPrice">₺{{ "%.2f"|format(result.price) }}</span>
+            <span class="price-change {% if result.daily_return > 0 %}text-green{% elif result.daily_return < 0 %}text-red{% endif %}" id="priceChange">
+                {% if result.daily_return > 0 %}+{% endif %}{{ "%.2f"|format(result.daily_return) }}%
             </span>
         </div>
-        {% endif %}
     </div>
     <div class="stock-header-right">
-        <div class="signal-display signal-{{ result.signal_class }}">
+        <div class="signal-display" id="signalDisplayContainer">
             <span class="signal-label">Öneri</span>
-            <span class="signal-value">{{ result.signal }}</span>
+            <span class="signal-value" id="signalValue">{{ result.signal }}</span>
         </div>
         <div class="overall-score-display">
             <span class="score-label">Genel Skor</span>
-            <span class="score-value">{{ result.overall_score }}/100</span>
+            <span class="score-value" id="overallScoreValue">{{ result.overall_score }}/100</span>
         </div>
     </div>
 </section>
@@ -41,148 +104,247 @@
 <section class="detail-scores">
     <div class="detail-score-card glass-card">
         <div class="detail-score-title">Teknik Skor</div>
-        <div class="detail-score-circle"
-            style="--score: {{ result.technical_score }}; --color: {% if result.technical_score >= 60 %}#00c853{% elif result.technical_score <= 40 %}#ff1744{% else %}#ffc107{% endif %}">
-            <span>{{ result.technical_score }}</span>
+        <div class="detail-score-circle" id="circleTechnical" style="--score: 50; --color: #ffc107">
+            <span id="scoreTechnical">50</span>
         </div>
     </div>
     <div class="detail-score-card glass-card">
         <div class="detail-score-title">Haber Skoru</div>
-        <div class="detail-score-circle"
-            style="--score: {{ result.news_score }}; --color: {% if result.news_score >= 60 %}#00c853{% elif result.news_score <= 40 %}#ff1744{% else %}#ffc107{% endif %}">
-            <span>{{ result.news_score }}</span>
+        <div class="detail-score-circle" id="circleNews" style="--score: 50; --color: #ffc107">
+            <span id="scoreNews">50</span>
         </div>
     </div>
     <div class="detail-score-card glass-card">
         <div class="detail-score-title">Genel Skor</div>
-        <div class="detail-score-circle"
-            style="--score: {{ result.overall_score }}; --color: {% if result.overall_score >= 60 %}#00c853{% elif result.overall_score <= 40 %}#ff1744{% else %}#ffc107{% endif %}">
-            <span>{{ result.overall_score }}</span>
+        <div class="detail-score-circle" id="circleOverall" style="--score: 50; --color: #ffc107">
+            <span id="scoreOverall">50</span>
         </div>
     </div>
 </section>
 
 <!-- Fiyat Bilgileri -->
-{% if result.indicators and result.indicators.price_info %}
 <section class="glass-card">
     <h2>💰 Fiyat Bilgileri</h2>
     <div class="price-grid">
         <div class="price-item">
             <span class="price-item-label">Günlük Değişim</span>
-            {% set ch1d = result.indicators.price_info.change_1d %}
-            <span class="price-item-value {% if ch1d > 0 %}text-green{% elif ch1d < 0 %}text-red{% endif %}">
-                {% if ch1d > 0 %}+{% endif %}{{ ch1d }}%
-            </span>
+            <span class="price-item-value" id="gridChange1d">0.0%</span>
         </div>
         <div class="price-item">
             <span class="price-item-label">Haftalık Değişim</span>
-            {% set ch1w = result.indicators.price_info.change_1w %}
-            <span class="price-item-value {% if ch1w > 0 %}text-green{% elif ch1w < 0 %}text-red{% endif %}">
-                {% if ch1w > 0 %}+{% endif %}{{ ch1w }}%
-            </span>
+            <span class="price-item-value" id="gridChange1w">0.0%</span>
         </div>
         <div class="price-item">
             <span class="price-item-label">Aylık Değişim</span>
-            {% set ch1m = result.indicators.price_info.change_1m %}
-            <span class="price-item-value {% if ch1m > 0 %}text-green{% elif ch1m < 0 %}text-red{% endif %}">
-                {% if ch1m > 0 %}+{% endif %}{{ ch1m }}%
-            </span>
+            <span class="price-item-value" id="gridChange1m">0.0%</span>
         </div>
         <div class="price-item">
             <span class="price-item-label">Dönem En Yüksek</span>
-            <span class="price-item-value">₺{{ result.indicators.price_info.high_period }}</span>
+            <span class="price-item-value" id="gridHigh">₺0.00</span>
         </div>
         <div class="price-item">
             <span class="price-item-label">Dönem En Düşük</span>
-            <span class="price-item-value">₺{{ result.indicators.price_info.low_period }}</span>
+            <span class="price-item-value" id="gridLow">₺0.00</span>
         </div>
     </div>
 </section>
-{% endif %}
 
 <!-- Teknik Göstergeler -->
-{% if result.details %}
 <section class="glass-card">
     <h2>📉 Teknik Göstergeler</h2>
     <div class="indicators-grid">
-        {% for detail in result.details %}
-        <div class="indicator-card">
-            <div class="indicator-header">
-                <span class="indicator-name">{{ detail.indicator }}</span>
-                <span
-                    class="signal-badge signal-{{ 'buy' if detail.signal == 'AL' else ('sell' if detail.signal == 'SAT' else 'hold') }}">
-                    {{ detail.signal }}
-                </span>
-            </div>
-            <div class="indicator-value">{{ detail.value }}</div>
-            <div class="indicator-desc">{{ detail.description }}</div>
-        </div>
-        {% endfor %}
+        <!-- JS ile dinamik olarak doldurulacaktır -->
     </div>
 </section>
-{% endif %}
 
 <!-- Haberler -->
-{% if result.news %}
 <section class="glass-card">
     <h2>📰 Son Haberler</h2>
     <div class="news-list">
-        {% for news in result.news %}
-        <div class="news-item">
-            <div class="news-sentiment sentiment-{{ news.sentiment.label }}">
-                {% if news.sentiment.label == 'pozitif' %}🟢
-                {% elif news.sentiment.label == 'negatif' %}🔴
-                {% else %}⚪{% endif %}
-            </div>
-            <div class="news-content">
-                <h4>
-                    {% if news.url %}
-                    <a href="{{ news.url }}" target="_blank" rel="noopener">{{ news.title }}</a>
-                    {% else %}
-                    {{ news.title }}
-                    {% endif %}
-                </h4>
-                <div class="news-meta">
-                    <span class="news-source">{{ news.source }}</span>
-                    <span class="news-date">{{ news.date }}</span>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
+        <!-- JS ile dinamik olarak doldurulacaktır -->
     </div>
 </section>
-{% endif %}
 
 <!-- Gemini AI Yorum -->
 <section class="glass-card ai-section">
     <h2>🤖 Gemini AI Yorumu</h2>
     <div id="aiCommentary">
-        <button class="btn-ai" id="getAiComment" onclick="loadAiComment('{{ result.ticker }}')">
-            ✨ AI Yorumu Al
-        </button>
-        <p class="ai-hint">Google Gemini, teknik analiz sonuçlarını inceleyip profesyonel bir yorum hazırlar.</p>
+        <!-- JS ile dinamik doldurulacaktır -->
     </div>
 </section>
 
 <!-- Özet -->
 <section class="glass-card summary-section">
     <h2>📝 Özet</h2>
-    <p class="summary-text">{{ result.summary }}</p>
+    <p class="summary-text" id="summaryText">Yükleniyor...</p>
 </section>
 
-{% endif %}
+<!-- Paralel Analiz Veri Kümesi -->
+<script id="timeframeData" type="application/json">
+    {{ timeframes | tojson }}
+</script>
 
 <script>
+    // JSON verilerini yükle
+    const timeframes = JSON.parse(document.getElementById('timeframeData').textContent);
+    let activeInterval = "1d"; // varsayılan günlük aralık
+    const ticker = "{{ result.ticker }}";
+
+    // Renk belirleme yardımcısı
+    function getScoreColor(score) {
+        if (score >= 60) return "#00c853";
+        if (score <= 40) return "#ff1744";
+        return "#ffc107";
+    }
+
+    // Arayüzü seçilen zaman dilimine göre güncelleyen ana fonksiyon
+    function updateDetailView(interval) {
+        activeInterval = interval;
+        const res = timeframes[interval];
+        const defaultRes = timeframes["1d"]; // Canlı fiyat ve takvim getirileri için HER ZAMAN günlük (1d) analiz referans alınır!
+        
+        if (!res || res.error) {
+            alert("Bu zaman dilimi için veri alınamadı: " + (res ? res.error : "Bilinmeyen Hata"));
+            return;
+        }
+
+        // 1. Üst Başlık & Zaman Dilimi Rozeti Güncellemesi
+        const intervalNames = {
+            "1h": "Saatlik (Kısa Vade)",
+            "1d": "Günlük (Orta Vade)",
+            "1wk": "Haftalık (Uzun Vade)"
+        };
+        document.getElementById("activeTimeframeBadge").textContent = intervalNames[interval];
+        
+        // Fiyat ve Günlük Getiri her zaman Canlı Günlük (1d) verisinden okunur
+        document.getElementById("currentPrice").textContent = "₺" + defaultRes.price.toFixed(2);
+        
+        const priceChangeEl = document.getElementById("priceChange");
+        priceChangeEl.className = "price-change " + (defaultRes.daily_return > 0 ? "text-green" : (defaultRes.daily_return < 0 ? "text-red" : ""));
+        priceChangeEl.textContent = (defaultRes.daily_return > 0 ? "+" : "") + defaultRes.daily_return.toFixed(2) + "%";
+
+        // 2. Öneri ve Skor Rozetleri
+        document.getElementById("signalValue").textContent = res.signal;
+        document.getElementById("overallScoreValue").textContent = res.overall_score + "/100";
+        
+        const signalDisplay = document.getElementById("signalDisplayContainer");
+        signalDisplay.className = "signal-display signal-" + res.signal_class;
+
+        // 3. Dairesel Skor Grafiklerinin Güncellenmesi
+        const circleTech = document.getElementById("circleTechnical");
+        circleTech.style.setProperty("--score", res.technical_score);
+        circleTech.style.setProperty("--color", getScoreColor(res.technical_score));
+        document.getElementById("scoreTechnical").textContent = res.technical_score;
+
+        const circleNews = document.getElementById("circleNews");
+        circleNews.style.setProperty("--score", res.news_score);
+        circleNews.style.setProperty("--color", getScoreColor(res.news_score));
+        document.getElementById("scoreNews").textContent = res.news_score;
+
+        const circleOverall = document.getElementById("circleOverall");
+        circleOverall.style.setProperty("--score", res.overall_score);
+        circleOverall.style.setProperty("--color", getScoreColor(res.overall_score));
+        document.getElementById("scoreOverall").textContent = res.overall_score;
+
+        // 4. Fiyat Bilgileri Grid Güncellemesi (Her zaman Günlük 1d takvim getirilerini ve fiyat aralıklarını gösterir)
+        const g1d = document.getElementById("gridChange1d");
+        g1d.className = "price-item-value " + (defaultRes.daily_return > 0 ? "text-green" : (defaultRes.daily_return < 0 ? "text-red" : ""));
+        g1d.textContent = (defaultRes.daily_return > 0 ? "+" : "") + defaultRes.daily_return.toFixed(2) + "%";
+
+        const g1w = document.getElementById("gridChange1w");
+        g1w.className = "price-item-value " + (defaultRes.weekly_return > 0 ? "text-green" : (defaultRes.weekly_return < 0 ? "text-red" : ""));
+        g1w.textContent = (defaultRes.weekly_return > 0 ? "+" : "") + defaultRes.weekly_return.toFixed(2) + "%";
+
+        const g1m = document.getElementById("gridChange1m");
+        g1m.className = "price-item-value " + (defaultRes.monthly_return > 0 ? "text-green" : (defaultRes.monthly_return < 0 ? "text-red" : ""));
+        g1m.textContent = (defaultRes.monthly_return > 0 ? "+" : "") + defaultRes.monthly_return.toFixed(2) + "%";
+
+        if (defaultRes.indicators && defaultRes.indicators.price_info) {
+            document.getElementById("gridHigh").textContent = "₺" + defaultRes.indicators.price_info.high_period.toFixed(2);
+            document.getElementById("gridLow").textContent = "₺" + defaultRes.indicators.price_info.low_period.toFixed(2);
+        }
+
+        // 5. 19 Teknik Gösterge Tablosunun Doldurulması
+        const indGrid = document.querySelector(".indicators-grid");
+        indGrid.innerHTML = "";
+        if (res.details && res.details.length > 0) {
+            res.details.forEach(d => {
+                const badgeClass = d.signal === 'AL' ? 'buy' : (d.signal === 'SAT' ? 'sell' : 'hold');
+                indGrid.innerHTML += `
+                    <div class="indicator-card">
+                        <div class="indicator-header">
+                            <span class="indicator-name">${d.indicator}</span>
+                            <span class="signal-badge signal-${badgeClass}">${d.signal}</span>
+                        </div>
+                        <div class="indicator-value">${d.value}</div>
+                        <div class="indicator-desc">${d.description}</div>
+                    </div>
+                `;
+            });
+        }
+
+        // 6. Haberler Listesinin Doldurulması
+        const newsList = document.querySelector(".news-list");
+        if (newsList) {
+            newsList.innerHTML = "";
+            if (res.news && res.news.length > 0) {
+                res.news.forEach(n => {
+                    const sentimentEmoji = n.sentiment.label === 'pozitif' ? '🟢' : (n.sentiment.label === 'negatif' ? '🔴' : '⚪');
+                    const titleHtml = n.url ? `<a href="${n.url}" target="_blank" rel="noopener">${n.title}</a>` : n.title;
+                    newsList.innerHTML += `
+                        <div class="news-item">
+                            <div class="news-sentiment sentiment-${n.sentiment.label}">
+                                ${sentimentEmoji}
+                            </div>
+                            <div class="news-content">
+                                <h4>${titleHtml}</h4>
+                                <div class="news-meta">
+                                    <span class="news-source">${n.source}</span>
+                                    <span class="news-date">${n.date}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                newsList.innerHTML = `<p style="color:var(--text-secondary); padding: 1.5rem 0;">Bu zaman diliminde son haber bulunamadı.</p>`;
+            }
+        }
+
+        // 7. Özet
+        document.getElementById("summaryText").textContent = res.summary;
+
+        // 8. Gemini AI Yorum Alanı Sıfırlama (Zaman dilimine duyarlı)
+        resetAiCommentBox();
+    }
+
+    // AI Yorum Kutusunu İlk Durumuna Getirme
+    function resetAiCommentBox() {
+        const container = document.getElementById('aiCommentary');
+        const intervalNamesTr = {
+            "1h": "Saatlik (Kısa Vade)",
+            "1d": "Günlük (Orta Vade)",
+            "1wk": "Haftalık (Uzun Vade)"
+        };
+        container.innerHTML = `
+            <button class="btn-ai" id="getAiComment" onclick="loadAiComment('${ticker}')">
+                ✨ ${intervalNamesTr[activeInterval]} AI Yorumu Al
+            </button>
+            <p class="ai-hint">Google Gemini, seçili <strong>${intervalNamesTr[activeInterval]}</strong> teknik analiz sonuçlarını inceleyerek profesyonel bir yorum hazırlar.</p>
+        `;
+    }
+
+    // AI Yorum İsteme AJAX Fonksiyonu
     function loadAiComment(ticker) {
         const container = document.getElementById('aiCommentary');
         container.innerHTML = `
-        <div class="ai-loading">
-            <div class="spinner" style="width:30px;height:30px;border-width:3px;margin:0 auto 1rem;"></div>
-            <p>Gemini analiz ediyor...</p>
-        </div>
-    `;
+            <div class="ai-loading" style="text-align:center; padding: 2rem 0;">
+                <div class="spinner" style="width:30px;height:30px;border-width:3px;margin:0 auto 1rem; border-top-color:#a78bfa;"></div>
+                <p style="color:#c084fc; font-weight:500;">Gemini ${activeInterval === '1h' ? 'Saatlik' : (activeInterval === '1wk' ? 'Haftalık' : 'Günlük')} verileri analiz ediyor...</p>
+            </div>
+        `;
 
-        fetch('/ai-comment/' + ticker)
+        fetch(`/ai-comment/${ticker}?interval=${activeInterval}`)
             .then(res => res.json())
             .then(data => {
                 const text = data.commentary
@@ -190,23 +352,40 @@
                     .replace(/\n/g, '<br>')
                     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 container.innerHTML = `
-                <div class="ai-result">
-                    <p>${text}</p>
-                </div>
-                <button class="btn-ai btn-ai-refresh" onclick="loadAiComment('${ticker}')" style="margin-top:1rem;">
-                    🔄 Yeniden Yorumla
-                </button>
-            `;
+                    <div class="ai-result" style="line-height:1.75;">
+                        <p>${text}</p>
+                    </div>
+                    <button class="btn-ai btn-ai-refresh" onclick="loadAiComment('${ticker}')" style="margin-top:1.5rem; background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.15);">
+                        🔄 Yeniden Yorumla
+                    </button>
+                `;
             })
             .catch(err => {
                 container.innerHTML = `
-                <div class="ai-error">⚠️ Yorum alınamadı: ${err.message}</div>
-                <button class="btn-ai" onclick="loadAiComment('${ticker}')" style="margin-top:1rem;">
-                    🔄 Tekrar Dene
-                </button>
-            `;
+                    <div class="ai-error" style="color:var(--red); padding:1rem 0;">⚠️ Yorum alınamadı: ${err.message}</div>
+                    <button class="btn-ai" onclick="loadAiComment('${ticker}')" style="margin-top:1rem;">
+                        🔄 Tekrar Dene
+                    </button>
+                `;
             });
     }
+
+    // Sekmeler arası geçiş tıklama olayları
+    document.querySelectorAll(".tf-tab").forEach(tab => {
+        tab.addEventListener("click", function() {
+            document.querySelectorAll(".tf-tab").forEach(t => t.classList.remove("active"));
+            this.classList.add("active");
+            
+            const interval = this.dataset.interval;
+            updateDetailView(interval);
+        });
+    });
+
+    // Sayfa ilk yüklendiğinde varsayılan Günlük ("1d") verileri yükle
+    document.addEventListener("DOMContentLoaded", function() {
+        updateDetailView("1d");
+    });
 </script>
 
+{% endif %}
 {% endblock %}
